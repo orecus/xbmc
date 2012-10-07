@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.essence"
-  version="0.0.0"
+  version="0.0.1"
   name="Essence"
-  provider-name="Jezz_X, Team XBMC">
+  provider-name="orecus">
   <requires>
     <import addon="xbmc.gui" version="3.0.1"/>    
     <import addon="script.tv.show.next.aired" version="4.1.20"/>

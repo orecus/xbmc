@@ -1,0 +1,192 @@
+﻿<window id="137">
+  <defaultcontrol always="true">9001</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <coordinates>
+    <system>1</system>
+    <posx>360</posx>
+    <posy>330</posy>
+  </coordinates>
+  <include>dialogeffect</include>
+  <controls>
+    <control type="image">
+      <description>background image</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1200</width>
+      <height>420</height>
+      <texture border="40">DialogBack.png</texture>
+    </control>
+    <control type="image">
+      <description>Dialog Header image</description>
+      <posx>60</posx>
+      <posy>24</posy>
+      <width>1080</width>
+      <height>60</height>
+      <texture>dialogheader.png</texture>
+    </control>
+    <control type="label">
+      <description>header label</description>
+      <posx>60</posx>
+      <posy>30</posy>
+      <width>1080</width>
+      <height>45</height>
+      <font>font13_title</font>
+      <label>$LOCALIZE[21421]</label>
+      <align>center</align>
+      <aligny>center</aligny>
+      <textcolor>selected</textcolor>
+      <shadowcolor>black</shadowcolor>
+    </control>
+    <control type="button">
+      <description>Close Window button</description>
+      <posx>1065</posx>
+      <posy>22</posy>
+      <width>96</width>
+      <height>48</height>
+      <label>-</label>
+      <font>-</font>
+      <onclick>PreviousMenu</onclick>
+      <texturefocus>DialogCloseButton-focus.png</texturefocus>
+      <texturenofocus>DialogCloseButton.png</texturenofocus>
+      <onleft>9001</onleft>
+      <onright>9001</onright>
+      <onup>9001</onup>
+      <ondown>9001</ondown>
+      <visible>system.getbool(input.enablemouse)</visible>
+    </control>
+    <control type="label">
+      <description>Rule match label</description>
+      <posx>60</posx>
+      <posy>90</posy>
+      <width>1080</width>
+      <height>52</height>
+      <align>center</align>
+      <aligny>center</aligny>
+      <font>font12</font>
+      <textcolor>blue</textcolor>
+      <shadowcolor>black</shadowcolor>
+      <label>21422</label>
+    </control>
+    <control type="group" id="9001">
+      <control type="spincontrolex" id="15">
+        <description>Rule Field</description>
+        <posx>45</posx>
+        <posy>150</posy>
+        <width>548</width>
+        <height>60</height>
+        <font>-</font>
+        <texturefocus border="3">button-focus2.png</texturefocus>
+        <texturenofocus border="3">button-nofocus.png</texturenofocus>
+        <onright>16</onright>
+        <onleft>16</onleft>
+        <onup>9000</onup>
+        <ondown>17</ondown>
+      </control>
+      <control type="label">
+        <description>Rule Field label</description>
+        <posx>52</posx>
+        <posy>150</posy>
+        <width>450</width>
+        <height>60</height>
+        <font>font13</font>
+        <label>$INFO[Control.GetLabel(15)]</label>
+        <align>left</align>
+        <aligny>center</aligny>
+        <textcolor>white</textcolor>
+        <shadowcolor>black</shadowcolor>
+      </control>
+      <control type="spincontrolex" id="16">
+        <description>Rule operator</description>
+        <posx>608</posx>
+        <posy>150</posy>
+        <width>548</width>
+        <height>60</height>
+        <font>-</font>
+        <texturefocus border="3">button-focus2.png</texturefocus>
+        <texturenofocus border="3">button-nofocus.png</texturenofocus>
+        <onright>15</onright>
+        <onleft>15</onleft>
+        <onup>9000</onup>
+        <ondown>17</ondown>
+      </control>
+      <control type="label">
+        <description>Rule Field label</description>
+        <posx>615</posx>
+        <posy>150</posy>
+        <width>450</width>
+        <height>60</height>
+        <font>font13</font>
+        <label>$INFO[Control.GetLabel(16)]</label>
+        <align>left</align>
+        <aligny>center</aligny>
+        <textcolor>white</textcolor>
+        <shadowcolor>black</shadowcolor>
+      </control>
+    </control>
+    <control type="button" id="17">
+      <description>Value Button</description>
+      <posx>45</posx>
+      <posy>218</posy>
+      <width>848</width>
+      <height>60</height>
+      <font>font13</font>
+      <aligny>center</aligny>
+      <texturefocus border="3">button-focus2.png</texturefocus>
+      <texturenofocus border="3">button-nofocus.png</texturenofocus>
+      <label>-</label>
+      <onup>9001</onup>
+      <onleft>20</onleft>
+      <onright>20</onright>
+      <ondown>9000</ondown>
+    </control>
+    <control type="button" id="20">
+      <description>Browse Button</description>
+      <posx>900</posx>
+      <posy>218</posy>
+      <width>255</width>
+      <height>60</height>
+      <align>center</align>
+      <aligny>center</aligny>
+      <texturefocus border="3">button-focus.png</texturefocus>
+      <texturenofocus border="3">button-nofocus.png</texturenofocus>
+      <label>1024</label>
+      <font>font12_title</font>
+      <onup>9001</onup>
+      <onleft>17</onleft>
+      <onright>17</onright>
+      <ondown>9000</ondown>
+    </control>
+    <control type="group" id="9000">
+      <control type="button" id="18">
+        <description>Ok Button</description>
+        <posx>292</posx>
+        <posy>315</posy>
+        <width>300</width>
+        <height>60</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>font12_title</font>
+        <label>186</label>
+        <onup>17</onup>
+        <onleft>19</onleft>
+        <onright>19</onright>
+        <ondown>9001</ondown>
+      </control>
+      <control type="button" id="19">
+        <description>Cancel Button</description>
+        <posx>608</posx>
+        <posy>315</posy>
+        <width>300</width>
+        <height>60</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>font12_title</font>
+        <label>222</label>
+        <onup>17</onup>
+        <onleft>18</onleft>
+        <onright>19</onright>
+        <ondown>9001</ondown>
+      </control>
+    </control>
+  </controls>
+</window>

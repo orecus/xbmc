@@ -1,0 +1,125 @@
+﻿<window id="101">
+  <defaultcontrol always="true">10</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <posx>502</posx>
+    <posy>345</posy>
+  </coordinates>
+  <include>dialogeffect</include>
+  <controls>
+    <control type="image">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>915</width>
+      <height>360</height>
+      <texture border="40">DialogBack.png</texture>
+    </control>
+    <control type="image">
+      <description>Dialog Header image</description>
+      <posx>60</posx>
+      <posy>24</posy>
+      <width>795</width>
+      <height>60</height>
+      <texture>dialogheader.png</texture>
+    </control>
+    <control type="label" id="1">
+      <description>fake heading label</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>0</width>
+      <height>0</height>
+      <font>-</font>
+      <visible>false</visible>
+    </control>
+    <control type="label">
+      <description>header label</description>
+      <posx>60</posx>
+      <posy>30</posy>
+      <width>795</width>
+      <height>45</height>
+      <font>font13_title</font>
+      <label>$INFO[Control.GetLabel(1)] $INFO[System.Progressbar,- ,%]</label>
+      <align>center</align>
+      <aligny>center</aligny>
+      <textcolor>selected</textcolor>
+      <shadowcolor>black</shadowcolor>
+    </control>
+    <control type="button">
+      <description>Close Window button</description>
+      <posx>780</posx>
+      <posy>22</posy>
+      <width>96</width>
+      <height>48</height>
+      <label>-</label>
+      <font>-</font>
+      <onclick>PreviousMenu</onclick>
+      <texturefocus>DialogCloseButton-focus.png</texturefocus>
+      <texturenofocus>DialogCloseButton.png</texturenofocus>
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <onup>10</onup>
+      <ondown>10</ondown>
+      <visible>system.getbool(input.enablemouse)</visible>
+    </control>
+    <control type="label" id="2">
+      <description>dialog line 1</description>
+      <posx>45</posx>
+      <posy>90</posy>
+      <width>825</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <haspath>true</haspath>
+      <font>font13</font>
+    </control>
+    <control type="label" id="3">
+      <description>dialog line 2</description>
+      <posx>45</posx>
+      <posy>128</posy>
+      <width>825</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <haspath>true</haspath>
+      <font>font13</font>
+    </control>
+    <control type="label" id="4">
+      <description>dialog line 3</description>
+      <posx>45</posx>
+      <posy>165</posy>
+      <width>825</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <haspath>true</haspath>
+      <font>font13</font>
+    </control>
+    <control type="progress">
+      <description>Progressbar</description>
+      <posx>45</posx>
+      <posy>222</posy>
+      <width>825</width>
+      <height>24</height>
+      <info>System.Progressbar</info>
+    </control>
+    <control type="button" id="10">
+      <description>Cancel button</description>
+      <posx>308</posx>
+      <posy>262</posy>
+      <width>300</width>
+      <height>60</height>
+      <label>222</label>
+      <font>font12_title</font>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <align>center</align>
+      <onleft>10</onleft>
+      <onright>10</onright>
+      <onup>10</onup>
+      <ondown>10</ondown>
+    </control>
+  </controls>
+</window>

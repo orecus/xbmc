@@ -1098,10 +1098,10 @@
 	  
       <control type="rss">
         <description>RSS feed</description>
-        <posx>380</posx>
-        <posy>12</posy>
+        <posx>310</posx>
+        <posy>14</posy>
         <height>45</height>
-        <width>1530</width>
+        <width>1600</width>
         <font>font12</font>
         <urlset>1</urlset>
         <textcolor>orange</textcolor>

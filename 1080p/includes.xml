@@ -918,22 +918,6 @@
       <animation effect="slide" start="0,0" end="-60,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
     </control>
 	
-	<control type="group"> <!-- Weather Glow-->
-      <posx>110r</posx>
-      <posy>0</posy>
-      <visible>!IsEmpty(Weather.Plugin)</visible>
-      <include>Window_OpenClose_Animation_Right</include>
-      <control type="image">
-        <description>Weather image</description>
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>90</width>
-        <height>90</height>
-        <aspectratio>keep</aspectratio>
-        <texture>weatherGlow.png</texture>
-      </control>
-    </control> <!-- Weather -->
-	
 	<control type="group"> <!-- Weather -->
       <posx>110r</posx>
       <posy>0</posy>

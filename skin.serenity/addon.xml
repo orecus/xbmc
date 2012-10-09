@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="skin.serenity"
+  version="0.0.1"
+  name="Serenity"
+  provider-name="orecus">
+  <requires>
+    <import addon="xbmc.gui" version="3.0.1"/>    
+    <import addon="script.tv.show.next.aired" version="4.1.20"/>
+    <import addon="script.artwork.downloader" version="1.0.14"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    defaultthemename="textures.xbt"
+    debugging="false"
+    effectslowdown="0.75">
+    <res width="1920" height="1080" aspect="16:9" default="true" folder="1080p" />
+    <res width="2560" height="1440" aspect="16:9" default="false" folder="1440p" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Serenity skin by orecus</summary>
+	<description lang="en">WIN</description>
+    <platform>all</platform>
+  </extension>
+</addon>

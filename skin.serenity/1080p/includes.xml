@@ -886,69 +886,71 @@
   </include>
   
   <include name="Clock">
-    <control type="label">
-      <description>Time label</description>
-      <posx>120r</posx>
-      <posy>8</posy>
-      <width>300</width>
-      <height>45</height>
-      <align>right</align>
-      <aligny>center</aligny>
-      <font>font28_title</font>
-      <textcolor>orange</textcolor>
-      <shadowcolor>black</shadowcolor>
-      <label>$INFO[System.Time]</label>
-	  <include>Window_OpenClose_Animation_Right</include>
-      <animation effect="slide" start="0,0" end="-60,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
-    </control>
+  	<control type="image">
+		<include>Window_OpenClose_Animation_Up</include>
+		<description>Background image</description>
+		<posx>0</posx>
+		<posy>-40</posy>
+		<width>2220</width>
+		<height>160</height>
+		<aspectratio>stretch</aspectratio>
+		<texture>HomeBack.png</texture>
+	</control>
+  
+	<control type="image">
+		<include>Window_OpenClose_Animation_Up</include>
+		<description>Logo</description>
+		<posx>0</posx>
+		<posy>5</posy>
+		<width>256</width>
+		<height>64</height>
+		<aspectratio>keep</aspectratio>
+		<texture>logo.png</texture>
+	</control>
 	
+	<control type="group"> <!-- Clock & Weather -->
+		<posx>110r</posx>
+		<posy>0</posy>
+		<visible>!IsEmpty(Weather.Plugin)</visible>
+		<include>Window_OpenClose_Animation_Up</include>
+		<control type="label">
+		<description>Time label</description>
+		<posx>120r</posx>
+		<posy>8</posy>
+		<width>300</width>
+		<height>45</height>
+		<align>right</align>
+		<aligny>center</aligny>
+		<font>font28_title</font>
+		<textcolor>orange</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<label>$INFO[System.Time]</label>
+	</control>
+
 	<control type="label">
-      <description>Date label</description>
-      <posx>120r</posx>
-      <posy>52</posy>
-      <width>300</width>
-      <height>22</height>
-      <align>right</align>
-      <aligny>center</aligny>
-      <font>font10</font>
-      <textcolor>white</textcolor>
-      <shadowcolor>black</shadowcolor>
-      <label>$INFO[System.Date]</label>
-      <include>Window_OpenClose_Animation_Right</include>
-      <animation effect="slide" start="0,0" end="-60,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
-    </control>
-	
-	<control type="group"> <!-- Weather -->
-      <posx>110r</posx>
-      <posy>0</posy>
-      <visible>!IsEmpty(Weather.Plugin)</visible>
-      <include>Window_OpenClose_Animation_Right</include>
-      <control type="image">
-        <description>Weather image</description>
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>90</width>
-        <height>90</height>
-        <aspectratio>keep</aspectratio>
-        <texture>$INFO[Weather.Conditions]</texture>
-      </control>
-    </control> <!-- Weather -->	
-	
-	<control type="group"> <!-- Information -->
-      <posx>110r</posx>
-      <posy>0</posy>
-      <visible>IsEmpty(Weather.Plugin)</visible>
-      <include>Window_OpenClose_Animation_Right</include>
-      <control type="image">
-        <description>Information image</description>
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>90</width>
-        <height>90</height>
-        <aspectratio>keep</aspectratio>
-        <texture>DefaultIconInfo.png</texture>
-      </control>
-    </control> <!-- Information -->
+		<description>Date label</description>
+		<posx>120r</posx>
+		<posy>52</posy>
+		<width>300</width>
+		<height>22</height>
+		<align>right</align>
+		<aligny>center</aligny>
+		<font>font10</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<label>$INFO[System.Date]</label>
+	</control>
+
+	<control type="image">
+		<description>Weather image</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>90</width>
+		<height>90</height>
+		<aspectratio>keep</aspectratio>
+		<texture>$INFO[Weather.Conditions]</texture>
+	</control>
+	</control> <!-- Clock & Weather -->
   </include>
   
   <include name="HomeAddonsCommonLayout">

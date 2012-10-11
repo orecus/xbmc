@@ -15,7 +15,6 @@
     debugging="false"
     effectslowdown="0.75">
     <res width="1920" height="1080" aspect="16:9" default="true" folder="1080p" />
-    <res width="2560" height="1440" aspect="16:9" default="false" folder="1440p" />
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Serenity skin by orecus</summary>

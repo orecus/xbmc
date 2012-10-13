@@ -253,28 +253,7 @@
     <include>CommonNowPlaying</include>
     <include>MainWindowMouseButtons</include>
     <include>BehindDialogFadeOut</include>
-    <control type="image">
-      <description>Section header image</description>
-      <posx>30</posx>
-      <posy>4</posy>
-      <width>52</width>
-      <height>52</height>
-      <aspectratio>keep</aspectratio>
-      <texture>icon_system.png</texture>
-    </control>
-    <control type="grouplist">
-      <posx>98</posx>
-      <posy>8</posy>
-      <width>1500</width>
-      <height>45</height>
-      <orientation>horizontal</orientation>
-      <align>left</align>
-      <itemgap>8</itemgap>
-      <control type="label">
-        <include>WindowTitleCommons</include>
-        <label>$LOCALIZE[5]</label>
-      </control>
-    </control>
-    <include>Clock</include>
+
+    <include>Clock</include> 
   </controls>
 </window>

@@ -462,6 +462,7 @@
       <ondown>608</ondown>
       <visible>false</visible>
     </control>
+
     <control type="group">
       <description>Controls for currently playing media</description>
       <posx>818r</posx>
@@ -483,7 +484,7 @@
         <width>52</width>
         <height>52</height>
         <colordiffuse>CCFFFFFF</colordiffuse>
-        <texture flipy="true" border="0,5,0,0" flipx="true">HomeSubEnd.png</texture>
+        <texture flipy="true" border="10" flipx="true">HomeSubEnd.png</texture>
         <animation effect="slide" start="0,0" end="218,0" time="0" condition="!System.HasAddon(script.globalsearch)">Conditional</animation>
       </control>
 	  
@@ -527,7 +528,7 @@
           <posy>0</posy>
           <width>308</width>
           <height>52</height>
-          <texture flipy="true" border="0,5,0,0">HomeSubNF.png</texture>
+          <texture flipy="true" border="10">HomeSubNF.png</texture>
           <colordiffuse>CCFFFFFF</colordiffuse>
         </control>
 		
@@ -707,8 +708,8 @@
         <font>font12</font>
         <textcolor>grey2</textcolor>
         <focusedcolor>white</focusedcolor>
-        <texturefocus flipy="true" border="5">HomeSubFO.png</texturefocus>
-        <texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
+        <texturefocus flipy="true" border="10">HomeSubFO.png</texturefocus>
+        <texturenofocus flipy="true" border="10">HomeSubNF.png</texturenofocus>
         <pulseonselect>false</pulseonselect>
         <label>31008</label>
         <onclick>fullscreen</onclick>
@@ -725,15 +726,17 @@
 	<!-- TV & Movie Extra Information -->
 	<control type="group">
 		<description>Extra Information</description>
-		<include>backgroundfade</include>
-		<visible>Skin.HasSetting(showExtraHomeInfo)+(Container(9000).HasFocus(11) | Container(9000).HasFocus(10))</visible>
-		<posx>731</posx>
-		<posy>800</posy>
-		<width>458</width>
+    <animation effect="fade" delay="200" time="200">Visible</animation>
+    <animation effect="fade" time="200">Hidden</animation>
+		<visible>Container(9000).HasFocus(3) | Container(9000).HasFocus(11) | Container(9000).HasFocus(10)</visible>
+		<posx>631</posx>
+		<posy>790</posy>
+		<width>658</width>
 		<height>48</height>
 		
 		<control type="image">
-			<texture>HomeSubExtraInfo.png</texture>
+      <width>658</width>
+			<texture border="10">HomeSubExtraInfo.png</texture>
 		</control>
 		
 		<control type="label">
@@ -741,11 +744,10 @@
 			<description>Show Information</description>
 			<font>font10</font>
 			<textcolor>selected</textcolor>
-			<align>left</align>
-			<aligny>center</aligny>
+      <aligny>center</aligny>
 			<posx>15</posx>
-			<posy>25</posy>
-			<label>Show</label>
+			<posy>23</posy>
+      <label>$INFO[Window(Home).Property(TVShows.Watched)][COLOR white] of [/COLOR]$INFO[Window(Home).Property(TVShows.Count)] [COLOR white]$LOCALIZE[20343] $LOCALIZE[16102], [/COLOR]$INFO[Window(Home).Property(Episodes.UnWatched)][COLOR white] episodes left[/COLOR]</label>
 		</control>
 		
 		<control type="label">
@@ -753,14 +755,36 @@
 			<description>Movie Information</description>
 			<font>font10</font>
 			<textcolor>selected</textcolor>
-			<align>left</align>
-			<aligny>center</aligny>
+      <aligny>center</aligny>
 			<posx>15</posx>
-			<posy>25</posy>
-			<label>Movie</label>
+			<posy>23</posy>
+			<label>[COLOR white]$LOCALIZE[31502]:[/COLOR] $INFO[Window(Home).Property(Movies.Count)][COLOR white] | $LOCALIZE[16102]:[/COLOR] $INFO[Window(Home).Property(Movies.Watched)][COLOR white] | $LOCALIZE[16101]:[/COLOR] $INFO[Window(Home).Property(Movies.UnWatched)]</label>
 		</control>
+
+    <control type="label">
+      <visible>Container(9000).HasFocus(3)</visible>
+      <description>Movie Information</description>
+      <font>font10</font>
+      <textcolor>selected</textcolor>
+      <aligny>center</aligny>
+      <posx>15</posx>
+      <posy>23</posy>
+      <label>[COLOR white]$LOCALIZE[133]:[/COLOR] $INFO[Window(Home).Property(Music.ArtistsCount)][COLOR white] | $LOCALIZE[132]:[/COLOR] $INFO[Window(Home).Property(Music.AlbumsCount)][COLOR white] | $LOCALIZE[134]:[/COLOR] $INFO[Window(Home).Property(Music.SongsCount)]</label>
+    </control>
+
+    <!--<control type="label">
+      <visible>Container(9000).HasFocus(3)</visible>
+      <description>Movie Information</description>
+      <font>font10</font>
+      <textcolor>selected</textcolor>
+      <aligny>center</aligny>
+      <posx>15</posx>
+      <posy>23</posy>
+      <label>[COLOR white]$LOCALIZE[20389]:[/COLOR] $INFO[Window(Home).Property(MusicVideos.Count)][COLOR white]  •  $LOCALIZE[16102]:[/COLOR] $INFO[Window(Home).Property(MusicVideos.Watched)][COLOR white]  •  $LOCALIZE[16101]:[/COLOR] $INFO[Window(Home).Property(MusicVideos.UnWatched)]</label>
+    </control>-->
 	</control>
 	
+    <!-- MainSubMenu -->
     <control type="group">
       <posy>600</posy>
       <animation type="WindowOpen" reversible="false">
@@ -771,11 +795,13 @@
         <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
         <effect type="fade" start="100" end="0" time="300" />
       </animation>
+
       <control type="group" id="9001">
         <posx>0</posx>
-        <posy>105</posy>
+        <posy>139</posy>
         <onup>9000</onup>
         <ondown>9002</ondown>
+
         <control type="grouplist" id="9010">
           <include>HomeSubMenuCommonValues</include>
           <onleft>9010</onleft>
@@ -784,6 +810,7 @@
           <include>HomeSubMenuVideos</include>
           <!-- Buttons for the grouplist -->
         </control>
+
         <control type="grouplist" id="9016">
           <include>HomeSubMenuCommonValues</include>
           <onleft>9016</onleft>
@@ -792,6 +819,7 @@
           <include>HomeSubMenuMovies</include>
           <!-- Buttons for the grouplist -->
         </control>
+
         <control type="grouplist" id="9017">
           <include>HomeSubMenuCommonValues</include>
           <onleft>9017</onleft>
@@ -809,6 +837,7 @@
           <include>HomeSubMenuMusic</include>
           <!-- Buttons for the grouplist -->
         </control>
+
         <control type="grouplist" id="9012">
           <include>HomeSubMenuCommonValues</include>
           <onleft>9012</onleft>
@@ -817,6 +846,7 @@
           <include>HomeSubMenuSystem</include>
           <!-- Buttons for the grouplist -->
         </control>
+
         <control type="grouplist" id="9013">
           <include>HomeSubMenuCommonValues</include>
           <onleft>9013</onleft>
@@ -825,6 +855,7 @@
           <include>HomeSubMenuPlayDisc</include>
           <!-- Buttons for the grouplist -->
         </control>
+
         <control type="grouplist" id="9014">
           <include>HomeSubMenuCommonValues</include>
           <onleft>9014</onleft>
@@ -833,6 +864,7 @@
           <include>HomeSubMenuLiveTV</include>
           <!-- Buttons for the grouplist -->
         </control>
+
         <control type="grouplist" id="9015">
           <include>HomeSubMenuCommonValues</include>
           <onleft>9013</onleft>
@@ -842,6 +874,8 @@
           <!-- Buttons for the grouplist -->
         </control>
       </control>
+
+      <!-- MainMenu Background -->
       <control type="image">
         <posx>-150</posx>
         <posy>0</posy>
@@ -849,16 +883,10 @@
         <height>160</height>
         <texture border="0,6,0,6">HomeBack.png</texture>
       </control>
-      <control type="image">
-        <posx>0</posx>
-        <posy>8</posy>
-        <width>1920</width>
-        <height>9</height>
-        <texture>HomeOverlay1.png</texture>
-      </control>
+
       <control type="fixedlist" id="9000">
         <posx>-165</posx>
-        <posy>8</posy>
+        <posy>30</posy>
         <width>2250</width>
         <height>90</height>
         <onleft>9000</onleft>
@@ -871,21 +899,24 @@
         <focusposition>2</focusposition>
         <movement>1</movement>
         <orientation>Horizontal</orientation>
+
         <itemlayout height="90" width="450">
           <control type="image">
             <posx>0</posx>
-            <posy>6</posy>
-            <width>1</width>
-            <height>78</height>
+            <posy>0</posy>
+            <width>16</width>
+            <height>96</height>
             <texture>HomeSeperator.png</texture>
           </control>
+
           <control type="image">
-            <posx>448</posx>
-            <posy>6</posy>
-            <width>1</width>
-            <height>78</height>
+            <posx>450</posx>
+            <posy>0</posy>
+            <width>16</width>
+            <height>96</height>
             <texture>HomeSeperator.png</texture>
           </control>
+
           <control type="label">
             <posx>225</posx>
             <posy>0</posy>
@@ -898,21 +929,8 @@
             <label>$INFO[ListItem.Label]</label>
           </control>
         </itemlayout>
+
         <focusedlayout height="90" width="450">
-          <control type="image">
-            <posx>0</posx>
-            <posy>6</posy>
-            <width>1</width>
-            <height>78</height>
-            <texture>HomeSeperator.png</texture>
-          </control>
-          <control type="image">
-            <posx>448</posx>
-            <posy>6</posy>
-            <width>1</width>
-            <height>78</height>
-            <texture>HomeSeperator.png</texture>
-          </control>
           <control type="label">
             <posx>225</posx>
             <posy>0</posy>
@@ -924,6 +942,7 @@
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
           </control>
+
           <control type="label">
             <posx>225</posx>
             <posy>0</posy>
@@ -938,6 +957,7 @@
             <include>VisibleFadeEffect</include>
           </control>
         </focusedlayout>
+
         <content>
           <item id="7">
             <label>8</label>
@@ -946,6 +966,7 @@
             <thumb>-</thumb>
             <visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
           </item>
+
           <item id="4">
             <label>1</label>
             <onclick>ActivateWindow(Pictures)</onclick>
@@ -953,6 +974,7 @@
             <thumb>-</thumb>
             <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
           </item>
+
           <item id="12">
             <label>31502</label>
             <onclick>ActivateWindow(PVR)</onclick>
@@ -960,6 +982,7 @@
             <thumb>-</thumb>
             <visible>System.GetBool(pvrmanager.enabled)</visible>
           </item>
+
           <item id="2">
             <label>3</label>
             <onclick condition="StringCompare(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
@@ -968,6 +991,7 @@
             <thumb>-</thumb>
             <visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
           </item>
+
           <item id="10">
             <label>20342</label>
             <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
@@ -975,6 +999,7 @@
             <thumb>-</thumb>
             <visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
           </item>
+
           <item id="11">
             <label>20343</label>
             <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
@@ -982,6 +1007,7 @@
             <thumb>-</thumb>
             <visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
           </item>
+
           <item id="3">
             <label>2</label>
             <onclick>ActivateWindow(Music)</onclick>
@@ -989,6 +1015,7 @@
             <thumb>-</thumb>
             <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
           </item>
+
           <item id="1">
             <label>0</label>
             <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
@@ -997,6 +1024,7 @@
             <thumb>-</thumb>
             <visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
           </item>
+
           <item id="6">
             <label>341</label>
             <onclick>XBMC.PlayDVD()</onclick>
@@ -1004,26 +1032,31 @@
             <thumb>-</thumb>
             <visible>System.HasMediaDVD</visible>
           </item>
+
           <item id="5">
             <label>13000</label>
             <onclick>ActivateWindow(Settings)</onclick>
             <icon>-</icon>
             <thumb>-</thumb>
           </item>
+
         </content>
       </control>
+
+      <!-- MainMenu Fade -->
       <control type="image">
         <posx>0</posx>
-        <posy>9</posy>
+        <posy>24</posy>
         <width>192</width>
-        <height>75</height>
+        <height>113</height>
         <texture>SideFade.png</texture>
       </control>
+
       <control type="image">
         <posx>192r</posx>
-        <posy>9</posy>
+        <posy>24</posy>
         <width>192</width>
-        <height>90</height>
+        <height>113</height>
         <texture flipx="true">SideFade.png</texture>
       </control>
     </control>
@@ -1043,6 +1076,7 @@
           <include>HomeAddonItemsVideos</include>
         </content>
       </control>
+
       <control type="fixedlist" id="703">
         <animation effect="slide" start="0,0" end="-136,0" time="0" condition="StringCompare(Container(703).NumItems,2) | StringCompare(Container(703).NumItems,4)">conditional</animation>
         <visible>Container(9000).HasFocus(3)</visible>
@@ -1055,6 +1089,7 @@
           <include>HomeAddonItemsMusic</include>
         </content>
       </control>
+
       <control type="fixedlist" id="704">
         <animation effect="slide" start="0,0" end="-136,0" time="0" condition="StringCompare(Container(704).NumItems,2) | StringCompare(Container(704).NumItems,4)">conditional</animation>
         <visible>Container(9000).HasFocus(4)</visible>
@@ -1067,6 +1102,7 @@
           <include>HomeAddonItemsPictures</include>
         </content>
       </control>
+
       <control type="fixedlist" id="705">
         <animation effect="slide" start="0,0" end="-136,0" time="0" condition="StringCompare(Container(705).NumItems,2) | StringCompare(Container(705).NumItems,4)">conditional</animation>
         <visible>Container(9000).HasFocus(1)</visible>
@@ -1085,7 +1121,7 @@
       <posx>0</posx>
       <posy>48r</posy>
       <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-      <include>Window_OpenClose_Animation_Right</include>
+      <include>Window_OpenClose_Animation_Down</include>
 	  
 	  <control type="image">
         <description>RSS background</description>

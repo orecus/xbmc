@@ -5,6 +5,7 @@
     <texture>-</texture>
     <colorkey>0</colorkey>
   </default>
+
   <default type="label">
     <posx>120</posx>
     <posy>90</posy>
@@ -13,6 +14,7 @@
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
   </default>
+
   <default type="fadelabel">
     <posx>120</posx>
     <posy>90</posy>
@@ -20,6 +22,7 @@
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
   </default>
+
   <default type="button">
     <posx>450</posx>
     <posy>300</posy>
@@ -34,6 +37,7 @@
     <aligny>center</aligny>
     <pulseonselect>no</pulseonselect>
   </default>
+
   <default type="togglebutton">
     <posx>210</posx>
     <posy>250</posy>
@@ -49,6 +53,7 @@
     <disabledcolor>grey3</disabledcolor>
     <pulseonselect>no</pulseonselect>
   </default>
+
   <default type="textbox">
     <posx>330</posx>
     <posy>330</posy>
@@ -58,15 +63,17 @@
     <textcolor>white</textcolor>
     <font>font13</font>
   </default>
+
   <default type="progress">
     <posx>150</posx>
     <posy>488</posy>
-    <texturebg border="6,0,6,0">ProgressBack.png</texturebg>
+    <texturebg border="8">ProgressBack.png</texturebg>
     <lefttexture>-</lefttexture>
-    <midtexture border="6,0,6,0">ProgressMid.png</midtexture>
+    <midtexture border="8">ProgressMid.png</midtexture>
     <righttexture>-</righttexture>
     <overlaytexture>-</overlaytexture>
   </default>
+
   <default type="spincontrol">
     <posx>495</posx>
     <posy>189</posy>
@@ -87,6 +94,7 @@
     <aligny>-</aligny>
     <pulseonselect>no</pulseonselect>
   </default>
+
   <default type="spincontrolex">
     <posx>795</posx>
     <posy>240</posy>
@@ -108,6 +116,7 @@
     <reverse>yes</reverse>
     <pulseonselect>no</pulseonselect>
   </default>
+
   <default type="radiobutton">
     <posx>450</posx>
     <posy>300</posy>
@@ -127,6 +136,7 @@
     <aligny>center</aligny>
     <pulseonselect>no</pulseonselect>
   </default>
+
   <default type="selectbutton">
     <posx>735</posx>
     <posy>502</posy>
@@ -146,10 +156,12 @@
     <disabledcolor>grey3</disabledcolor>
     <aligny>center</aligny>
   </default>
+
   <default type="slider">
     <controloffsetx>75</controloffsetx>
     <controloffsety>0</controloffsety>
   </default>
+
   <default type="sliderex">
     <height>52</height>
     <textoffsetx>10</textoffsetx>
@@ -165,18 +177,21 @@
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
   </default>
+
   <default type="mover">
     <posx>90</posx>
     <posy>288</posy>
     <texturefocus border="5">button-focus.png</texturefocus>
     <texturenofocus border="5">button-nofocus.png</texturenofocus>
   </default>
+
   <default type="resize">
     <posx>90</posx>
     <posy>288</posy>
     <texturefocus border="5">button-focus.png</texturefocus>
     <texturenofocus border="5">button-nofocus.png</texturenofocus>
   </default>
+  
   <default type="edit">
     <posx>450</posx>
     <posy>300</posy>

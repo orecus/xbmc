@@ -6,6 +6,7 @@
     <posy>345</posy>
   </coordinates>
   <include>dialogeffect</include>
+  <include>BehindDialogFadeOut</include>
   <controls>
     <control type="image">
       <posx>0</posx>
@@ -14,6 +15,7 @@
       <height>360</height>
       <texture border="40">DialogBack.png</texture>
     </control>
+
     <control type="image">
       <description>Dialog Header image</description>
       <posx>60</posx>
@@ -22,6 +24,7 @@
       <height>60</height>
       <texture>dialogheader.png</texture>
     </control>
+
     <control type="label" id="1">
       <description>fake heading label</description>
       <posx>0</posx>
@@ -31,6 +34,7 @@
       <font>-</font>
       <visible>false</visible>
     </control>
+
     <control type="label">
       <description>header label</description>
       <posx>60</posx>
@@ -44,6 +48,7 @@
       <textcolor>selected</textcolor>
       <shadowcolor>black</shadowcolor>
     </control>
+
     <control type="button">
       <description>Close Window button</description>
       <posx>780</posx>
@@ -61,6 +66,7 @@
       <ondown>10</ondown>
       <visible>system.getbool(input.enablemouse)</visible>
     </control>
+
     <control type="label" id="2">
       <description>dialog line 1</description>
       <posx>45</posx>
@@ -73,6 +79,7 @@
       <haspath>true</haspath>
       <font>font13</font>
     </control>
+
     <control type="label" id="3">
       <description>dialog line 2</description>
       <posx>45</posx>
@@ -85,6 +92,7 @@
       <haspath>true</haspath>
       <font>font13</font>
     </control>
+
     <control type="label" id="4">
       <description>dialog line 3</description>
       <posx>45</posx>
@@ -97,6 +105,7 @@
       <haspath>true</haspath>
       <font>font13</font>
     </control>
+
     <control type="progress">
       <description>Progressbar</description>
       <posx>45</posx>
@@ -105,6 +114,7 @@
       <height>24</height>
       <info>System.Progressbar</info>
     </control>
+
     <control type="button" id="10">
       <description>Cancel button</description>
       <posx>308</posx>

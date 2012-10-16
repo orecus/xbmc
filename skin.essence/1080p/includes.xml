@@ -32,6 +32,54 @@
     </control>
   </include>
 
+  <include name="ButtonArrowBig-Down">
+    <texturefocus>sets\Default\icons\ArrowHead-Down-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\ArrowHead-Down.png</texturenofocus>
+  </include>
+
+  <include name="ButtonArrowBig-Up">
+    <texturefocus>sets\Default\icons\ArrowHead-Up-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\ArrowHead-Up.png</texturenofocus>
+  </include>
+
+  <include name="ButtonArrowBig-Left">
+    <texturefocus>sets\Default\icons\ArrowHead-Left-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\ArrowHead-Left.png</texturenofocus>
+  </include>
+
+  <include name="ButtonArrowBig-Right">
+    <texturefocus>sets\Default\icons\ArrowHead-Right-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\ArrowHead-Right.png</texturenofocus>
+  </include>
+
+  <include name="ArrowBig-Down">
+    <texture>sets\Default\icons\ArrowHead-Down.png</texture>
+  </include>  
+
+  <include name="ArrowBig-Up">
+    <texture>sets\Default\icons\ArrowHead-Up.png</texture>
+  </include>  
+
+  <include name="ArrowBig-Left">
+    <texture>sets\Default\icons\ArrowHead-Left.png</texture>
+  </include>
+
+  <include name="ArrowBig-Right">
+    <texture>sets\Default\icons\ArrowHead-Right.png</texture>
+  </include>
+
+  <include name="ButtonInfoDialogsCommonValues">
+    <height>60</height>
+    <width>255</width>
+    <textoffsetx>30</textoffsetx>
+    <align>center</align>
+    <aligny>center</aligny>
+    <font>font12_title</font>
+    <texturefocus border="5">button-focus.png</texturefocus>
+    <texturenofocus border="5">button-nofocus.png</texturenofocus>
+    <pulseonselect>false</pulseonselect>
+  </include>
+
   <include name="WindowTitleCommons">
     <posx>0</posx>
     <posy>0</posy>

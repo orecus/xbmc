@@ -63,7 +63,7 @@
 					<height>75</height>
 					<aspectratio>keep</aspectratio>
 					<visible>false</visible>
-					<texture>DefaultIconInfo.png</texture>
+					<texture>sets\Default\icons\About.png</texture>
 				</control>
 
 				<control type="image" id="404">
@@ -74,7 +74,7 @@
 					<height>75</height>
 					<aspectratio>keep</aspectratio>
 					<visible>false</visible>
-					<texture>DefaultIconWarning.png</texture>
+					<texture>sets\Default\icons\Warning Message.png</texture>
 				</control>
 
 				<control type="image" id="405">
@@ -85,7 +85,7 @@
 					<height>75</height>
 					<aspectratio>keep</aspectratio>
 					<visible>false</visible>
-					<texture>DefaultIconError.png</texture>
+					<texture>sets\Default\icons\Close.png</texture>
 				</control>
 		</control>
 	</controls>

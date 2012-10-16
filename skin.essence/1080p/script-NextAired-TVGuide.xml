@@ -23,6 +23,7 @@
         <animation effect="fade" time="600">Visible</animation>
         <animation effect="fade" time="600">Hidden</animation>
       </control>
+
       <control type="image">
         <posx>0</posx>
         <posy>0</posy>
@@ -35,6 +36,7 @@
         <animation effect="fade" time="600">Visible</animation>
         <animation effect="fade" time="600">Hidden</animation>
       </control>
+
       <control type="image">
         <posx>0</posx>
         <posy>0</posy>
@@ -47,6 +49,7 @@
         <animation effect="fade" time="600">Visible</animation>
         <animation effect="fade" time="600">Hidden</animation>
       </control>
+
       <control type="image">
         <posx>0</posx>
         <posy>0</posy>
@@ -59,6 +62,7 @@
         <animation effect="fade" time="600">Visible</animation>
         <animation effect="fade" time="600">Hidden</animation>
       </control>
+
       <control type="image">
         <posx>0</posx>
         <posy>0</posy>
@@ -71,6 +75,7 @@
         <animation effect="fade" time="600">Visible</animation>
         <animation effect="fade" time="600">Hidden</animation>
       </control>
+
       <control type="image">
         <posx>0</posx>
         <posy>0</posy>
@@ -83,6 +88,7 @@
         <animation effect="fade" time="600">Visible</animation>
         <animation effect="fade" time="600">Hidden</animation>
       </control>
+
       <control type="image">
         <posx>0</posx>
         <posy>0</posy>
@@ -106,6 +112,7 @@
       <animation effect="slide" start="0,15" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
       <animation effect="slide" start="0,0" end="0,15" time="200" condition="Window.Next(Home)">WindowClose</animation>
     </control>
+
     <control type="image">
       <description>Section header image</description>
       <posx>30</posx>
@@ -115,6 +122,7 @@
       <aspectratio>keep</aspectratio>
       <texture>icon_video.png</texture>
     </control>
+
     <control type="grouplist">
       <posx>98</posx>
       <posy>8</posy>
@@ -127,11 +135,13 @@
         <include>WindowTitleCommons</include>
         <label>$LOCALIZE[SCRIPT450]</label>
       </control>
+
       <control type="label">
         <include>WindowTitleCommons</include>
         <label>[COLOR=blue] - [/COLOR]$LOCALIZE[31208]</label>
       </control>
     </control>
+
     <control type="grouplist" id="2000">
       <include>Window_OpenClose_Animation</include>
       <posx>60</posx>
@@ -146,6 +156,7 @@
         <visible>IntegerGreaterThan(Container(200).NumItems,0)</visible>
         <width>450</width>
         <height>990</height>
+
         <control type="image">
           <posx>0</posx>
           <posy>0</posy>
@@ -153,6 +164,7 @@
           <height>900</height>
           <texture border="15">ContentPanel.png</texture>
         </control>
+
         <control type="image">
           <posx>0</posx>
           <posy>888</posy>
@@ -160,6 +172,7 @@
           <height>96</height>
           <texture border="15">ContentPanelMirror.png</texture>
         </control>
+
         <control type="label">
           <posx>30</posx>
           <posy>20</posy>
@@ -171,6 +184,7 @@
           <font>font13_title</font>
           <textcolor>white</textcolor>
         </control>
+
         <control type="panel" id="200">
           <posx>15</posx>
           <posy>60</posy>
@@ -184,6 +198,7 @@
           <include>TVNextAiredListCommonLayout</include>
         </control>
       </control>
+
       <control type="group">
         <description>Tuesday</description>
         <visible>IntegerGreaterThan(Container(201).NumItems,0)</visible>
@@ -196,6 +211,7 @@
           <height>900</height>
           <texture border="15">ContentPanel.png</texture>
         </control>
+
         <control type="image">
           <posx>0</posx>
           <posy>888</posy>
@@ -203,6 +219,7 @@
           <height>96</height>
           <texture border="15">ContentPanelMirror.png</texture>
         </control>
+
         <control type="label">
           <posx>30</posx>
           <posy>20</posy>
@@ -214,6 +231,7 @@
           <font>font13_title</font>
           <textcolor>white</textcolor>
         </control>
+
         <control type="panel" id="201">
           <posx>15</posx>
           <posy>60</posy>
@@ -227,6 +245,7 @@
           <include>TVNextAiredListCommonLayout</include>
         </control>
       </control>
+
       <control type="group">
         <description>Wednesday</description>
         <visible>IntegerGreaterThan(Container(202).NumItems,0)</visible>
@@ -239,6 +258,7 @@
           <height>900</height>
           <texture border="15">ContentPanel.png</texture>
         </control>
+
         <control type="image">
           <posx>0</posx>
           <posy>888</posy>
@@ -246,6 +266,7 @@
           <height>96</height>
           <texture border="15">ContentPanelMirror.png</texture>
         </control>
+
         <control type="label">
           <posx>30</posx>
           <posy>20</posy>
@@ -257,6 +278,7 @@
           <font>font13_title</font>
           <textcolor>white</textcolor>
         </control>
+
         <control type="panel" id="202">
           <posx>15</posx>
           <posy>60</posy>
@@ -270,6 +292,7 @@
           <include>TVNextAiredListCommonLayout</include>
         </control>
       </control>
+
       <control type="group">
         <description>Thursday</description>
         <visible>IntegerGreaterThan(Container(203).NumItems,0)</visible>
@@ -282,6 +305,7 @@
           <height>900</height>
           <texture border="15">ContentPanel.png</texture>
         </control>
+
         <control type="image">
           <posx>0</posx>
           <posy>888</posy>
@@ -289,6 +313,7 @@
           <height>96</height>
           <texture border="15">ContentPanelMirror.png</texture>
         </control>
+
         <control type="label">
           <posx>30</posx>
           <posy>20</posy>
@@ -300,6 +325,7 @@
           <font>font13_title</font>
           <textcolor>white</textcolor>
         </control>
+
         <control type="panel" id="203">
           <posx>15</posx>
           <posy>60</posy>
@@ -313,6 +339,7 @@
           <include>TVNextAiredListCommonLayout</include>
         </control>
       </control>
+
       <control type="group">
         <description>Friday</description>
         <visible>IntegerGreaterThan(Container(204).NumItems,0)</visible>
@@ -325,6 +352,7 @@
           <height>900</height>
           <texture border="15">ContentPanel.png</texture>
         </control>
+
         <control type="image">
           <posx>0</posx>
           <posy>888</posy>
@@ -332,6 +360,7 @@
           <height>96</height>
           <texture border="15">ContentPanelMirror.png</texture>
         </control>
+
         <control type="label">
           <posx>30</posx>
           <posy>20</posy>
@@ -343,6 +372,7 @@
           <font>font13_title</font>
           <textcolor>white</textcolor>
         </control>
+
         <control type="panel" id="204">
           <posx>15</posx>
           <posy>60</posy>
@@ -356,6 +386,7 @@
           <include>TVNextAiredListCommonLayout</include>
         </control>
       </control>
+
       <control type="group">
         <description>Saturday</description>
         <visible>IntegerGreaterThan(Container(205).NumItems,0)</visible>
@@ -368,6 +399,7 @@
           <height>900</height>
           <texture border="15">ContentPanel.png</texture>
         </control>
+
         <control type="image">
           <posx>0</posx>
           <posy>888</posy>
@@ -375,6 +407,7 @@
           <height>96</height>
           <texture border="15">ContentPanelMirror.png</texture>
         </control>
+
         <control type="label">
           <posx>30</posx>
           <posy>20</posy>
@@ -386,6 +419,7 @@
           <font>font13_title</font>
           <textcolor>white</textcolor>
         </control>
+
         <control type="panel" id="205">
           <posx>15</posx>
           <posy>60</posy>
@@ -399,6 +433,7 @@
           <include>TVNextAiredListCommonLayout</include>
         </control>
       </control>
+
       <control type="group">
         <description>Sunday</description>
         <visible>IntegerGreaterThan(Container(206).NumItems,0)</visible>
@@ -411,6 +446,7 @@
           <height>900</height>
           <texture border="15">ContentPanel.png</texture>
         </control>
+
         <control type="image">
           <posx>0</posx>
           <posy>888</posy>
@@ -418,6 +454,7 @@
           <height>96</height>
           <texture border="15">ContentPanelMirror.png</texture>
         </control>
+
         <control type="label">
           <posx>30</posx>
           <posy>20</posy>
@@ -429,6 +466,7 @@
           <font>font13_title</font>
           <textcolor>white</textcolor>
         </control>
+
         <control type="panel" id="206">
           <posx>15</posx>
           <posy>60</posy>
@@ -443,6 +481,7 @@
         </control>
       </control>
     </control>
+
     <control type="group">
       <include>Window_OpenClose_Animation</include>
       <control type="image">
@@ -451,44 +490,49 @@
         <posy>180</posy>
         <width>45</width>
         <height>60</height>
-        <texture>arrow-big-left.png</texture>
+        <include>ArrowBig-Left</include>
         <visible>Container(2000).HasPrevious</visible>
         <include>VisibleFadeEffect</include>
       </control>
+
       <control type="image">
         <description>left Arrow</description>
         <posx>15</posx>
         <posy>255r</posy>
         <width>45</width>
         <height>60</height>
-        <texture>arrow-big-left.png</texture>
+        <include>ArrowBig-Left</include>
         <visible>Container(2000).HasPrevious</visible>
         <include>VisibleFadeEffect</include>
       </control>
+
       <control type="image">
         <description>right Arrow</description>
         <posx>1860</posx>
         <posy>180</posy>
         <width>45</width>
         <height>60</height>
-        <texture>arrow-big-right.png</texture>
+        <include>ArrowBig-Right</include>
         <visible>Container(2000).HasNext</visible>
         <include>VisibleFadeEffect</include>
       </control>
+
       <control type="image">
         <description>right Arrow</description>
         <posx>1860</posx>
         <posy>255r</posy>
         <width>45</width>
         <height>60</height>
-        <texture>arrow-big-right.png</texture>
+        <include>ArrowBig-Right</include>
         <visible>Container(2000).HasNext</visible>
         <include>VisibleFadeEffect</include>
       </control>
     </control>
+
     <include>CommonNowPlaying</include>
     <include>MainWindowMouseButtons</include>
     <include>BehindDialogFadeOut</include>
+
     <control type="group">
       <posx>-375</posx>
       <include>SideBladeLeft</include>
@@ -510,6 +554,7 @@
           <aspectratio>keep</aspectratio>
           <texture>$INFO[system.addonicon(script.tv.show.next.aired)]</texture>
         </control>
+
         <control type="label" id="7">
           <width>375</width>
           <height>52</height>
@@ -519,6 +564,7 @@
           <align>center</align>
           <aligny>center</aligny>
         </control>
+
         <control type="button" id="8">
           <description>Settings</description>
           <textwidth>352</textwidth>

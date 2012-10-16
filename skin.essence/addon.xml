@@ -2,11 +2,7 @@
 <addon
   id="skin.essence"
   version="0.0.1"
-<<<<<<< HEAD:skin.serenity/addon.xml
   name="Essence"
-=======
-  name="essence"
->>>>>>> Name change:skin.essence/addon.xml
   provider-name="orecus">
   <requires>
     <import addon="xbmc.gui" version="3.0.1"/>    
@@ -20,11 +16,7 @@
     <res width="1920" height="1080" aspect="16:9" default="true" folder="1080p" />
   </extension>
   <extension point="xbmc.addon.metadata">
-<<<<<<< HEAD:skin.serenity/addon.xml
-    <summary lang="en">Essence skin by orecus</summary>
-=======
     <summary lang="en">essence skin by orecus</summary>
->>>>>>> Name change:skin.essence/addon.xml
 	<description lang="en">WIN</description>
     <platform>all</platform>
   </extension>

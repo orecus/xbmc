@@ -1,1 +1,1 @@
-repository for skin.serenity and other xbmc related projects, see subfolders for specific projects.
+repository for skin.essence and other xbmc related projects, see subfolders for specific projects.

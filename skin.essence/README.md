@@ -1,13 +1,13 @@
-skin.serenity
+skin.essence
 ============
 
-Serenity  XBMC Skin
+Essence XBMC Skin
 
-- What is Serenity ?
+- What is Essence?
   Serenity  is an XBMC skin that is slated to be released once the next major release 
   of XBMC dubbed "12.0 Frodo" is in the wild.
 
-  The goal for Serenity is foremost to be an pleasing skin to use and look at, logical in the way it's built
+  The goal for Essence is foremost to be an pleasing skin to use and look at, logical in the way it's built
   and easy to use. The speed and "flow" of the skin is the top priority.
   
   Most of the settings that is configurable should not pose any questions to what they do or how it affects

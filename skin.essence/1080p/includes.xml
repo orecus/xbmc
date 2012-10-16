@@ -1004,11 +1004,11 @@
     <control type="image">
   		<description>Background image</description>
   		<posx>0</posx>
-  		<posy>-40</posy>
-  		<width>2220</width>
-  		<height>160</height>
-  		<aspectratio>stretch</aspectratio>
-  		<texture>HomeBack.png</texture>
+  		<posy>0</posy>
+  		<width>1920</width>
+  		<height>120</height>
+  		<aspectratio>keep</aspectratio>
+  		<texture>headerBackground.png</texture>
       <include>Window_OpenClose_Animation_Up</include>
   	</control>
     
@@ -1016,7 +1016,7 @@
   		<include>Window_OpenClose_Animation_Up</include>
   		<description>Logo</description>
   		<posx>0</posx>
-  		<posy>5</posy>
+  		<posy>0</posy>
   		<width>256</width>
   		<height>64</height>
   		<aspectratio>keep</aspectratio>

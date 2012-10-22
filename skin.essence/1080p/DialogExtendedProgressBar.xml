@@ -2,6 +2,8 @@
   <defaultcontrol></defaultcontrol>
   <animation effect="fade" time="250">WindowOpen</animation>
   <animation effect="fade" delay="400" time="250">WindowClose</animation>
+  <animation effect="fade" time="250">Visible</animation>
+  <animation effect="fade" delay="400" time="250">Hidden</animation>
   <controls>
   
 	<control type="group">

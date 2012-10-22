@@ -112,8 +112,8 @@
     <textwidth>292</textwidth>
     <aligny>center</aligny>
     <font>font12_title</font>
-    <texturefocus border="5">button-focus.png</texturefocus>
-    <texturenofocus border="5">button-nofocus.png</texturenofocus>
+    <texturefocus border="0">button-focus.png</texturefocus>
+    <texturenofocus border="0">button-nofocus.png</texturenofocus>
     <pulseonselect>false</pulseonselect>
   </include>
 
@@ -122,12 +122,12 @@
     <width>270</width>
     <textwidth>292</textwidth>
     <align>center</align>
-    <aligny>center</aligny>
+    <aligny>top</aligny>
     <font>font12</font>
     <textcolor>grey2</textcolor>
     <focusedcolor>blue</focusedcolor>
-    <texturefocus border="10">HomeSubFO.png</texturefocus>
-    <texturenofocus border="10">HomeSubNF.png</texturenofocus>
+    <texturefocus border="0">HomeSubFO.png</texturefocus>
+    <texturenofocus border="0">HomeSubNF.png</texturenofocus>
     <pulseonselect>false</pulseonselect>
   </include>
 

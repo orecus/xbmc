@@ -730,45 +730,64 @@
     <animation effect="fade" time="200">Hidden</animation>
 		<visible>Container(9000).HasFocus(3) | Container(9000).HasFocus(11) | Container(9000).HasFocus(10)</visible>
 		<posx>631</posx>
-		<posy>790</posy>
+		<posy>570</posy>
 		<width>658</width>
-		<height>48</height>
+		<height>52</height>
 		
 		<control type="image">
       <width>658</width>
-			<texture border="10">HomeSubExtraInfo.png</texture>
+      <height>52</height>
+			<texture flipy="true">HomeSubNF.png</texture>
 		</control>
+
+    <control type="image">
+      <description>Background End image</description>
+      <posx>658</posx>
+      <posy>0</posy>
+      <width>52</width>
+      <height>52</height>
+      <texture flipy="true">HomeSubEnd.png</texture>
+    </control>
+
+    <control type="image">
+      <description>Background End image</description>
+      <posx>-52</posx>
+      <posy>0</posy>
+      <width>52</width>
+      <height>52</height>
+      <texture flipy="true" flipx="true">HomeSubEnd.png</texture>
+    </control>
 		
 		<control type="label">
 			<visible>Container(9000).HasFocus(11)</visible>
 			<description>Show Information</description>
-			<font>font10</font>
+			<font>font12</font>
 			<textcolor>selected</textcolor>
       <aligny>center</aligny>
 			<posx>15</posx>
-			<posy>23</posy>
+			<posy>30</posy>
       <label>$INFO[Window(Home).Property(TVShows.Watched)][COLOR white] of [/COLOR]$INFO[Window(Home).Property(TVShows.Count)] [COLOR white]$LOCALIZE[20343] $LOCALIZE[16102], [/COLOR]$INFO[Window(Home).Property(Episodes.UnWatched)][COLOR white] episodes left[/COLOR]</label>
 		</control>
 		
 		<control type="label">
 			<visible>Container(9000).HasFocus(10)</visible>
 			<description>Movie Information</description>
-			<font>font10</font>
+			<font>font12</font>
 			<textcolor>selected</textcolor>
       <aligny>center</aligny>
 			<posx>15</posx>
-			<posy>23</posy>
+			<posy>30</posy>
 			<label>[COLOR white]$LOCALIZE[31502]:[/COLOR] $INFO[Window(Home).Property(Movies.Count)][COLOR white] | $LOCALIZE[16102]:[/COLOR] $INFO[Window(Home).Property(Movies.Watched)][COLOR white] | $LOCALIZE[16101]:[/COLOR] $INFO[Window(Home).Property(Movies.UnWatched)]</label>
 		</control>
 
     <control type="label">
       <visible>Container(9000).HasFocus(3)</visible>
       <description>Movie Information</description>
-      <font>font10</font>
+      <font>font12</font>
       <textcolor>selected</textcolor>
       <aligny>center</aligny>
       <posx>15</posx>
-      <posy>23</posy>
+      <posy>30</posy>
       <label>[COLOR white]$LOCALIZE[133]:[/COLOR] $INFO[Window(Home).Property(Music.ArtistsCount)][COLOR white] | $LOCALIZE[132]:[/COLOR] $INFO[Window(Home).Property(Music.AlbumsCount)][COLOR white] | $LOCALIZE[134]:[/COLOR] $INFO[Window(Home).Property(Music.SongsCount)]</label>
     </control>
 
@@ -1125,9 +1144,9 @@
 	  
 	  <control type="image">
         <description>RSS background</description>
-        <posx>296</posx>
+        <posx>0</posx>
         <posy>0</posy>
-        <width>1624</width>
+        <width>1920</width>
         <height>48</height>
         <texture>rssBackground.png</texture>
       </control>

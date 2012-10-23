@@ -617,3 +617,23 @@ msgstr ""
 msgctxt "#31909"
 msgid "Fetching forecast info..."
 msgstr ""
+
+msgctxt "#31910"
+msgid "You have"
+msgstr ""
+
+msgctxt "#31911"
+msgid "movies"
+msgstr ""
+
+msgctxt "#31912"
+msgid "left to watch."
+msgstr ""
+
+msgctxt "#31913"
+msgid "of"
+msgstr ""
+
+msgctxt "#31914"
+msgid "episodes left"
+msgstr ""

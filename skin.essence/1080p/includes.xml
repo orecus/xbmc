@@ -141,8 +141,8 @@
     <ondown>9002</ondown>
     <itemgap>0</itemgap>
     <orientation>Horizontal</orientation>
-    <animation effect="fade" delay="200" time="200">Visible</animation>
-    <animation effect="fade" time="200">Hidden</animation>
+    <animation effect="slide" time="100" start="0,-52" end="0,0">Visible</animation>
+    <animation effect="slide" time="100" start="0,0" end="0,-52">Hidden</animation>
   </include>
 
   <include name="ButtonInfoDialogsCommonValues">
@@ -999,7 +999,15 @@
   </include>
   
   <include name="Clock">
-    <include>Window_OpenClose_Animation_Up</include>
+    <control type="image">
+      <description>Background image</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1920</width>
+      <height>120</height>
+      <aspectratio>keep</aspectratio>
+      <texture>headerProgressBackground.png</texture>
+    </control>
 
     <control type="image">
   		<description>Background image</description>
@@ -1009,11 +1017,9 @@
   		<height>120</height>
   		<aspectratio>keep</aspectratio>
   		<texture>headerBackground.png</texture>
-      <include>Window_OpenClose_Animation_Up</include>
   	</control>
     
   	<control type="image">
-  		<include>Window_OpenClose_Animation_Up</include>
   		<description>Logo</description>
   		<posx>0</posx>
   		<posy>0</posy>
@@ -1024,7 +1030,6 @@
   	</control>
 
     <!--<control type="image">
-      <include>Window_OpenClose_Animation_Up</include>
       <visible></visible>
       <description>Logo</description>
       <posx>0</posx>
@@ -1033,17 +1038,17 @@
       <height>64</height>
       <aspectratio>keep</aspectratio>
       <texture>xbmc-logo.png</texture>
-    </control>
+    </control>-->
 
-    <control type="label">
+    <!-- Breadcrums -->
+    <!--<control type="label">
       <posx>0</posx>
-      <posy>55</posy>
+      <posy>45</posy>
       <width>256</width>
       <height>45</height>
       <align>center</align>
       <include>WindowTitleCommons</include>
       <label>$LOCALIZE[5]</label>
-      <include>Window_OpenClose_Animation_Up</include>
       <visible></visible>
     </control>-->
   	
@@ -1051,7 +1056,6 @@
   		<posx>110r</posx>
   		<posy>0</posy>
   		<visible>!IsEmpty(Weather.Plugin)</visible>
-  		<include>Window_OpenClose_Animation_Up</include>
 
     	<control type="label">
     		<description>Time label</description>
@@ -1431,5 +1435,10 @@
   <include name="VisibleFadeEffect">
     <animation effect="fade" time="300">Visible</animation>
     <animation effect="fade" time="300">Hidden</animation>
+  </include>
+
+  <include name="backgroundAnimation">
+      <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+      <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="linear" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
   </include>
 </includes>

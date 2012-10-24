@@ -14,7 +14,7 @@
 
 				<control type="image">
 					<height>120</height>
-					<texture border="20">OverlayDialogBackground.png</texture>
+					<texture>sets/Default/OverlayDialogBackground.png</texture>
 				</control>
 
 				<control type="fadelabel" id="401">
@@ -52,7 +52,7 @@
 					<width>75</width>
 					<height>75</height>
 					<aspectratio>keep</aspectratio>
-					<texture>DefaultFile.png</texture>
+					<texture>sets/Default/icons/DefaultFile.png</texture>
 				</control>
 
 				<control type="image" id="403">
@@ -63,7 +63,7 @@
 					<height>75</height>
 					<aspectratio>keep</aspectratio>
 					<visible>false</visible>
-					<texture>sets\Default\icons\About.png</texture>
+					<texture>sets/Default/About.png</texture>
 				</control>
 
 				<control type="image" id="404">
@@ -74,7 +74,7 @@
 					<height>75</height>
 					<aspectratio>keep</aspectratio>
 					<visible>false</visible>
-					<texture>sets\Default\icons\Warning Message.png</texture>
+					<texture>sets/Default/icons/WarningMessage.png</texture>
 				</control>
 
 				<control type="image" id="405">
@@ -85,7 +85,7 @@
 					<height>75</height>
 					<aspectratio>keep</aspectratio>
 					<visible>false</visible>
-					<texture>sets\Default\icons\Close.png</texture>
+					<texture>sets/Default/icons/Close.png</texture>
 				</control>
 		</control>
 	</controls>

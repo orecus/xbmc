@@ -1,11 +1,11 @@
 # XBMC Media Center language file
-# Addon Name: Confluence
-# Addon id: skin.confluence
-# Addon version: 2.1.0
-# Addon Provider: Jezz_X, Team XBMC
+# Addon Name: Essence
+# Addon id: skin.essence
+# Addon version: 0.0.1
+# Addon Provider: orecus
 msgid ""
 msgstr ""
-"Project-Id-Version: xbmc.skin.confluence-Frodo\n"
+"Project-Id-Version: xbmc.skin.essence-Frodo\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: 2012-05-04 12:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"

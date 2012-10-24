@@ -244,7 +244,7 @@
     <control type="image" id="90126">
       <width>52</width>
       <height>52</height>
-      <texture border="0">HomeSubEnd.png</texture>
+      <texture border="0">sets/Default/HomeSubEnd.png</texture>
     </control>
   </include>
 
@@ -285,7 +285,7 @@
     <control type="image" id="90149">
       <width>52</width>
       <height>52</height>
-      <texture border="0">HomeSubEnd.png</texture>
+      <texture border="0">sets/Default/HomeSubEnd.png</texture>
     </control>
   </include>
 

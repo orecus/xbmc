@@ -9,6 +9,7 @@
   <include file="ViewsPVR.xml" />
   <include file="IncludesCodecFlagging.xml" />
   <include file="IncludesHomeRecentlyAdded.xml" />
+  <include file="IncludesHomeRecentlyAdded-New.xml" />
   <include file="IncludesHomeMenuItems.xml" />
   <include file="IncludesBackgroundBuilding.xml" />
   <include file="weather+\10DayForecast.xml" />

@@ -33,39 +33,39 @@
   </include>
 
   <include name="ButtonArrowBig-Down">
-    <texturefocus>sets\Default\icons\ArrowHead-Down-focus.png</texturefocus>
-    <texturenofocus>sets\Default\icons\ArrowHead-Down.png</texturenofocus>
+    <texturefocus>sets\Default\icons\ArrowHeadDown-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\ArrowHeadDown.png</texturenofocus>
   </include>
 
   <include name="ButtonArrowBig-Up">
-    <texturefocus>sets\Default\icons\ArrowHead-Up-focus.png</texturefocus>
-    <texturenofocus>sets\Default\icons\ArrowHead-Up.png</texturenofocus>
+    <texturefocus>sets\Default\icons\ArrowHeadUp-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\ArrowHeadUp.png</texturenofocus>
   </include>
 
   <include name="ButtonArrowBig-Left">
-    <texturefocus>sets\Default\icons\ArrowHead-Left-focus.png</texturefocus>
-    <texturenofocus>sets\Default\icons\ArrowHead-Left.png</texturenofocus>
+    <texturefocus>sets\Default\icons\ArrowHeadLeft-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\ArrowHeadLeft.png</texturenofocus>
   </include>
 
   <include name="ButtonArrowBig-Right">
-    <texturefocus>sets\Default\icons\ArrowHead-Right-focus.png</texturefocus>
-    <texturenofocus>sets\Default\icons\ArrowHead-Right.png</texturenofocus>
+    <texturefocus>sets\Default\icons\ArrowHeadRight-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\ArrowHeadRight.png</texturenofocus>
   </include>
 
   <include name="ArrowBig-Down">
-    <texture>sets\Default\icons\ArrowHead-Down.png</texture>
+    <texture>sets\Default\icons\ArrowHeadDown.png</texture>
   </include>  
 
   <include name="ArrowBig-Up">
-    <texture>sets\Default\icons\ArrowHead-Up.png</texture>
+    <texture>sets\Default\icons\ArrowHeadUp.png</texture>
   </include>  
 
   <include name="ArrowBig-Left">
-    <texture>sets\Default\icons\ArrowHead-Left.png</texture>
+    <texture>sets\Default\icons\ArrowHeadLeft.png</texture>
   </include>
 
   <include name="ArrowBig-Right">
-    <texture>sets\Default\icons\ArrowHead-Right.png</texture>
+    <texture>sets\Default\icons\ArrowHeadRight.png</texture>
   </include>
 
   <include name="ButtonInfoDialogsCommonValues">
@@ -74,7 +74,7 @@
     <textoffsetx>30</textoffsetx>
     <align>center</align>
     <aligny>center</aligny>
-    <font>font12_title</font>
+    <font>Font_Reg12</font>
     <texturefocus border="5">button-focus.png</texturefocus>
     <texturenofocus border="5">button-nofocus.png</texturenofocus>
     <pulseonselect>false</pulseonselect>
@@ -85,7 +85,7 @@
     <posy>0</posy>
     <width min="0" max="256">auto</width>
     <height>45</height>
-    <font>font14</font>
+    <font>Font_Reg14</font>
     <textcolor>white</textcolor>
     <shadowcolor>black</shadowcolor>
     <scroll>true</scroll>
@@ -99,7 +99,7 @@
     <textoffsetx>15</textoffsetx>
     <textwidth>300</textwidth>
     <aligny>center</aligny>
-    <font>font13</font>
+    <font>Font_Reg10</font>
     <texturefocus border="5">button-focus.png</texturefocus>
     <texturenofocus>-</texturenofocus>
     <pulseonselect>false</pulseonselect>
@@ -126,8 +126,8 @@
     <font>font12</font>
     <textcolor>grey2</textcolor>
     <focusedcolor>blue</focusedcolor>
-    <texturefocus border="0">HomeSubFO.png</texturefocus>
-    <texturenofocus border="0">HomeSubNF.png</texturenofocus>
+    <texturefocus border="0">sets/Default/HomeSubFO.png</texturefocus>
+    <texturenofocus border="0">sets/Default/HomeSubNF.png</texturenofocus>
     <pulseonselect>false</pulseonselect>
   </include>
 
@@ -1006,7 +1006,7 @@
       <width>1920</width>
       <height>120</height>
       <aspectratio>keep</aspectratio>
-      <texture>headerProgressBackground.png</texture>
+      <texture>sets/Default/headerProgressBackground.png</texture>
     </control>
 
     <control type="image">
@@ -1016,7 +1016,7 @@
   		<width>1920</width>
   		<height>120</height>
   		<aspectratio>keep</aspectratio>
-  		<texture>headerBackground.png</texture>
+  		<texture>sets/Default/headerBackground.png</texture>
   	</control>
     
   	<control type="image">
@@ -1026,7 +1026,7 @@
   		<width>256</width>
   		<height>64</height>
   		<aspectratio>keep</aspectratio>
-  		<texture>logo.png</texture>
+  		<texture>sets/Default/logo.png</texture>
   	</control>
 
     <!--<control type="image">
@@ -1037,7 +1037,7 @@
       <width>256</width>
       <height>64</height>
       <aspectratio>keep</aspectratio>
-      <texture>xbmc-logo.png</texture>
+      <texture>sets/Default/xbmc-logo.png</texture>
     </control>-->
 
     <!-- Breadcrums -->
@@ -1435,6 +1435,8 @@
   <include name="VisibleFadeEffect">
     <animation effect="fade" time="300">Visible</animation>
     <animation effect="fade" time="300">Hidden</animation>
+    <animation effect="fade" time="300">WindowOpen</animation>
+    <animation effect="fade" time="300">WindowClose</animation>
   </include>
 
   <include name="backgroundAnimation">

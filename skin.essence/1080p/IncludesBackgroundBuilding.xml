@@ -34,7 +34,7 @@
       <include>backgroundfade</include>
       <fadetime>FanartCrossfadeTime</fadetime>
       <visible>!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
-      <include>Window_OpenClose_Animation</include>
+      <include>backgroundAnimation</include>
       <visible>![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] + ![Player.HasAudio + ![Skin.HasSetting(ShowBackgroundVis) | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)]]</visible>
     </control>
 
@@ -63,15 +63,6 @@
       <width>1920</width>
       <height>1080</height>
       <visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo) + ![Window.IsVisible(PVR) + [Control.IsVisible(11) | Control.IsVisible(12)]]</visible>
-    </control>
-
-    <control type="image">
-      <posx>0</posx>
-      <posy>-60</posy>
-      <width>1920</width>
-      <height>180</height>
-      <texture flipy="true">HomeNowPlayingBack.png</texture>
-      <visible>[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + ![Skin.HasSetting(ShowBackgroundVis) | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)]] | [!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))]</visible>
     </control>
   </include>
 </includes>

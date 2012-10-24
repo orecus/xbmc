@@ -732,12 +732,23 @@
             <width>435</width>
             <height>90</height>
             <font>font_MainMenu</font>
-            <textcolor>blue</textcolor>
+            <textcolor>orange</textcolor>
             <align>center</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
             <visible>Control.HasFocus(9000)</visible>
             <include>VisibleFadeEffect</include>
+          </control>
+
+          <control type="image">
+            <include>VisibleFadeEffect</include>
+            <visible>Control.HasFocus(9000)</visible>
+            <posx>-50</posx>
+            <posy>-50</posy>
+            <height>200</height>
+            <width>550</width>
+            <aspectratio>keep</aspectratio>
+            <texture>sets/Default/orangeGlow.png</texture>
           </control>
         </focusedlayout>
 

@@ -1434,10 +1434,10 @@
   </include>
 
   <include name="VisibleFadeEffect">
-    <animation effect="fade" time="300">Visible</animation>
-    <animation effect="fade" time="300">Hidden</animation>
-    <animation effect="fade" time="300">WindowOpen</animation>
-    <animation effect="fade" time="300">WindowClose</animation>
+    <animation effect="fade" time="175">Visible</animation>
+    <animation effect="fade" time="175">Hidden</animation>
+    <animation effect="fade" time="175">WindowOpen</animation>
+    <animation effect="fade" time="175">WindowClose</animation>
   </include>
 
   <include name="backgroundAnimation">

@@ -67,9 +67,9 @@
   <default type="progress">
     <posx>150</posx>
     <posy>488</posy>
-    <texturebg border="8">ProgressBack.png</texturebg>
+    <texturebg border="8">sets/Default/ProgressBack.png</texturebg>
     <lefttexture>-</lefttexture>
-    <midtexture border="8">ProgressMid.png</midtexture>
+    <midtexture border="8">sets/Default/ProgressMid.png</midtexture>
     <righttexture>-</righttexture>
     <overlaytexture>-</overlaytexture>
   </default>

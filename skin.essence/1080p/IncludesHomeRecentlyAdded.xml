@@ -511,6 +511,7 @@
         </control>
       </control>
 
+      <!-- Music -->
       <control type="group">
         <posx>360</posx>
         <posy>75</posy>

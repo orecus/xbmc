@@ -8,6 +8,7 @@
   </coordinates>
   <controls>
     <include>CommonBackground</include>
+    <include>Clock</include>
     <control type="group">
       <include>Window_OpenClose_Animation</include>
       <control type="image">
@@ -19,6 +20,7 @@
         <animation effect="slide" start="0,15" end="0,0" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
         <animation effect="slide" start="0,0" end="0,15" time="200" condition="Window.Next(Home)">WindowClose</animation>
       </control>
+
       <control type="image">
         <description>LOGO</description>
         <posx>0</posx>
@@ -29,6 +31,7 @@
         <texture>xbmc-logo.png</texture>
         <include>Window_OpenClose_Animation</include>
       </control>
+
       <control type="image">
         <posx>398</posx>
         <posy>90</posy>
@@ -36,6 +39,7 @@
         <height>900</height>
         <texture border="10">ContentPanel.png</texture>
       </control>
+
       <control type="image">
         <posx>398</posx>
         <posy>978</posy>
@@ -43,6 +47,7 @@
         <height>96</height>
         <texture border="10">ContentPanelMirror.png</texture>
       </control>
+
       <control type="label">
         <posx>442</posx>
         <posy>150</posy>
@@ -54,6 +59,7 @@
         <aligny>center</aligny>
         <label>$LOCALIZE[31421]</label>
       </control>
+
       <control type="list" id="52">
         <posx>442</posx>
         <posy>255</posy>
@@ -74,6 +80,7 @@
             <height>142</height>
             <texture border="5">button-nofocus.png</texture>
           </control>
+
           <control type="image">
             <posx>15</posx>
             <posy>15</posy>
@@ -81,6 +88,7 @@
             <height>112</height>
             <texture>$INFO[ListItem.Icon]</texture>
           </control>
+
           <control type="label">
             <posx>165</posx>
             <posy>15</posy>
@@ -93,6 +101,7 @@
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
           </control>
+
           <control type="label">
             <posx>165</posx>
             <posy>75</posy>
@@ -106,6 +115,7 @@
             <label>$INFO[ListItem.Label2]</label>
           </control>
         </itemlayout>
+
         <focusedlayout height="150" width="870">
           <control type="image">
             <posx>0</posx>
@@ -116,6 +126,7 @@
             <visible>!Control.HasFocus(52)</visible>
             <include>VisibleFadeEffect</include>
           </control>
+
           <control type="image">
             <posx>0</posx>
             <posy>0</posy>
@@ -125,6 +136,7 @@
             <visible>Control.HasFocus(52)</visible>
             <include>VisibleFadeEffect</include>
           </control>
+
           <control type="image">
             <posx>15</posx>
             <posy>15</posy>
@@ -132,6 +144,7 @@
             <height>112</height>
             <texture>$INFO[ListItem.Icon]</texture>
           </control>
+
           <control type="label">
             <posx>165</posx>
             <posy>15</posy>
@@ -144,6 +157,7 @@
             <aligny>center</aligny>
             <label>$INFO[ListItem.Label]</label>
           </control>
+
           <control type="label">
             <posx>165</posx>
             <posy>75</posy>
@@ -158,6 +172,7 @@
           </control>
         </focusedlayout>
       </control>
+
       <control type="image">
         <description>LOGO</description>
         <posx>398</posx>
@@ -167,6 +182,7 @@
         <aspectratio>keep</aspectratio>
         <texture>logo.png</texture>
       </control>
+
       <control type="group">
         <posx>1410</posx>
         <posy>900</posy>
@@ -181,6 +197,7 @@
           <aligny>center</aligny>
           <label>$LOCALIZE[31003]</label>
         </control>
+
         <control type="button" id="20">
           <description>Power push button</description>
           <posx>15</posx>
@@ -199,6 +216,7 @@
           <ondown>52</ondown>
           <colordiffuse>CCFFFFFF</colordiffuse>
         </control>
+
         <control type="image">
           <description>Power Icon</description>
           <posx>22</posx>
@@ -208,6 +226,7 @@
           <aspectratio>keep</aspectratio>
           <texture>icon_power.png</texture>
         </control>
+
         <control type="image">
           <posx>20</posx>
           <posy>4</posy>
@@ -218,7 +237,7 @@
         </control>
       </control>
     </control>
-    <include>Clock</include>
+
     <control type="label">
       <description>Date label</description>
       <posx>30r</posx>

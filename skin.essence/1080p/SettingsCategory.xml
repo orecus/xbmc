@@ -224,6 +224,6 @@
         <label>[COLOR=blue] - [/COLOR]$INFO[Control.GetLabel(2)]</label>
       </control>
     </control>
-    <include>Clock</include>
+    <include>Clock_Settings</include>
   </controls>
 </window>

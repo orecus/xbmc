@@ -352,6 +352,6 @@
         <label>$LOCALIZE[130]</label>
       </control>
     </control>
-    <include>Clock</include>
+    <include>Clock_Settings</include>
   </controls>
 </window>

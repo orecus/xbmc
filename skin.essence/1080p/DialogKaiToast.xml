@@ -1,29 +1,44 @@
 ﻿<window id="107">
-	<animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
-	<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 	<coordinates>
-	<posx>0</posx>
-	<posy>0</posy>
+		<posx>0</posx>
+		<posy>43</posy>
 	</coordinates>
 		<controls>
 			<control type="group">
-				<posx>10</posx>
-				<posy>90</posy>
-				<width>680</width>
-				<height>100</height>
+				<width>600</width>
+				<include>Window_OpenClose_Animation_Left</include>
 
 				<control type="image">
-					<height>120</height>
-					<texture>sets/Default/OverlayDialogBackground.png</texture>
+					<description>Background End image</description>
+					<posx>520</posx>
+					<posy>23</posy>
+					<width>64</width>
+					<height>64</height>
+					<texture flipx="false">sets/Default/HomeSubEnd.png</texture>
 				</control>
+
+				<control type="image">
+					<description>Background image</description>
+					<posx>0</posx>
+					<posy>23</posy>
+					<width>520</width>
+					<height>64</height>
+					<texture>sets/Default/HomeSub.png</texture>
+				</control>
+
+				<!--<control type="image">
+					<height>120</height>
+					<width>600</width>
+					<texture>sets/Default/OverlayDialogBackground.png</texture>
+				</control>-->
 
 				<control type="fadelabel" id="401">
 					<description>Line 1 Label</description>
-					<posx>140</posx>
-					<posy>25</posy>
-					<width>510</width>
+					<posx>55</posx>
+					<posy>20</posy>
+					<width>490</width>
 					<height>27</height>
-					<font>Font_Reg14</font>
+					<font>Font_Reg12</font>
 					<textcolor>orange</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -33,11 +48,11 @@
 				
 				<control type="fadelabel" id="402">
 					<description>Line 2 Label</description>
-					<posx>140</posx>
-					<posy>50</posy>
-					<width>510</width>
+					<posx>55</posx>
+					<posy>40</posy>
+					<width>490</width>
 					<height>30</height>
-					<font>Font_Reg12</font>
+					<font>Font_Reg10</font>
 					<textcolor>white</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -47,45 +62,12 @@
 				
 				<control type="image" id="400">
 					<description>avatar</description>
-					<posx>35</posx>
-					<posy>23</posy>
+					<posx>-10</posx>
+					<posy>10</posy>
 					<width>75</width>
 					<height>75</height>
 					<aspectratio>keep</aspectratio>
-					<texture>sets/Default/icons/DefaultFile.png</texture>
-				</control>
-
-				<control type="image" id="403">
-					<description>avatar</description>
-					<posx>35</posx>
-					<posy>23</posy>
-					<width>75</width>
-					<height>75</height>
-					<aspectratio>keep</aspectratio>
-					<visible>false</visible>
-					<texture>sets/Default/About.png</texture>
-				</control>
-
-				<control type="image" id="404">
-					<description>avatar</description>
-					<posx>35</posx>
-					<posy>23</posy>
-					<width>75</width>
-					<height>75</height>
-					<aspectratio>keep</aspectratio>
-					<visible>false</visible>
-					<texture>sets/Default/icons/WarningMessage.png</texture>
-				</control>
-
-				<control type="image" id="405">
-					<description>avatar</description>
-					<posx>35</posx>
-					<posy>23</posy>
-					<width>75</width>
-					<height>75</height>
-					<aspectratio>keep</aspectratio>
-					<visible>false</visible>
-					<texture>sets/Default/icons/Close.png</texture>
+					<texture>sets/Default/icons/Cry.png</texture>
 				</control>
 		</control>
 	</controls>

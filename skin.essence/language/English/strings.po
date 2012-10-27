@@ -637,3 +637,43 @@ msgstr ""
 msgctxt "#31914"
 msgid "episodes left"
 msgstr ""
+
+msgctxt "#31915"
+msgid "\"Live\" preview"
+msgstr ""
+
+msgctxt "#31916"
+msgid "Animate Backgrounds"
+msgstr ""
+
+msgctxt "#31917"
+msgid "Show Library Information"
+msgstr ""
+
+msgctxt "#31918"
+msgid "Show Recently Added Media"
+msgstr ""
+
+msgctxt "#31919"
+msgid "Show Skin logo"
+msgstr ""
+
+msgctxt "#31920"
+msgid "- Use XBMC logo instead"
+msgstr ""
+
+msgctxt "#31921"
+msgid "- Use Posters for TV Shows [COLOR=grey3](Episode Thumbs will be used otherwise)[/COLOR]"
+msgstr ""
+
+msgctxt "#31922"
+msgid "Library Views"
+msgstr ""
+
+msgctxt "#31923
+msgid "Setting Description"
+msgstr ""
+
+msgctxt "#31924"
+msgid "- Use Classiv view"
+msgstr ""

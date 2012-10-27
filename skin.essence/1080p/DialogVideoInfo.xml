@@ -1138,6 +1138,6 @@
         </control>
       </control>
     </control>
-    <include>Clock</include>
+    <include>Header</include>
   </controls>
 </window>

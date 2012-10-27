@@ -6,10 +6,10 @@
   <controls>
 
     <include>CommonBackground</include>
-    <include>Clock</include>
+    <include>Header</include>
+    <include condition="!Skin.HasSetting(useClassicLatestMedia)">HomeWidgets</include>
+    <include condition="Skin.HasSetting(useClassicLatestMedia)">HomeWidgetsClassic</include>
     <include>IncludesHomeNowPlaying</include>
-    <!-- <include condition="!Skin.HasSetting(HomepageHideRecentlyAddedVideo) | !Skin.HasSetting(HomepageHideRecentlyAddedAlbums)">HomeRecentlyAddedInfo</include> -->
-    <include condition="!Skin.HasSetting(HomepageHideRecentlyAddedVideo) | !Skin.HasSetting(HomepageHideRecentlyAddedAlbums)">HomeRecentlyAddedInfo-NEW</include>
 	
     <!-- DUMMY -->
     <control type="button" id="9003">
@@ -32,14 +32,7 @@
     <!-- MainMenu -->
     <control type="group">
       <posy>850</posy>
-      <animation type="WindowOpen" reversible="false">
-        <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-        <effect type="fade" start="0" end="100" time="300" />
-      </animation>
-      <animation type="WindowClose" reversible="false">
-        <effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-        <effect type="fade" start="100" end="0" time="300" />
-      </animation>
+      <include>Window_OpenClose_Animation_Down</include>
 
       <control type="group" id="9001">
         <posx>0</posx>
@@ -126,7 +119,7 @@
         <animation effect="slide" time="100" start="0,52" end="0,0">Visible</animation>
         <animation effect="slide" time="100" start="0,0" end="0,52">Hidden</animation>
 
-        <visible>Container(9000).HasFocus(3) | Container(9000).HasFocus(11) | Container(9000).HasFocus(10)</visible>
+        <visible>[Container(9000).HasFocus(3) | Container(9000).HasFocus(11) | Container(9000).HasFocus(10)] + Skin.HasSetting(showExtraHomeInfo)</visible>
         <posx>631</posx>
         <posy>-30</posy>
         <height>52</height>
@@ -134,7 +127,7 @@
         <control type="image">
           <width>658</width>
           <height>52</height>
-          <texture flipy="true">sets/Default/HomeSubNF.png</texture>
+          <texture flipy="true">sets/Default/HomeSub.png</texture>
         </control>
 
         <control type="image">
@@ -158,7 +151,7 @@
         <control type="label">
           <visible>Container(9000).HasFocus(11)</visible>
           <description>Show Information</description>
-          <font>Font_Reg14</font>
+          <font>Font_Bold14_Caps</font>
           <textcolor>selected</textcolor>
           <aligny>center</aligny>
           <align>center</align>
@@ -172,7 +165,7 @@
         <control type="label">
           <visible>Container(9000).HasFocus(10)</visible>
           <description>Movie Information</description>
-          <font>Font_Reg14</font>
+          <font>Font_Bold14_Caps</font>
           <textcolor>selected</textcolor>
           <align>center</align>
           <aligny>center</aligny>
@@ -186,7 +179,7 @@
         <control type="label">
           <visible>Container(9000).HasFocus(3)</visible>
           <description>Music Information</description>
-          <font>Font_Reg14</font>
+          <font>Font_Bold14_Caps</font>
           <textcolor>selected</textcolor>
           <align>center</align>
           <aligny>center</aligny>
@@ -209,7 +202,7 @@
 
       <control type="fixedlist" id="9000">
         <posx>-165</posx>
-        <posy>30</posy>
+        <posy>35</posy>
         <width>2250</width>
         <height>90</height>
         <onleft>9000</onleft>
@@ -223,10 +216,10 @@
         <movement>1</movement>
         <orientation>Horizontal</orientation>
 
-        <itemlayout height="90" width="450">
+        <itemlayout height="140" width="450">
           <control type="label">
             <posx>225</posx>
-            <posy>0</posy>
+            <posy>-10</posy>
             <width>435</width>
             <height>90</height>
             <font>Font_MainMenu</font>
@@ -238,10 +231,10 @@
           </control>
         </itemlayout>
 
-        <focusedlayout height="90" width="450">
+        <focusedlayout height="140" width="450">
           <control type="label">
             <posx>225</posx>
-            <posy>0</posy>
+            <posy>-10</posy>
             <width>435</width>
             <height>90</height>
             <font>font_MainMenu</font>
@@ -254,7 +247,7 @@
 
           <control type="label">
             <posx>225</posx>
-            <posy>0</posy>
+            <posy>-10</posy>
             <width>435</width>
             <height>90</height>
             <font>font_MainMenu</font>
@@ -271,11 +264,22 @@
             <include>VisibleFadeEffect</include>
             <visible>Control.HasFocus(9000)</visible>
             <posx>-50</posx>
-            <posy>-50</posy>
+            <posy>-60</posy>
             <height>200</height>
             <width>550</width>
             <aspectratio>keep</aspectratio>
             <texture>sets/Default/whiteGlow.png</texture>
+          </control>
+
+          <control type="image">
+            <include>VisibleFadeEffect</include>
+            <visible>Control.HasFocus(9000)</visible>
+            <posx>-50</posx>
+            <posy>80</posy>
+            <height>16</height>
+            <width>550</width>
+            <aspectratio>keep</aspectratio>
+            <texture>sets/Default/seperatorHorizontal.png</texture>
           </control>
         </focusedlayout>
 
@@ -442,7 +446,7 @@
     <control type="group">
       <description>Controls for currently playing media</description>
       <posx>618r</posx>
-      <posy>90</posy>
+      <posy>809</posy>
       <animation effect="slide" start="0,0" end="330,0" time="300" condition="!Player.HasMedia">conditional</animation>
       <animation type="WindowOpen" reversible="false">
         <effect type="slide" start="500,0" end="0,0" time="300" />
@@ -458,7 +462,7 @@
         <posy>0</posy>
         <width>64</width>
         <height>64</height>
-        <texture flipx="true">sets/Default/HomeSubEnd.png</texture>
+        <texture flipx="true" flipy="true">sets/Default/HomeSubEnd.png</texture>
         <animation effect="slide" start="0,0" end="145,0" time="0" condition="!System.HasAddon(script.globalsearch)">Conditional</animation>
       </control>
 
@@ -468,13 +472,13 @@
         <posy>0</posy>
         <width>44</width>
         <height>64</height>
-        <texture>sets/Default/HomeSubNF.png</texture>
+        <texture flipy="true">sets/Default/HomeSub.png</texture>
       </control>
 
       <control type="button" id="608">
         <description>Global Search</description>
-        <posx>235</posx>
-        <posy>0</posy>
+        <posx>225</posx>
+        <posy>15</posy>
         <height>45</height>
         <width>45</width>
         <label>-</label>
@@ -503,14 +507,14 @@
           <posy>0</posy>
           <width>358</width>
           <height>64</height>
-          <texture>sets/Default/HomeSubNF.png</texture>
+          <texture flipy="true">sets/Default/HomeSub.png</texture>
         </control>
     
         <control type="group">
           <visible>!VideoPlayer.Content(LiveTV)</visible>
           <control type="button" id="601">
             <posx>15</posx>
-            <posy>0</posy>
+            <posy>15</posy>
             <width>45</width>
             <height>45</height>
             <label>-</label>
@@ -525,7 +529,7 @@
       
           <control type="button" id="602">
             <posx>60</posx>
-            <posy>0</posy>
+            <posy>15</posy>
             <width>45</width>
             <height>45</height>
             <label>-</label>
@@ -540,7 +544,7 @@
       
           <control type="togglebutton" id="603">
             <posx>105</posx>
-            <posy>0</posy>
+            <posy>15</posy>
             <width>45</width>
             <height>45</height>
             <label>-</label>
@@ -558,7 +562,7 @@
       
           <control type="button" id="604">
             <posx>150</posx>
-            <posy>0</posy>
+            <posy>15</posy>
             <width>45</width>
             <height>45</height>
             <label>-</label>
@@ -574,7 +578,7 @@
       
           <control type="button" id="605">
             <posx>195</posx>
-            <posy>0</posy>
+            <posy>15</posy>
             <width>45</width>
             <height>45</height>
             <label>-</label>
@@ -589,7 +593,7 @@
       
           <control type="button" id="606">
             <posx>240</posx>
-            <posy>0</posy>
+            <posy>15</posy>
             <width>45</width>
             <height>45</height>
             <label>-</label>
@@ -604,7 +608,7 @@
 
           <control type="button" id="607">
             <posx>285</posx>
-            <posy>0</posy>
+            <posy>15</posy>
             <width>45</width>
             <height>45</height>
             <label>-</label>
@@ -700,7 +704,46 @@
       </control>
     </control>
 	 
-    <!-- Extra Controls -->
+    <!-- RSS -->
+    <control type="group">
+      <posx>0</posx>
+      <posy>48r</posy>
+      <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+      <include>Window_OpenClose_Animation_Down</include>
+	  
+      <control type="image">
+        <description>RSS background</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>1920</width>
+        <height>48</height>
+        <texture>sets\Default\fullGradiant.png</texture>
+      </control>
+
+      <control type="image">
+        <description>RSS Logo</description>
+        <posx>0</posx>
+        <posy>-10</posy>
+        <width>64</width>
+        <height>64</height>
+        <texture>sets\Default\icons\RSSFeeds-focus.png</texture>
+      </control>
+
+      <control type="rss">
+        <description>RSS feed</description>
+        <posx>64</posx>
+        <posy>10</posy>
+        <height>45</height>
+        <width>1736</width>
+        <font>Font_Reg12</font>
+        <urlset>1</urlset>
+        <textcolor>orange</textcolor>
+        <titlecolor>blue</titlecolor>
+        <headlinecolor>grey</headlinecolor>
+      </control>  
+    </control>
+
+    <!-- Shutdown Controls -->
     <control type="group" id="10">
       <posx>100r</posx>
       <posy>55r</posy>
@@ -742,35 +785,5 @@
         <ondown>9003</ondown>
       </control>
     </control>
-
-    <!-- RSS -->
-    <control type="group">
-      <posx>0</posx>
-      <posy>48r</posy>
-      <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-      <include>Window_OpenClose_Animation_Down</include>
-	  
-	  <control type="image">
-        <description>RSS background</description>
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>1920</width>
-        <height>48</height>
-        <texture>sets\Default\rssBackground.png</texture>
-      </control>
-
-      <control type="rss">
-        <description>RSS feed</description>
-        <posx>0</posx>
-        <posy>10</posy>
-        <height>45</height>
-        <width>1800</width>
-        <font>Font_Reg12</font>
-        <urlset>1</urlset>
-        <textcolor>orange</textcolor>
-        <titlecolor>blue</titlecolor>
-        <headlinecolor>grey</headlinecolor>
-      </control>  
-    </control> <!-- RSS -->
   </controls>
 </window>

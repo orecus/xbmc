@@ -7,7 +7,6 @@
       <posy>350</posy>
       <visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
       <include>VisibleFadeEffect</include>
-      <include>Window_OpenClose_Animation</include>
 
       <control type="image">
         <description>Cover image</description>
@@ -70,18 +69,10 @@
       <posy>500</posy>
       <visible>Container(9000).HasFocus(12) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
       <include>VisibleFadeEffect</include>
-      <include>Window_OpenClose_Animation</include>
       <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
       <control type="group">
         <animation effect="slide" start="0,0" end="0,150" time="0" condition="PVR.IsRecording">conditional</animation>
         <visible>PVR.HasNonRecordingTimer</visible>
-        <control type="image">
-          <posx>0</posx>
-          <posy>-8</posy>
-          <width>735</width>
-          <height>135</height>
-          <texture>gradient.png</texture>
-        </control>
     
         <control type="image">
           <posx>600</posx>
@@ -148,14 +139,8 @@
 
       <!-- PVR Is Recording -->
       <control type="group">
+        <include>VisibleFadeEffect</include>
         <visible>PVR.IsRecording</visible>
-        <control type="image">
-          <posx>0</posx>
-          <posy>-8</posy>
-          <width>735</width>
-          <height>135</height>
-          <texture>gradient.png</texture>
-        </control>
     
         <control type="image">
           <posx>600</posx>
@@ -231,16 +216,6 @@
         <visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
 
         <control type="image">
-          <description>Background image</description>
-          <posx>0</posx>
-          <posy>0</posy>
-          <width>710</width>
-          <height>580</height>
-          <aspectratio aligny="bottom">keep</aspectratio>
-          <texture>sets/Default/nowPlayingBackground.png</texture>
-        </control>
-
-        <control type="image">
           <description>Cover image</description>
           <posx>10</posx>
           <posy>120</posy>
@@ -284,15 +259,7 @@
     <!-- TV NowPlaying Info -->
       <control type="group">
         <visible>VideoPlayer.Content(LiveTV)</visible>
-        <control type="image">
-          <description>Background image</description>
-          <posx>0</posx>
-          <posy>0</posy>
-          <width>710</width>
-          <height>580</height>
-          <aspectratio aligny="bottom">keep</aspectratio>
-          <texture>sets/Default/nowPlayingBackground.png</texture>
-        </control>
+        <include>VisibleFadeEffect</include>
 
         <control type="image">
           <description>Cover image</description>
@@ -352,16 +319,8 @@
       <!-- Movies NowPlaying Info -->
       <control type="group">
         <visible>VideoPlayer.Content(Movies)</visible>
+        <include>VisibleFadeEffect</include>
         <posy>35</posy>
-        <control type="image">
-          <description>Background image</description>
-          <posx>0</posx>
-          <posy>0</posy>
-          <width>710</width>
-          <height>580</height>
-          <aspectratio aligny="bottom">keep</aspectratio>
-          <texture>sets/Default/nowPlayingBackground.png</texture>
-        </control>
 
         <control type="image">
           <description>Cover image</description>
@@ -421,16 +380,8 @@
     <!-- TV Shows NowPlaying Info -->
       <control type="group">
         <visible>VideoPlayer.Content(Episodes)</visible>
+        <include>VisibleFadeEffect</include>
         <posy>35</posy>
-        <control type="image">
-          <description>Background image</description>
-          <posx>0</posx>
-          <posy>0</posy>
-          <width>710</width>
-          <height>580</height>
-          <aspectratio aligny="bottom">keep</aspectratio>
-          <texture>sets/Default/nowPlayingBackground.png</texture>
-        </control>
 
         <control type="image">
           <description>Cover image</description>
@@ -487,6 +438,5 @@
         </control>
       </control>
     </control>
-
   </include>
 </includes>

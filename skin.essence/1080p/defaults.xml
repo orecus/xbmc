@@ -10,17 +10,19 @@
     <posx>120</posx>
     <posy>90</posy>
     <label>-</label>
-    <font>font13</font>
+    <font>Font_Reg12</font>
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
+    <shadowcolor>black</shadowcolor>
   </default>
 
   <default type="fadelabel">
     <posx>120</posx>
     <posy>90</posy>
-    <font>font13</font>
+    <font>Font_Reg12</font>
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
+    <shadowcolor>black</shadowcolor>
   </default>
 
   <default type="button">
@@ -30,7 +32,8 @@
     <height>63</height>
     <texturefocus border="5">sets/Default/button-focus.png</texturefocus>
     <texturenofocus border="5">sets/Default/button-nofocus.png</texturenofocus>
-    <font>font13</font>
+    <font>Font_Reg12</font>
+    <shadowcolor>black</shadowcolor>
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
     <textoffsetx>10</textoffsetx>
@@ -48,8 +51,9 @@
     <alttexturefocus>sets/Default/scroll-down-focus.png</alttexturefocus>
     <alttexturenofocus>sets/Default/scroll-down.png</alttexturenofocus>
     <textcolor>white</textcolor>
+    <shadowcolor>black</shadowcolor>
     <label>-</label>
-    <font>font13</font>
+    <font>Font_Reg12</font>
     <disabledcolor>grey3</disabledcolor>
     <pulseonselect>no</pulseonselect>
   </default>
@@ -61,7 +65,8 @@
     <height>322</height>
     <align>left</align>
     <textcolor>white</textcolor>
-    <font>font13</font>
+    <font>Font_Reg12</font>
+    <shadowcolor>black</shadowcolor>
   </default>
 
   <default type="progress">
@@ -81,10 +86,11 @@
     <texturedown>sets/Default/scroll-down-2.png</texturedown>
     <textureupfocus>sets/Default/scroll-up-focus-2.png</textureupfocus>
     <texturedownfocus>sets/Default/scroll-down-focus-2.png</texturedownfocus>
+    <shadowcolor>black</shadowcolor>
     <align>right</align>
     <width>50</width>
     <height>33</height>
-    <font>font13</font>
+    <font>Font_Reg12</font>
     <reverse>yes</reverse>
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
@@ -108,9 +114,10 @@
     <texturedown>sets/Default/scroll-down-2.png</texturedown>
     <textureupfocus>sets/Default/scroll-up-focus-2.png</textureupfocus>
     <texturedownfocus>sets/Default/scroll-down-focus-2.png</texturedownfocus>
-    <font>font13</font>
+    <font>Font_Reg12</font>
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
+    <shadowcolor>black</shadowcolor>
     <textoffsetx>10</textoffsetx>
     <aligny>center</aligny>
     <reverse>yes</reverse>
@@ -122,16 +129,17 @@
     <posy>300</posy>
     <width>450</width>
     <height>63</height>
-    <radiowidth>36</radiowidth>
-    <radioheight>36</radioheight>
+    <radiowidth>48</radiowidth>
+    <radioheight>48</radioheight>
     <textureradiofocus>sets/Default/radiobutton-focus.png</textureradiofocus>
     <textureradionofocus>sets/Default/radiobutton-nofocus.png</textureradionofocus>
     <texturefocus border="5">sets/Default/button-focus.png</texturefocus>
     <texturenofocus border="5">sets/Default/button-nofocus.png</texturenofocus>
     <label>215</label>
-    <font>font13</font>
+    <font>Font_Reg12</font>
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
+    <shadowcolor>black</shadowcolor>
     <textoffsetx>10</textoffsetx>
     <aligny>center</aligny>
     <pulseonselect>no</pulseonselect>
@@ -151,9 +159,10 @@
     <textureleftfocus>sets/Default/scroll-left-focus.png</textureleftfocus>
     <textureright>sets/Default/scroll-right.png</textureright>
     <texturerightfocus>sets/Default/scroll-right-focus.png</texturerightfocus>
-    <font>font13</font>
+    <font>Font_Reg12</font>
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
+    <shadowcolor>black</shadowcolor>
     <aligny>center</aligny>
   </default>
 
@@ -171,11 +180,12 @@
     <sliderwidth>150</sliderwidth>
     <sliderheight>20</sliderheight>
     <texturesliderbar>sets/Default/osd_slider_bg.png</texturesliderbar>
-    <textureslidernib>osets/Default/sd_slider_nibNF.png</textureslidernib>
+    <textureslidernib>sets/Default/sd_slider_nibNF.png</textureslidernib>
     <textureslidernibfocus>sets/Default/osd_slider_nib.png</textureslidernibfocus>
     <font>font12</font>
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
+    <shadowcolor>black</shadowcolor>
   </default>
 
   <default type="mover">
@@ -199,9 +209,10 @@
     <height>63</height>
     <texturefocus border="5">sets/Default/button-focus.png</texturefocus>
     <texturenofocus border="5">sets/Default/button-nofocus.png</texturenofocus>
-    <font>font13</font>
+    <font>Font_Reg12</font>
     <textcolor>white</textcolor>
     <disabledcolor>grey3</disabledcolor>
+    <shadowcolor>black</shadowcolor>
     <textoffsetx>10</textoffsetx>
     <aligny>center</aligny>
     <pulseonselect>no</pulseonselect>

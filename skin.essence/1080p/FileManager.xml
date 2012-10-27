@@ -465,6 +465,6 @@
         <texture>icon_home.png</texture>
       </control>
     </control>
-    <include>Clock</include>
+    <include>Header</include>
   </controls>
 </window>

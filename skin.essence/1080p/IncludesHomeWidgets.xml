@@ -1,0 +1,719 @@
+﻿<includes>
+  <include name="HomeWidgets">
+    <control type="group" id="9003">
+      <onup>20</onup>
+      <ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
+      <ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
+      <visible>!Window.IsVisible(Favourites) + Skin.HasSetting(showLatestMediaAdded) + !Skin.HasSetting(useClassicLatestMedia)</visible>
+      
+      <!-- Movies -->
+      <control type="group">
+      <posx>0</posx>
+      <posy>50</posy>
+      <visible>Library.HasContent(Movies)</visible>
+      <visible>Container(9000).Hasfocus(10)</visible>
+      <include>VisibleFadeEffect</include>
+
+        <!-- Left Movie -->
+        <control type="group">
+          <posy>15</posy>
+          <animation effect="slide" start="0,0" end="320,0" time="350" delay="175">WindowClose</animation>
+          <animation effect="slide" start="320,0" end="0,0" time="350" delay="175">WindowOpen</animation>
+          
+          <control type="image">
+            <posx>385</posx>
+            <posy>75</posy>
+            <height>620</height>
+            <width>422</width>
+            <texture>$INFO[Window.Property(RecentMovie.1.Thumb)]</texture>
+          </control>
+
+          <control type="image">
+            <visible>Control.HasFocus(8601)</visible>
+            <posx>370</posx>
+            <posy>60</posy>
+            <height>650</height>
+            <width>452</width>
+            <texture border="16">sets/Default/RecentAddedBack-focus.png</texture>
+          </control>
+
+          <control type="image">
+            <visible>!Control.HasFocus(8601)</visible>
+            <posx>370</posx>
+            <posy>60</posy>
+            <height>650</height>
+            <width>452</width>
+            <texture border="16">sets/Default/RecentAddedBack.png</texture>
+          </control>
+
+          <control type="button" id="8601">
+            <posx>540</posx>
+            <posy>250</posy>
+            <width>128</width>
+            <height>128</height>
+            <label>-</label>
+            <texturefocus>sets/Default/icons/MediaPlay-focus.png</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onleft>8603</onleft>
+            <onright>8602</onright>
+            <onup>9003</onup>
+            <ondown>9000</ondown>
+            <onclick>$INFO[Window(Home).Property(RecentMovie.1.File)]</onclick>
+          </control>
+
+          <control type="fadelabel">
+            <posx>440</posx>
+            <posy>660</posy>
+            <height>32</height>
+            <width>285</width>
+            <align>center</align>
+            <font>Font_Reg12</font>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentMovie.1.Year)] | $INFO[Window(Home).Property(RecentMovie.1.Rating)]</label>
+          </control>
+
+          <control type="fadelabel">
+            <posx>410</posx>
+            <posy>630</posy>
+            <height>32</height>
+            <width>350</width>
+            <align>center</align>
+            <font>Font_Reg14</font>
+            <textcolor>orange</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
+          </control>
+        </control>
+
+        <!-- Right Movie -->
+        <control type="group">
+          <posy>15</posy>
+          <animation effect="slide" start="0,0" end="-320,0" time="350" delay="175">WindowClose</animation>
+          <animation effect="slide" start="-320,0" end="0,0" time="350" delay="175">WindowOpen</animation>
+          
+          <control type="image">
+            <posx>1110</posx>
+            <posy>75</posy>
+            <height>620</height>
+            <width>422</width>
+            <texture>$INFO[Window.Property(RecentMovie.3.Thumb)]</texture>
+          </control>
+
+          <control type="image">
+            <visible>Control.HasFocus(8603)</visible>
+            <posx>1095</posx>
+            <posy>60</posy>
+            <height>650</height>
+            <width>452</width>
+            <texture border="16">sets/Default/RecentAddedBack-focus.png</texture>
+          </control>
+
+          <control type="image">
+            <visible>!Control.HasFocus(8603)</visible>
+            <posx>1095</posx>
+            <posy>60</posy>
+            <height>650</height>
+            <width>452</width>
+            <texture border="16">sets/Default/RecentAddedBack.png</texture>
+          </control>
+
+          <control type="button" id="8603">
+            <posx>1260</posx>
+            <posy>250</posy>
+            <width>128</width>
+            <height>128</height>
+            <label>-</label>
+            <texturefocus>sets/Default/icons/MediaPlay-focus.png</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onleft>8602</onleft>
+            <onright>8601</onright>
+            <onup>9003</onup>
+            <ondown>9000</ondown>
+            <onclick>$INFO[Window(Home).Property(RecentMovie.3.File)]</onclick>
+          </control>
+
+          <control type="fadelabel">
+            <posx>1180</posx>
+            <posy>660</posy>
+            <height>32</height>
+            <width>285</width>
+            <align>center</align>
+            <font>Font_Reg12</font>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentMovie.3.Year)] | $INFO[Window(Home).Property(RecentMovie.3.Rating)]</label>
+          </control>
+
+          <control type="fadelabel">
+            <posx>1180</posx>
+            <posy>630</posy>
+            <height>32</height>
+            <width>350</width>
+            <align>center</align>
+            <font>Font_Reg12</font>
+            <textcolor>orange</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentMovie.3.Title)]</label>
+          </control>
+        </control>
+
+        <!-- Center Movie -->
+       <control type="group">
+          <control type="image">
+            <posx>730</posx>
+            <posy>60</posy>
+            <height>677</height>
+            <width>461</width>
+            <texture>$INFO[Window.Property(RecentMovie.2.Thumb)]</texture>
+          </control>
+
+          <control type="image">
+            <visible>Control.HasFocus(8602)</visible>
+            <posx>715</posx>
+            <posy>45</posy>
+            <height>707</height>
+            <width>491</width>
+            <texture border="16">sets/Default/RecentAddedBack-focus.png</texture>
+          </control>
+
+          <control type="image">
+            <visible>!Control.HasFocus(8602)</visible>
+            <posx>715</posx>
+            <posy>45</posy>
+            <height>707</height>
+            <width>491</width>
+            <texture border="16">sets/Default/RecentAddedBack.png</texture>
+          </control>
+
+          <control type="button" id="8602">
+            <posx>900</posx>
+            <posy>350</posy>
+            <width>128</width>
+            <height>128</height>
+            <label>-</label>
+            <texturefocus>sets/Default/icons/MediaPlay-focus.png</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onleft>8601</onleft>
+            <onright>8603</onright>
+            <onup>9003</onup>
+            <ondown>9000</ondown>
+            <onclick>$INFO[Window(Home).Property(RecentMovie.2.File)]</onclick>
+          </control>
+
+          <control type="fadelabel">
+            <posx>790</posx>
+            <posy>700</posy>
+            <height>32</height>
+            <width>340</width>
+            <align>center</align>
+            <font>Font_Reg12</font>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentMovie.2.Year)] | $INFO[Window(Home).Property(RecentMovie.2.Rating)]</label>
+          </control>
+
+          <control type="fadelabel">
+            <posx>790</posx>
+            <posy>670</posy>
+            <height>32</height>
+            <width>340</width>
+            <align>center</align>
+            <font>Font_Reg14</font>
+            <textcolor>orange</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentMovie.2.Title)]</label>
+          </control>
+        </control>
+      </control>
+
+      <!-- TV-Shows -->
+      <control type="group">
+      <posx>0</posx>
+      <posy>50</posy>
+      <visible>Library.HasContent(TVShows)</visible>
+      <visible>Container(9000).Hasfocus(11) + Skin.HasSetting(usePostersLatestMedia)</visible>
+      <include>VisibleFadeEffect</include>
+
+        <!-- Left Show -->
+        <control type="group">
+          <posy>15</posy>
+          <animation effect="slide" start="0,0" end="320,0" time="350" delay="175">WindowClose</animation>
+          <animation effect="slide" start="320,0" end="0,0" time="350" delay="175">WindowOpen</animation>
+          
+          <control type="image">
+            <posx>385</posx>
+            <posy>75</posy>
+            <height>620</height>
+            <width>422</width>
+            <texture>$INFO[Window.Property(RecentEpisode.1.Poster]</texture>
+          </control>
+
+          <control type="image">
+            <visible>Control.HasFocus(8601)</visible>
+            <posx>370</posx>
+            <posy>60</posy>
+            <height>650</height>
+            <width>452</width>
+            <texture border="16">sets/Default/RecentAddedBack-focus.png</texture>
+          </control>
+
+          <control type="image">
+            <visible>!Control.HasFocus(8601)</visible>
+            <posx>370</posx>
+            <posy>60</posy>
+            <height>650</height>
+            <width>452</width>
+            <texture border="16">sets/Default/RecentAddedBack.png</texture>
+          </control>
+
+          <control type="button" id="8601">
+            <posx>540</posx>
+            <posy>250</posy>
+            <width>128</width>
+            <height>128</height>
+            <label>-</label>
+            <texturefocus>sets/Default/icons/MediaPlay-focus.png</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onleft>8603</onleft>
+            <onright>8602</onright>
+            <onup>9003</onup>
+            <ondown>9000</ondown>
+            <onclick>$INFO[Window(Home).Property(RecentEpisode.1.File)]</onclick>
+          </control>
+
+          <control type="fadelabel">
+            <posx>410</posx>
+            <posy>660</posy>
+            <height>32</height>
+            <width>350</width>
+            <align>center</align>
+            <font>Font_Reg12</font>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)] - "$INFO[Window(Home).Property(RecentEpisode.1.Title)]"</label>
+          </control>
+
+          <control type="fadelabel">
+            <posx>410</posx>
+            <posy>630</posy>
+            <height>32</height>
+            <width>350</width>
+            <align>center</align>
+            <font>Font_Reg14</font>
+            <textcolor>orange</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentEpisode.1.TVshowTitle)]</label>
+          </control>
+        </control>
+
+        <!-- Right Show -->
+        <control type="group">
+          <posy>15</posy>
+          <animation effect="slide" start="0,0" end="-320,0" time="350" delay="175">WindowClose</animation>
+          <animation effect="slide" start="-320,0" end="0,0" time="350" delay="175">WindowOpen</animation>
+          
+          <control type="image">
+            <posx>1110</posx>
+            <posy>75</posy>
+            <height>620</height>
+            <width>422</width>
+            <texture>$INFO[Window.Property(RecentEpisode.3.Poster)]</texture>
+          </control>
+
+          <control type="image">
+            <visible>Control.HasFocus(8603)</visible>
+            <posx>1095</posx>
+            <posy>60</posy>
+            <height>650</height>
+            <width>452</width>
+            <texture border="16">sets/Default/RecentAddedBack-focus.png</texture>
+          </control>
+
+          <control type="image">
+            <visible>!Control.HasFocus(8603)</visible>
+            <posx>1095</posx>
+            <posy>60</posy>
+            <height>650</height>
+            <width>452</width>
+            <texture border="16">sets/Default/RecentAddedBack.png</texture>
+          </control>
+
+          <control type="button" id="8603">
+            <posx>1260</posx>
+            <posy>250</posy>
+            <width>128</width>
+            <height>128</height>
+            <label>-</label>
+            <texturefocus>sets/Default/icons/MediaPlay-focus.png</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onleft>8602</onleft>
+            <onright>8601</onright>
+            <onup>9003</onup>
+            <ondown>9000</ondown>
+            <onclick>$INFO[Window(Home).Property(RecentEpisode.3.File)]</onclick>
+          </control>
+
+          <control type="fadelabel">
+            <posx>1180</posx>
+            <posy>660</posy>
+            <height>32</height>
+            <width>350</width>
+            <align>center</align>
+            <font>Font_Reg14</font>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentEpisode.3.EpisodeNo)] - "$INFO[Window(Home).Property(RecentEpisode.3.Title)]"</label>
+          </control>
+
+          <control type="fadelabel">
+            <posx>1180</posx>
+            <posy>630</posy>
+            <height>32</height>
+            <width>350</width>
+            <align>center</align>
+            <font>Font_Reg12</font>
+            <textcolor>orange</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentEpisode.3.TVshowTitle)]</label>
+          </control>
+        </control>
+
+        <!-- Center Show -->
+       <control type="group">
+          <control type="image">
+            <posx>730</posx>
+            <posy>60</posy>
+            <height>677</height>
+            <width>461</width>
+            <texture>$INFO[Window.Property(RecentEpisode.2.Poster)]</texture>
+          </control>
+
+          <control type="image">
+            <visible>Control.HasFocus(8602)</visible>
+            <posx>715</posx>
+            <posy>45</posy>
+            <height>707</height>
+            <width>491</width>
+            <texture border="16">sets/Default/RecentAddedBack-focus.png</texture>
+          </control>
+
+          <control type="image">
+            <visible>!Control.HasFocus(8602)</visible>
+            <posx>715</posx>
+            <posy>45</posy>
+            <height>707</height>
+            <width>491</width>
+            <texture border="16">sets/Default/RecentAddedBack.png</texture>
+          </control>
+
+          <control type="button" id="8602">
+            <posx>900</posx>
+            <posy>350</posy>
+            <width>128</width>
+            <height>128</height>
+            <label>-</label>
+            <texturefocus>sets/Default/icons/MediaPlay-focus.png</texturefocus>
+            <texturenofocus>-</texturenofocus>
+            <onleft>8601</onleft>
+            <onright>8603</onright>
+            <onup>9003</onup>
+            <ondown>9000</ondown>
+            <onclick>$INFO[Window(Home).Property(RecentEpisode.2.File)]</onclick>
+          </control>
+
+          <control type="fadelabel">
+            <posx>790</posx>
+            <posy>700</posy>
+            <height>32</height>
+            <width>350</width>
+            <align>center</align>
+            <font>Font_Reg12</font>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentEpisode.2.EpisodeNo)] - "$INFO[Window(Home).Property(RecentEpisode.2.Title)]"</label>
+          </control>
+
+          <control type="fadelabel">
+            <posx>790</posx>
+            <posy>670</posy>
+            <height>32</height>
+            <width>350</width>
+            <align>center</align>
+            <font>Font_Reg14</font>
+            <textcolor>orange</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[Window(Home).Property(RecentEpisode.2.TVshowTitle)]</label>
+          </control>
+        </control>
+      </control>
+
+      <!-- Music -->
+      <control type="group">
+        <posx>360</posx>
+        <posy>75</posy>
+        <visible>Library.HasContent(Music)</visible>
+        <visible>Container(9000).Hasfocus(3)</visible>
+        <include>VisibleFadeEffect</include>
+        <control type="label">
+          <description>Title label</description>
+          <posx>240</posx>
+          <posy>330</posy>
+          <height>30</height>
+          <width>720</width>
+          <label>359</label>
+          <align>center</align>
+          <aligny>center</aligny>
+          <font>font12_title</font>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+        </control>
+        <control type="list" id="8002">
+          <animation effect="slide" start="0,0" end="150,0" time="0" condition="StringCompare(Container(8002).NumItems,3)">conditional</animation>
+          <animation effect="slide" start="0,0" end="300,0" time="0" condition="StringCompare(Container(8002).NumItems,2)">conditional</animation>
+          <animation effect="slide" start="0,0" end="450,0" time="0" condition="StringCompare(Container(8002).NumItems,1)">conditional</animation>
+          <posx>0</posx>
+          <posy>0</posy>
+          <width>1200</width>
+          <height>360</height>
+          <onleft>8002</onleft>
+          <onright>8002</onright>
+          <onup>20</onup>
+          <ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
+          <ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
+          <viewtype label="535">list</viewtype>
+          <pagecontrol>-</pagecontrol>
+          <scrolltime>200</scrolltime>
+          <orientation>Horizontal</orientation>
+          <itemlayout height="330" width="300">
+            <control type="image">
+              <description>background</description>
+              <posx>0</posx>
+              <posy>0</posy>
+              <width>300</width>
+              <height>330</height>
+              <texture border="15">RecentAddedBack.png</texture>
+            </control>
+            <control type="image">
+              <posx>15</posx>
+              <posy>15</posy>
+              <width>270</width>
+              <height>232</height>
+              <aspectratio>keep</aspectratio>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+              <bordertexture border="5">button-nofocus.png</bordertexture>
+              <bordersize>5</bordersize>
+            </control>
+            <control type="label">
+              <posx>150</posx>
+              <posy>255</posy>
+              <width>270</width>
+              <height>30</height>
+              <font>font10</font>
+              <textcolor>grey2</textcolor>
+              <shadowcolor>black</shadowcolor>
+              <selectedcolor>selected</selectedcolor>
+              <align>center</align>
+              <aligny>center</aligny>
+              <label>$INFO[ListItem.Label2]</label>
+            </control>
+            <control type="label">
+              <posx>150</posx>
+              <posy>285</posy>
+              <width>270</width>
+              <height>30</height>
+              <font>font12</font>
+              <textcolor>white</textcolor>
+              <shadowcolor>black</shadowcolor>
+              <selectedcolor>selected</selectedcolor>
+              <align>center</align>
+              <aligny>center</aligny>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+          </itemlayout>
+          <focusedlayout height="330" width="300">
+            <control type="image">
+              <description>background</description>
+              <posx>0</posx>
+              <posy>0</posy>
+              <width>300</width>
+              <height>330</height>
+              <texture border="15">RecentAddedBack.png</texture>
+            </control>
+            <control type="image">
+              <posx>15</posx>
+              <posy>15</posy>
+              <width>270</width>
+              <height>232</height>
+              <aspectratio>keep</aspectratio>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+              <bordertexture border="5">folder-focus.png</bordertexture>
+              <bordersize>5</bordersize>
+              <visible>Control.HasFocus(8002)</visible>
+            </control>
+            <control type="image">
+              <posx>15</posx>
+              <posy>15</posy>
+              <width>270</width>
+              <height>232</height>
+              <aspectratio>keep</aspectratio>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+              <bordertexture border="5">button-nofocus.png</bordertexture>
+              <bordersize>5</bordersize>
+              <visible>!Control.HasFocus(8002)</visible>
+            </control>
+            <control type="label">
+              <posx>150</posx>
+              <posy>255</posy>
+              <width>270</width>
+              <height>30</height>
+              <font>font10</font>
+              <textcolor>grey2</textcolor>
+              <shadowcolor>black</shadowcolor>
+              <selectedcolor>selected</selectedcolor>
+              <align>center</align>
+              <aligny>center</aligny>
+              <label>$INFO[ListItem.Label2]</label>
+            </control>
+            <control type="label">
+              <posx>150</posx>
+              <posy>285</posy>
+              <width>270</width>
+              <height>30</height>
+              <font>font12</font>
+              <textcolor>white</textcolor>
+              <shadowcolor>black</shadowcolor>
+              <selectedcolor>selected</selectedcolor>
+              <align>center</align>
+              <aligny>center</aligny>
+              <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label">
+              <posx>150</posx>
+              <posy>285</posy>
+              <width>270</width>
+              <height>30</height>
+              <font>font12</font>
+              <textcolor>blue</textcolor>
+              <selectedcolor>selected</selectedcolor>
+              <align>center</align>
+              <aligny>center</aligny>
+              <label>$INFO[ListItem.Label]</label>
+              <visible>Control.HasFocus(8002)</visible>
+            </control>
+          </focusedlayout>
+          <content>
+            <item>
+              <label>$INFO[Window.Property(LatestAlbum.1.Title)]</label>
+              <label2>$INFO[Window.Property(LatestAlbum.1.Artist)]</label2>
+              <onclick>PlayList.Clear</onclick>
+              <onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.1.Path)]")</onclick>
+              <icon>-</icon>
+              <thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
+            </item>
+            <item>
+              <label>$INFO[Window.Property(LatestAlbum.2.Title)]</label>
+              <label2>$INFO[Window.Property(LatestAlbum.2.Artist)]</label2>
+              <onclick>PlayList.Clear</onclick>
+              <onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.2.Path)]")</onclick>
+              <icon>-</icon>
+              <thumb>$INFO[Window.Property(LatestAlbum.2.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestAlbum.2.Title))</visible>
+            </item>
+            <item>
+              <label>$INFO[Window.Property(LatestAlbum.3.Title)]</label>
+              <label2>$INFO[Window.Property(LatestAlbum.3.Artist)]</label2>
+              <onclick>PlayList.Clear</onclick>
+              <onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.3.Path)]")</onclick>
+              <icon>-</icon>
+              <thumb>$INFO[Window.Property(LatestAlbum.3.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestAlbum.3.Title))</visible>
+            </item>
+            <item>
+              <label>$INFO[Window.Property(LatestAlbum.4.Title)]</label>
+              <label2>$INFO[Window.Property(LatestAlbum.4.Artist)]</label2>
+              <onclick>PlayList.Clear</onclick>
+              <onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.4.Path)]")</onclick>
+              <icon>-</icon>
+              <thumb>$INFO[Window.Property(LatestAlbum.4.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestAlbum.4.Title))</visible>
+            </item>
+            <item>
+              <label>$INFO[Window.Property(LatestAlbum.5.Title)]</label>
+              <label2>$INFO[Window.Property(LatestAlbum.5.Artist)]</label2>
+              <onclick>PlayList.Clear</onclick>
+              <onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.5.Path)]")</onclick>
+              <icon>-</icon>
+              <thumb>$INFO[Window.Property(LatestAlbum.5.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestAlbum.5.Title))</visible>
+            </item>
+            <item>
+              <label>$INFO[Window.Property(LatestAlbum.6.Title)]</label>
+              <label2>$INFO[Window.Property(LatestAlbum.6.Artist)]</label2>
+              <onclick>PlayList.Clear</onclick>
+              <onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.6.Path)]")</onclick>
+              <icon>-</icon>
+              <thumb>$INFO[Window.Property(LatestAlbum.6.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestAlbum.6.Title))</visible>
+            </item>
+            <item>
+              <label>$INFO[Window.Property(LatestAlbum.7.Title)]</label>
+              <label2>$INFO[Window.Property(LatestAlbum.7.Artist)]</label2>
+              <onclick>PlayList.Clear</onclick>
+              <onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.7.Path)]")</onclick>
+              <icon>-</icon>
+              <thumb>$INFO[Window.Property(LatestAlbum.7.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestAlbum.7.Title))</visible>
+            </item>
+            <item>
+              <label>$INFO[Window.Property(LatestAlbum.8.Title)]</label>
+              <label2>$INFO[Window.Property(LatestAlbum.8.Artist)]</label2>
+              <onclick>PlayList.Clear</onclick>
+              <onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.8.Path)]")</onclick>
+              <icon>-</icon>
+              <thumb>$INFO[Window.Property(LatestAlbum.8.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestAlbum.8.Title))</visible>
+            </item>
+            <item>
+              <label>$INFO[Window.Property(LatestAlbum.9.Title)]</label>
+              <label2>$INFO[Window.Property(LatestAlbum.9.Artist)]</label2>
+              <onclick>PlayList.Clear</onclick>
+              <onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.9.Path)]")</onclick>
+              <icon>-</icon>
+              <thumb>$INFO[Window.Property(LatestAlbum.9.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestAlbum.9.Title))</visible>
+            </item>
+            <item>
+              <label>$INFO[Window.Property(LatestAlbum.10.Title)]</label>
+              <label2>$INFO[Window.Property(LatestAlbum.10.Artist)]</label2>
+              <onclick>PlayList.Clear</onclick>
+              <onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.10.Path)]")</onclick>
+              <icon>-</icon>
+              <thumb>$INFO[Window.Property(LatestAlbum.10.Thumb)]</thumb>
+              <visible>!IsEmpty(Window.Property(LatestAlbum.10.Title))</visible>
+            </item>
+          </content>
+        </control>
+
+        <control type="button">
+          <description>left Arrow</description>
+          <posx>-60</posx>
+          <posy>135</posy>
+          <width>45</width>
+          <height>60</height>
+          <include>ButtonArrowBig-Left</include>
+          <onclick>Control.Move(8002,-1)</onclick>
+          <visible>Control.HasFocus(8002) + Container(8002).HasPrevious</visible>
+          <include>VisibleFadeEffect</include>
+        </control>
+
+        <control type="button">
+          <description>right Arrow</description>
+          <posx>1215</posx>
+          <posy>135</posy>
+          <width>45</width>
+          <height>60</height>
+          <include>ButtonArrowBig-Right</include>
+          <onclick>Control.Move(8002,1)</onclick>
+          <visible>Control.HasFocus(8002) + Container(8002).HasNext</visible>
+          <include>VisibleFadeEffect</include>
+        </control>
+      </control>
+    </control>
+  </include>
+</includes>

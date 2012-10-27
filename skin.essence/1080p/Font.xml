@@ -218,6 +218,12 @@
         </font>
         <!--CAPS-->
         <font>
+            <name>Font_Bold14_Caps</name>
+            <filename>MC360.ttf</filename>
+            <style>bold uppercase</style>
+            <size>22</size>
+        </font>
+        <font>
             <name>Font_Bold16_Caps</name>
             <filename>MC360.ttf</filename>
             <style>bold uppercase</style>

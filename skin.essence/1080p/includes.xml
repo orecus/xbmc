@@ -9,8 +9,8 @@
   <include file="ViewsPVR.xml" />
   <include file="IncludesCodecFlagging.xml" />
   <include file="IncludesHomeNowPlaying.xml" />
-  <include file="IncludesHomeRecentlyAdded.xml" />
-  <include file="IncludesHomeRecentlyAdded-New.xml" />
+  <include file="IncludesHomeWidgets-Classic.xml" />
+  <include file="IncludesHomeWidgets.xml" />
   <include file="IncludesHomeMenuItems.xml" />
   <include file="IncludesBackgroundBuilding.xml" />
   <include file="weather+\10DayForecast.xml" />
@@ -35,39 +35,39 @@
   </include>
 
   <include name="ButtonArrowBig-Down">
-    <texturefocus>sets\Default\icons\ArrowHeadDown-focus.png</texturefocus>
-    <texturenofocus>sets\Default\icons\ArrowHeadDown.png</texturenofocus>
+    <texturefocus>sets\Default\icons\NavigateArrowHeadDown-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\NavigateArrowHeadDown.png</texturenofocus>
   </include>
 
   <include name="ButtonArrowBig-Up">
-    <texturefocus>sets\Default\icons\ArrowHeadUp-focus.png</texturefocus>
-    <texturenofocus>sets\Default\icons\ArrowHeadUp.png</texturenofocus>
+    <texturefocus>sets\Default\icons\NavigateArrowHeadUp-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\NavigateArrowHeadUp.png</texturenofocus>
   </include>
 
   <include name="ButtonArrowBig-Left">
-    <texturefocus>sets\Default\icons\ArrowHeadLeft-focus.png</texturefocus>
-    <texturenofocus>sets\Default\icons\ArrowHeadLeft.png</texturenofocus>
+    <texturefocus>sets\Default\icons\NavigateArrowHeadLeft-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\NavigateArrowHeadLeft.png</texturenofocus>
   </include>
 
   <include name="ButtonArrowBig-Right">
-    <texturefocus>sets\Default\icons\ArrowHeadRight-focus.png</texturefocus>
-    <texturenofocus>sets\Default\icons\ArrowHeadRight.png</texturenofocus>
+    <texturefocus>sets\Default\icons\NavigateArrowHeadRight-focus.png</texturefocus>
+    <texturenofocus>sets\Default\icons\NavigateArrowHeadRight.png</texturenofocus>
   </include>
 
   <include name="ArrowBig-Down">
-    <texture>sets\Default\icons\ArrowHeadDown.png</texture>
+    <texture>sets\Default\icons\NavigateArrowHeadDown.png</texture>
   </include>  
 
   <include name="ArrowBig-Up">
-    <texture>sets\Default\icons\ArrowHeadUp.png</texture>
+    <texture>sets\Default\icons\NavigateArrowHeadUp.png</texture>
   </include>  
 
   <include name="ArrowBig-Left">
-    <texture>sets\Default\icons\ArrowHeadLeft.png</texture>
+    <texture>sets\Default\icons\NavigateArrowHeadLeft.png</texture>
   </include>
 
   <include name="ArrowBig-Right">
-    <texture>sets\Default\icons\ArrowHeadRight.png</texture>
+    <texture>sets\Default\icons\NavigateArrowHeadRight.png</texture>
   </include>
 
   <include name="ButtonInfoDialogsCommonValues">
@@ -96,14 +96,14 @@
   </include>
 
   <include name="ButtonCommonValues">
-    <height>60</height>
-    <width>375</width>
+    <height>48</height>
+    <width>350</width>
     <textoffsetx>15</textoffsetx>
     <textwidth>300</textwidth>
     <aligny>center</aligny>
     <font>Font_Reg10</font>
-    <texturefocus border="5">button-focus.png</texturefocus>
-    <texturenofocus>-</texturenofocus>
+    <texturefocus border="5">sets/Default/button-focus.png</texturefocus>
+    <texturenofocus>sets/Default/button.png</texturenofocus>
     <pulseonselect>false</pulseonselect>
   </include>
 
@@ -113,7 +113,7 @@
     <textoffsetx>30</textoffsetx>
     <textwidth>292</textwidth>
     <aligny>center</aligny>
-    <font>font12_title</font>
+    <font>Font_Bold14</font>
     <texturefocus border="0">button-focus.png</texturefocus>
     <texturenofocus border="0">button-nofocus.png</texturenofocus>
     <pulseonselect>false</pulseonselect>
@@ -121,15 +121,17 @@
 
   <include name="ButtonHomeSubCommonValues">
     <height>52</height>
-    <width>270</width>
-    <textwidth>292</textwidth>
+    <width>180</width>
+    <textwidth>200</textwidth>
     <align>center</align>
     <aligny>top</aligny>
-    <font>font12</font>
+    <font>Font_Bold14_Caps</font>
     <textcolor>grey2</textcolor>
-    <focusedcolor>blue</focusedcolor>
-    <texturefocus border="0">sets/Default/HomeSubFO.png</texturefocus>
-    <texturenofocus border="0">sets/Default/HomeSubNF.png</texturenofocus>
+    <focusedcolor>white</focusedcolor>
+    <aspectratio>keep</aspectratio>
+    <shadowcolor>black</shadowcolor>
+    <texturefocus border="0">sets/Default/HomeSub-focus.png</texturefocus>
+    <texturenofocus border="0">sets/Default/HomeSub.png</texturenofocus>
     <pulseonselect>false</pulseonselect>
   </include>
 
@@ -160,10 +162,11 @@
   </include>
 
   <include name="SideBladeLeft">
-    <animation effect="slide" start="0,0" end="375,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
-    <animation effect="slide" start="0,0" end="-450,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
+    <animation effect="slide" start="0,0" end="410,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
+    <animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
     <animation effect="slide" start="0,0" end="-75,0" time="300" tween="quadratic" easing="out" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9001)]">WindowClose</animation>
     <animation effect="slide" start="-75,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+    
     <control type="button" id="8999">
       <description>Fake button for mouse control</description>
       <posx>0</posx>
@@ -178,31 +181,21 @@
     </control>
 
     <control type="button" id="9001">
-      <posx>375</posx>
-      <posy>390</posy>
+      <posx>359</posx>
+      <posy>420</posy>
       <width>63</width>
       <height>192</height>
       <font>-</font>
-      <texturefocus>HasSub.png</texturefocus>
-      <texturenofocus>HasSub.png</texturenofocus>
+      <texturefocus>sets/Default/HasSub.png</texturefocus>
+      <texturenofocus>sets/Default/HasSub.png</texturenofocus>
     </control>
 
     <control type="image">
-      <posx>0</posx>
-      <posy>0</posy>
-      <width>390</width>
-      <height>1080</height>
-      <texture border="0,0,10,0">MediaBladeSub.png</texture>
-    </control>
-
-    <control type="image">
-      <description>LOGO</description>
-      <posx>22</posx>
-      <posy>75</posy>
-      <width>330</width>
-      <height>120</height>
-      <aspectratio>keep</aspectratio>
-      <texture>logo.png</texture>
+      <posx>-50</posx>
+      <posy>40</posy>
+      <width>450</width>
+      <height>1000</height>
+      <texture>sets/Default/HomeBladeSub.png</texture>
     </control>
   </include>
 
@@ -379,7 +372,7 @@
         <posy>45r</posy>
         <width>1050</width>
         <height>30</height>
-        <label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumber, - ([COLOR=blue],[/COLOR])]</label>
+        <label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumber, - ([COLOR=orange],[/COLOR])]</label>
         <align>left</align>
         <aligny>center</aligny>
         <font>font12</font>
@@ -392,11 +385,22 @@
 
   <include name="CommonPageCount">
     <control type="group">
-      <animation effect="slide" start="0,0" end="-135,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+      <animation effect="slide" start="0,0" end="-48,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+
+      <control type="image">
+        <description>RSS background</description>
+        <posx>0</posx>
+        <posy>48r</posy>
+        <width>1920</width>
+        <height>48</height>
+        <texture>sets\Default\fullGradiant.png</texture>
+        <include>Window_OpenClose_Animation_Down</include>
+      </control>
+
       <control type="label">
         <description>Page Count Label</description>
         <posx>60r</posx>
-        <posy>80r</posy>
+        <posy>48r</posy>
         <width>750</width>
         <height>30</height>
         <font>font12</font>
@@ -404,8 +408,8 @@
         <scroll>false</scroll>
         <align>right</align>
         <aligny>center</aligny>
-        <label>$INFO[Window.Property(filter),$LOCALIZE[587] ([COLOR=blue],[/COLOR]) - ]$INFO[Container.NumItems,([COLOR=blue],[/COLOR]) $LOCALIZE[31025]]$INFO[Container.CurrentPage, - $LOCALIZE[31024] ([COLOR=blue]]$INFO[Container.NumPages,/,[/COLOR])]</label>
-        <include>Window_OpenClose_Animation</include>
+        <label>$INFO[Window.Property(filter),$LOCALIZE[587] ([COLOR=orange],[/COLOR]) - ]$INFO[Container.NumItems,([COLOR=orange],[/COLOR]) $LOCALIZE[31025]]$INFO[Container.CurrentPage, - $LOCALIZE[31024] ([COLOR=orange]]$INFO[Container.NumPages,/,[/COLOR])]</label>
+        <include>Window_OpenClose_Animation_Down</include>
       </control>
 
       <control type="label">
@@ -419,7 +423,7 @@
         <scroll>false</scroll>
         <align>right</align>
         <aligny>center</aligny>
-        <label>$INFO[Container.TotalTime,$LOCALIZE[31009] ([COLOR=blue],[/COLOR])]</label>
+        <label>$INFO[Container.TotalTime,$LOCALIZE[31009] ([COLOR=orange],[/COLOR])]</label>
         <include>Window_OpenClose_Animation</include>
       </control>
     </control>
@@ -663,9 +667,9 @@
 
   <include name="CommonNowPlaying_Controls">
     <control type="label" id="202">
-      <width>375</width>
-      <height>52</height>
-      <font>font12</font>
+      <width>360</width>
+      <height>48</height>
+      <font>Font_Reg12</font>
       <label>31023</label>
       <textcolor>blue</textcolor>
       <align>center</align>
@@ -680,12 +684,12 @@
     </control>
 
     <control type="group" id="9006">
-      <width>375</width>
+      <width>360</width>
       <height>68</height>
       <visible>VideoPlayer.Content(LiveTV)</visible>
       <include>VisibleFadeEffect</include>
       <control type="button" id="600">
-        <posx>30</posx>
+        <posx>20</posx>
         <posy>3</posy>
         <width>58</width>
         <height>58</height>
@@ -700,7 +704,7 @@
       </control>
 
       <control type="button" id="601">
-        <posx>90</posx>
+        <posx>80</posx>
         <posy>3</posy>
         <width>58</width>
         <height>58</height>
@@ -715,7 +719,7 @@
       </control>
 
       <control type="button" id="603">
-        <posx>150</posx>
+        <posx>140</posx>
         <posy>3</posy>
         <width>58</width>
         <height>58</height>
@@ -731,7 +735,7 @@
       </control>
 
       <control type="button" id="604">
-        <posx>270</posx>
+        <posx>260</posx>
         <posy>3</posy>
         <width>58</width>
         <height>58</height>
@@ -752,17 +756,17 @@
       <visible>[Player.HasAudio | Player.HasVideo]</visible>
       <visible>!VideoPlayer.Content(LiveTV)</visible>
       <include>VisibleFadeEffect</include>
-      <width>375</width>
-      <height>68</height>
+      <width>360</width>
+      <height>64</height>
       <defaultcontrol always="true">603</defaultcontrol>
       <control type="button" id="600">
-        <posx>8</posx>
+        <posx>0</posx>
         <posy>3</posy>
         <width>58</width>
         <height>58</height>
         <label>-</label>
-        <texturefocus>OSDPrevTrackFO.png</texturefocus>
-        <texturenofocus>OSDPrevTrackNF.png</texturenofocus>
+        <texturefocus>sets/Default/icons/MediaPrevious-focus.png</texturefocus>
+        <texturenofocus>sets/Default/icons/MediaPrevious.png</texturenofocus>
         <onleft>50</onleft>
         <onright>606</onright>
         <onup>610</onup>
@@ -772,13 +776,13 @@
       </control>
 
       <control type="button" id="606">
-        <posx>68</posx>
+        <posx>60</posx>
         <posy>3</posy>
         <width>58</width>
         <height>58</height>
         <label>-</label>
-        <texturefocus>OSDRewindFO.png</texturefocus>
-        <texturenofocus>OSDRewindNF.png</texturenofocus>
+        <texturefocus>sets/Default/icons/MediaRewind-focus.png</texturefocus>
+        <texturenofocus>sets/Default/icons/MediaRewind.png</texturenofocus>
         <onleft>600</onleft>
         <onright>603</onright>
         <onup>610</onup>
@@ -791,16 +795,16 @@
       <control type="group">
         <animation effect="slide" start="0,0" end="60,0" time="0" condition="Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Player.HasVideo">Conditional</animation>
         <control type="togglebutton" id="603">
-          <posx>68</posx>
+          <posx>60</posx>
           <posy>3</posy>
           <width>58</width>
           <height>58</height>
           <label>-</label>
-          <texturefocus>OSDPauseFO.png</texturefocus>
-          <texturenofocus>OSDPauseNF.png</texturenofocus>
+          <texturefocus>sets/Default/icons/MediaPause-focus.png</texturefocus>
+          <texturenofocus>sets/Default/icons/MediaPause.png</texturenofocus>
           <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-          <alttexturefocus>OSDPlayFO.png</alttexturefocus>
-          <alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
+          <alttexturefocus>sets/Default/icons/MediaPlay-focus.png</alttexturefocus>
+          <alttexturenofocus>sets/Default/icons/MediaPlay.png</alttexturenofocus>
           <onleft>606</onleft>
           <onright>601</onright>
           <onup>610</onup>
@@ -810,13 +814,13 @@
         </control>
 
         <control type="button" id="601">
-          <posx>128</posx>
+          <posx>120</posx>
           <posy>3</posy>
           <width>58</width>
           <height>58</height>
           <label>-</label>
-          <texturefocus>OSDStopFO.png</texturefocus>
-          <texturenofocus>OSDStopNF.png</texturenofocus>
+          <texturefocus>sets/Default/icons/MediaStop-focus.png</texturefocus>
+          <texturenofocus>sets/Default/icons/MediaStop.png</texturenofocus>
           <onleft>603</onleft>
           <onright>607</onright>
           <onup>610</onup>
@@ -827,13 +831,13 @@
         </control>
 
         <control type="button" id="607">
-          <posx>188</posx>
+          <posx>180</posx>
           <posy>3</posy>
           <width>58</width>
           <height>58</height>
           <label>-</label>
-          <texturefocus>OSDForwardFO.png</texturefocus>
-          <texturenofocus>OSDForwardNF.png</texturenofocus>
+          <texturefocus>sets/Default/icons/MediaForward-focus.png</texturefocus>
+          <texturenofocus>sets/Default/icons/MediaForward.png</texturenofocus>
           <onleft>601</onleft>
           <onright>602</onright>
           <onup>610</onup>
@@ -844,13 +848,13 @@
         </control>
 
         <control type="button" id="602">
-          <posx>188</posx>
+          <posx>180</posx>
           <posy>3</posy>
           <width>58</width>
           <height>58</height>
           <label>-</label>
-          <texturefocus>OSDNextTrackFO.png</texturefocus>
-          <texturenofocus>OSDNextTrackNF.png</texturenofocus>
+          <texturefocus>sets/Default/icons/MediaNext-focus.png</texturefocus>
+          <texturenofocus>sets/Default/icons/MediaNext.png</texturenofocus>
           <onleft>607</onleft>
           <onright>604</onright>
           <onup>610</onup>
@@ -965,8 +969,8 @@
       <include>ButtonCommonValues</include>
       <label>31008</label>
       <onclick>fullscreen</onclick>
-      <textureradiofocus>GoFullscreen.png</textureradiofocus>
-      <textureradionofocus>GoFullscreen.png</textureradionofocus>
+      <textureradiofocus>/sets/Default/icons/MediaFullscreen.png</textureradiofocus>
+      <textureradionofocus>/sets/Default/icons/MediaFullscreen-focus.png</textureradionofocus>
       <visible>Player.HasMedia</visible>
     </control>
   </include>
@@ -1000,18 +1004,9 @@
     </control>
   </include>
   
-  <include name="Clock">
+  <!-- Header & Weather -->
+  <include name="Header">
     <control type="group">
-      <control type="image">
-        <description>Background image</description>
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>1920</width>
-        <height>120</height>
-        <aspectratio>keep</aspectratio>
-        <texture>sets/Default/headerProgressBackground.png</texture>
-      </control>
-
       <control type="image">
     		<description>Background image</description>
     		<posx>0</posx>
@@ -1021,163 +1016,73 @@
     		<aspectratio>keep</aspectratio>
     		<texture>sets/Default/headerBackground.png</texture>
     	</control>
-    </control>
     
-  	<control type="image">
-  		<description>Logo</description>
-  		<posx>0</posx>
-  		<posy>0</posy>
-  		<width>256</width>
-  		<height>64</height>
-  		<aspectratio>keep</aspectratio>
-  		<texture>sets/Default/logo.png</texture>
-  	</control>
-
-    <!--<control type="image">
-      <visible></visible>
-      <description>Logo</description>
-      <posx>0</posx>
-      <posy>5</posy>
-      <width>256</width>
-      <height>64</height>
-      <aspectratio>keep</aspectratio>
-      <texture>sets/Default/xbmc-logo.png</texture>
-    </control>-->
-
-    <!-- Breadcrums -->
-    <!--<control type="label">
-      <posx>0</posx>
-      <posy>45</posy>
-      <width>256</width>
-      <height>45</height>
-      <align>center</align>
-      <include>WindowTitleCommons</include>
-      <label>$LOCALIZE[5]</label>
-      <visible></visible>
-    </control>-->
-  	
-  	<control type="group"> <!-- Clock & Weather -->
-  		<posx>110r</posx>
-  		<posy>0</posy>
-  		<visible>!IsEmpty(Weather.Plugin)</visible>
-
-    	<control type="label">
-    		<description>Time label</description>
-    		<posx>120r</posx>
-    		<posy>8</posy>
-    		<width>300</width>
-    		<height>45</height>
-    		<align>right</align>
-    		<aligny>center</aligny>
-    		<font>font28_title</font>
-    		<textcolor>orange</textcolor>
-    		<shadowcolor>black</shadowcolor>
-    		<label>$INFO[System.Time]</label>
-    	</control>
-
-    	<control type="label">
-    		<description>Date label</description>
-    		<posx>120r</posx>
-    		<posy>52</posy>
-    		<width>300</width>
-    		<height>22</height>
-    		<align>right</align>
-    		<aligny>center</aligny>
-    		<font>font10</font>
-    		<textcolor>white</textcolor>
-    		<shadowcolor>black</shadowcolor>
-    		<label>$INFO[System.Date]</label>
-    	</control>
-
     	<control type="image">
-    		<description>Weather image</description>
+        <visible>Skin.HasSetting(showSkinLogo) + !Skin.HasSetting(useXBMCLogo)</visible>
+    		<description>Logo</description>
     		<posx>0</posx>
     		<posy>0</posy>
-    		<width>90</width>
-    		<height>90</height>
+    		<width>256</width>
+    		<height>64</height>
     		<aspectratio>keep</aspectratio>
-    		<texture>$INFO[Weather.Conditions]</texture>
+    		<texture>sets/Default/logo.png</texture>
     	</control>
-  	</control> <!-- Clock & Weather -->
-  </include>
-
-    <include name="Clock_Settings">
-    <control type="group">
-      <control type="image">
-        <description>Background image</description>
-        <posx>0</posx>
-        <posy>-20</posy>
-        <width>1920</width>
-        <height>120</height>
-        <texture>sets/Default/HomeBack.png</texture>
-      </control>
-    </control>
-
-    <control type="image">
-      <visible></visible>
-      <description>Logo</description>
-      <posx>0</posx>
-      <posy>5</posy>
-      <width>256</width>
-      <height>64</height>
-      <aspectratio>keep</aspectratio>
-      <texture>sets/Default/xbmc-logo.png</texture>
-    </control>
-
-    <!-- Breadcrums -->
-    <!--<control type="label">
-      <posx>0</posx>
-      <posy>45</posy>
-      <width>256</width>
-      <height>45</height>
-      <align>center</align>
-      <include>WindowTitleCommons</include>
-      <label>$LOCALIZE[5]</label>
-      <visible></visible>
-    </control>-->
-    
-    <control type="group"> <!-- Clock & Weather -->
-      <posx>110r</posx>
-      <posy>0</posy>
-      <visible>!IsEmpty(Weather.Plugin)</visible>
-
-      <control type="label">
-        <description>Time label</description>
-        <posx>120r</posx>
-        <posy>8</posy>
-        <width>300</width>
-        <height>45</height>
-        <align>right</align>
-        <aligny>center</aligny>
-        <font>font28_title</font>
-        <textcolor>orange</textcolor>
-        <shadowcolor>black</shadowcolor>
-        <label>$INFO[System.Time]</label>
-      </control>
-
-      <control type="label">
-        <description>Date label</description>
-        <posx>120r</posx>
-        <posy>52</posy>
-        <width>300</width>
-        <height>22</height>
-        <align>right</align>
-        <aligny>center</aligny>
-        <font>font10</font>
-        <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
-        <label>$INFO[System.Date]</label>
-      </control>
 
       <control type="image">
-        <description>Weather image</description>
+        <visible>Skin.HasSetting(showSkinLogo) + Skin.HasSetting(useXBMCLogo)</visible>
+        <description>Logo</description>
         <posx>0</posx>
         <posy>0</posy>
-        <width>90</width>
-        <height>90</height>
+        <width>256</width>
+        <height>64</height>
         <aspectratio>keep</aspectratio>
-        <texture>$INFO[Weather.Conditions]</texture>
+        <texture>sets/Default/xbmc-logo.png</texture>
       </control>
+
+    	<!-- Clock & Weather -->
+    	<control type="group">
+    		<posx>110r</posx>
+    		<posy>0</posy>
+    		<visible>!IsEmpty(Weather.Plugin)</visible>
+
+      	<control type="label">
+      		<description>Time label</description>
+      		<posx>120r</posx>
+      		<posy>-5</posy>
+      		<width>300</width>
+      		<height>45</height>
+      		<align>right</align>
+      		<aligny>center</aligny>
+      		<font>Font_Reg18</font>
+      		<textcolor>orange</textcolor>
+      		<shadowcolor>black</shadowcolor>
+      		<label>$INFO[System.Time]</label>
+      	</control>
+
+      	<control type="label">
+      		<description>Date label</description>
+      		<posx>120r</posx>
+      		<posy>35</posy>
+      		<width>300</width>
+      		<height>22</height>
+      		<align>right</align>
+      		<aligny>center</aligny>
+      		<font>Font_Reg18</font>
+      		<textcolor>white</textcolor>
+      		<shadowcolor>black</shadowcolor>
+      		<label>$INFO[System.Date]</label>
+      	</control>
+
+      	<control type="image">
+      		<description>Weather image</description>
+      		<posx>0</posx>
+      		<posy>-15</posy>
+      		<width>90</width>
+      		<height>90</height>
+      		<aspectratio>keep</aspectratio>
+      		<texture>$INFO[Weather.Conditions]</texture>
+      	</control>
+    	</control>
     </control>
   </include>
   
@@ -1191,6 +1096,7 @@
       <effect type="zoom" start="100" end="70" center="auto" easing="in" tween="quadratic" time="300" />
       <effect type="fade" start="100" end="0" time="300" />
     </animation>
+
     <hitrect x="0" y="795" w="1920" h="180" />
     <posx>0</posx>
     <posy>285r</posy>
@@ -1201,6 +1107,7 @@
     <focusposition>3</focusposition>
     <movement>2</movement>
     <orientation>Horizontal</orientation>
+
     <itemlayout height="300" width="273">
       <control type="image">
         <posx>0</posx>
@@ -1489,42 +1396,47 @@
   <include name="Window_OpenClose_Animation_Up">
 	<animation effect="slide" start="0,0" end="0,-480" time="350" delay="175">WindowClose</animation>
 	<animation effect="slide" start="0,-480" end="0,0" time="350" delay="175">WindowOpen</animation>
+  <animation effect="slide" start="0,0" end="0,-480" time="350" delay="175">Hidden</animation>
+  <animation effect="slide" start="0,-480" end="0,0" time="350" delay="175">Visible</animation>
   </include>  
 
   <include name="Window_OpenClose_Animation_Down">
 	<animation effect="slide" start="0,0" end="0,480" time="350" delay="175">WindowClose</animation>
 	<animation effect="slide" start="0,480" end="0,0" time="350" delay="175">WindowOpen</animation>
+  <animation effect="slide" start="0,0" end="0,480" time="350" delay="175">Hidden</animation>
+  <animation effect="slide" start="0,480" end="0,0" time="350" delay="175">Visible</animation>
   </include> 
 
   <include name="Window_OpenClose_Animation_Left">
 	<animation effect="slide" start="0,0" end="-480,0" time="350" delay="175">WindowClose</animation>
 	<animation effect="slide" start="-480,0" end="0,0" time="350" delay="175">WindowOpen</animation>
+  <animation effect="slide" start="0,0" end="-480,0" time="350" delay="175">Hidden</animation>
+  <animation effect="slide" start="-480,0" end="0,0" time="350" delay="175">Visible</animation>
   </include>  
 
   <include name="Window_OpenClose_Animation_Right">
 	<animation effect="slide" start="0,0" end="480,0" time="350" delay="175">WindowClose</animation>
 	<animation effect="slide" start="480,0" end="0,0" time="350" delay="175">WindowOpen</animation>
+  <animation effect="slide" start="0,0" end="480,0" time="350" delay="175">Hidden</animation>
+  <animation effect="slide" start="480,0" end="0,0" time="350" delay="175">Visible</animation>
   </include>  
-
-  <include name="Window_OpenClose_Animation">
-    <animation effect="fade" time="350">WindowOpen</animation>
-    <animation effect="fade" time="350">WindowClose</animation>
-  </include>
 
   <include name="dialogeffect">
     <animation effect="fade" time="250">WindowOpen</animation>
     <animation effect="fade" time="250">WindowClose</animation>
+    <animation effect="fade" time="250">Visible</animation>
+    <animation effect="fade" time="250">Hidden</animation>
   </include>
 
   <include name="VisibleFadeEffect">
-    <animation effect="fade" time="175">Visible</animation>
-    <animation effect="fade" time="175">Hidden</animation>
-    <animation effect="fade" time="175">WindowOpen</animation>
-    <animation effect="fade" time="175">WindowClose</animation>
+    <animation effect="fade" time="75">Visible</animation>
+    <animation effect="fade" time="75">Hidden</animation>
+    <animation effect="fade" time="75">WindowOpen</animation>
+    <animation effect="fade" time="75">WindowClose</animation>
   </include>
 
   <include name="backgroundAnimation">
-      <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-      <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="linear" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+      <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
+      <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="linear" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
   </include>
 </includes>

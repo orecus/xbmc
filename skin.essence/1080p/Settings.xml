@@ -3,31 +3,41 @@
   <allowoverlay>no</allowoverlay>
   <controls>
     <include>CommonBackground</include>
-    <include>Clock_Settings</include> 
 
-      <control type="label">
-        <description>Header label</description>
-        <posx>50</posx>
-        <posy>45</posy>
-        <width>300</width>
-        <height>45</height>
-        <font>Font_Reg10</font>
-        <label>$LOCALIZE[31000] $LOCALIZE[5]</label>
-        <align>left</align>
-        <aligny>center</aligny>
-        <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
-      </control>
+    <control type="image">
+      <include>VisibleFadeEffect</include>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>sets/Default/backgroundTint.png</texture>
+    </control>
+
+    <include>Header</include> 
+
+     <control type="textbox">
+      <description>Appearance Description</description>
+      <posx>450</posx>
+      <posy>780</posy>
+      <width>1110</width>
+      <height>150</height>
+      <font>Font_Reg14</font>
+      <label>$INFO[Container(9000).ListItem.Label2]</label>
+      <align>left</align>
+      <textcolor>white</textcolor>
+      <shadowcolor>black</shadowcolor>
+    </control>
 
     <control type="group">
       <posx>270</posx>
-      <posy>40</posy>
+      <posy>10</posy>
 
       <control type="list" id="9000">
+        <include>VisibleFadeEffect</include>
         <posx>0</posx>
         <posy>0</posy>
         <width>1800</width>
-        <height>32</height>
+        <height>64</height>
         <onleft>9000</onleft>
         <onright>9001</onright>
         <onup>9000</onup>
@@ -36,39 +46,46 @@
         <pagecontrol>-</pagecontrol>
         <scrolltime>300</scrolltime>
 
-        <itemlayout height="32" width="140">
+        <itemlayout height="64" width="150">
           <control type="label">
-            <posx>0</posx>
+            <posx>75</posx>
             <posy>-5</posy>
-            <width>140</width>
-            <height>32</height>
+            <width>150</width>
+            <height>64</height>
             <font>Font_Reg14</font>
             <textcolor>white</textcolor>
-            <align>left</align>
+            <align>center</align>
             <aligny>top</aligny>
             <label>$INFO[ListItem.Label]</label>
             <shadowcolor>black</shadowcolor>
           </control>
         </itemlayout>
 
-        <focusedlayout height="32" width="140">
-          
+        <focusedlayout height="64" width="150">
           <control type="image">
-            <posy>0</posy>
             <posx>0</posx>
-            <width>140</width>
-            <height>32</height>
+            <posy>-15</posy>
+            <width>150</width>
+            <height>64</height>
+            <texture>sets/Default/whiteGlow.png</texture>
+          </control>
+
+          <control type="image">
+            <posx>0</posx>
+            <posy>-15</posy>
+            <width>150</width>
+            <height>64</height>
             <texture>sets/Default/button-focus.png</texture>
           </control>
 
           <control type="label">
-            <posx>0</posx>
+            <posx>75</posx>
             <posy>-5</posy>
             <width>140</width>
-            <height>32</height>
+            <height>64</height>
             <font>Font_Reg14</font>
-            <textcolor>blue</textcolor>
-            <align>left</align>
+            <textcolor>white</textcolor>
+            <align>center</align>
             <aligny>top</aligny>
             <label>$INFO[ListItem.Label]</label>
             <shadowcolor>black</shadowcolor>
@@ -139,19 +156,6 @@
             <icon>-</icon>
           </item>
         </content>
-      </control>
-
-       <control type="textbox">
-        <description>Appearance Description</description>
-        <posx>450</posx>
-        <posy>780</posy>
-        <width>1110</width>
-        <height>150</height>
-        <font>Font_Reg14</font>
-        <label>$INFO[Container(9000).ListItem.Label2]</label>
-        <align>left</align>
-        <textcolor>white</textcolor>
-        <shadowcolor>black</shadowcolor>
       </control>
     </control>
 

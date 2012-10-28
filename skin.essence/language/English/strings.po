@@ -675,5 +675,5 @@ msgid "Setting Description"
 msgstr ""
 
 msgctxt "#31924"
-msgid "- Use Classiv view"
+msgid "- Use Classic view"
 msgstr ""

@@ -1429,14 +1429,30 @@
   </include>
 
   <include name="VisibleFadeEffect">
-    <animation effect="fade" time="75">Visible</animation>
-    <animation effect="fade" time="75">Hidden</animation>
-    <animation effect="fade" time="75">WindowOpen</animation>
-    <animation effect="fade" time="75">WindowClose</animation>
+    <animation effect="fade" time="175">Visible</animation>
+    <animation effect="fade" time="175">Hidden</animation>
+    <animation effect="fade" time="175">WindowOpen</animation>
+    <animation effect="fade" time="175">WindowClose</animation>
   </include>
 
   <include name="backgroundAnimation">
-      <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
-      <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="linear" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
+      <animation effect="zoom" start="100" end="130" center="auto" time="25000" tween="sine" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
+      <animation effect="slide" start="0,-15" end="0,15" time="7500" tween="sine" pulse="true" delay="0" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
+      <animation effect="slide" start="15,0" end="-15,0" time="7500" tween="sine" pulse="true" delay="7500" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
+  </include>
+
+    <include name="backgroundAnimationEffects1">
+      <animation effect="zoom" start="90" end="110" center="auto" time="15000" tween="sine" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
+      <animation effect="slide" start="0,0" end="1920,0" time="125000" tween="sine" pulse="true" delay="15000" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
+  </include>
+
+  <include name="backgroundAnimationEffects2">
+      <animation effect="zoom" start="70" end="80" center="auto" time="15000" tween="sine" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
+      <animation effect="slide" start="0,-1080" end="0,1080" time="125000" tween="sine" pulse="true" delay="7500" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
+  </include>
+
+  <include name="backgroundAnimationEffects3">
+      <animation effect="zoom" start="90" end="100" center="auto" time="15000" tween="sine" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
+      <animation effect="slide" start="1920,1080" end="-1920,-1080" time="125000" tween="sine" pulse="true" delay="0" reversible="true" condition="Skin.HasSetting(animateBackgrounds)">Conditional</animation>
   </include>
 </includes>

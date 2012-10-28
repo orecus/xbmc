@@ -101,6 +101,7 @@
       <width>960</width>
       <height>540</height>
       <texture>sets/Default/settings-preview/homescreen-showSkinLogo.png</texture>
+      <include>VisibleFadeEffect</include>
     </control>
 
     <control type="image">
@@ -110,6 +111,7 @@
       <width>960</width>
       <height>540</height>
       <texture>sets/Default/settings-preview/homescreen-useXBMCLogo.png</texture>
+      <include>VisibleFadeEffect</include>
     </control>
 
     <control type="image">
@@ -119,6 +121,7 @@
       <width>960</width>
       <height>540</height>
       <texture>sets/Default/settings-preview/homescreen-mainmenu.png</texture>
+      <include>VisibleFadeEffect</include>
     </control>
 
     <control type="image">
@@ -128,6 +131,7 @@
       <width>960</width>
       <height>540</height>
       <texture>sets/Default/settings-preview/homescreen-mainmenu.png</texture>
+      <include>VisibleFadeEffect</include>
     </control>
 
     <control type="image">
@@ -136,6 +140,7 @@
       <width>960</width>
       <height>540</height>
       <texture>sets/Default/settings-preview/homescreen-mainmenuShowSub.png</texture>
+      <include>VisibleFadeEffect</include>
     </control>
 
     <control type="image">
@@ -145,6 +150,7 @@
       <width>960</width>
       <height>540</height>
       <texture>sets/Default/settings-preview/homescreen-recentlyaddedTVShowsPosters.png</texture>
+      <include>VisibleFadeEffect</include>
     </control>
 
     <control type="image">
@@ -154,6 +160,7 @@
       <width>960</width>
       <height>540</height>
       <texture>sets/Default/settings-preview/homescreen-recentlyaddedTVShowsThumbs.png</texture>
+      <include>VisibleFadeEffect</include>
     </control>
 
     <control type="image">
@@ -163,6 +170,7 @@
       <width>960</width>
       <height>540</height>
       <texture>sets/Default/settings-preview/homescreen-recentlyaddedClassic.png</texture>
+      <include>VisibleFadeEffect</include>
     </control>
 
     <control type="image">
@@ -172,6 +180,7 @@
       <width>960</width>
       <height>540</height>
       <texture>sets/Default/settings-preview/homescreen-rss.png</texture>
+      <include>VisibleFadeEffect</include>
     </control>
 
     <control type="image">
@@ -181,6 +190,7 @@
       <width>960</width>
       <height>540</height>
       <texture>sets/Default/settings-preview/homescreen-extrainformation.png</texture>
+      <include>VisibleFadeEffect</include>
     </control>
 
     <!-- Main Configuration Menu -->
@@ -384,7 +394,6 @@
             <align>left</align>
             <aligny>center</aligny>
           </control>
-
 
           <control type="radiobutton" id="447">
             <width>900</width>

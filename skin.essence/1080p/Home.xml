@@ -197,7 +197,7 @@
         <posy>0</posy>
         <width>2200</width>
         <height>160</height>
-        <texture border="0,6,0,6">sets/Default/HomeBack.png</texture>
+        <texture>sets/Default/HomeBack.png</texture>
       </control>
 
       <control type="fixedlist" id="9000">

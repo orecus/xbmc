@@ -229,7 +229,7 @@
 
         <control type="button">
           <description>left Arrow</description>
-          <posx>-100</posx>
+          <posx>-90</posx>
           <posy>215</posy>
           <width>64</width>
           <height>64</height>
@@ -796,19 +796,19 @@
           <width>45</width>
           <height>60</height>
           <include>ButtonArrowBig-Left</include>
-          <onclick>Control.Move(8002,-1)</onclick>
+          <onclick>Control.Move(8001,-1)</onclick>
           <visible>Control.HasFocus(8002) + Container(8002).HasPrevious</visible>
           <include>VisibleFadeEffect</include>
         </control>
 
         <control type="button">
           <description>right Arrow</description>
-          <posx>1215</posx>
+          <posx>1455</posx>
           <posy>135</posy>
           <width>45</width>
           <height>60</height>
           <include>ButtonArrowBig-Right</include>
-          <onclick>Control.Move(8002,1)</onclick>
+          <onclick>Control.Move(8001,1)</onclick>
           <visible>Control.HasFocus(8002) + Container(8002).HasNext</visible>
           <include>VisibleFadeEffect</include>
         </control>

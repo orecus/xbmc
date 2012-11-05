@@ -14,7 +14,7 @@
         <posx>100</posx>
         <posy>100</posy>
         <visible>Library.HasContent(Movies)</visible>
-        <visible>Container(9000).Hasfocus(10) + Skin.HasSetting(showLatestMediaAdded) + Skin.HasSetting(useClassicLatestMedia)</visible>
+        <visible>[Control.HasFocus(90150)] | [Container(9000).HasFocus(10)]</visible>
         <include>VisibleFadeEffect</include>
 
         <control type="image">
@@ -110,6 +110,15 @@
                 <width>365</width>
                 <height>530</height>
                 <texture border="15">sets/Default/RecentAddedBack-focus.png</texture>
+              </control>
+
+              <control type="image">
+                <description>Play Button</description>
+                <posy>196</posy>
+                <posx>112</posx>
+                <width>128</width>
+                <height>128</height>
+                <texture >sets/Default/icons/MediaPlay-focus.png</texture>
               </control>
 
                <control type="label">
@@ -257,7 +266,7 @@
         <posx>240</posx>
         <posy>175</posy>
         <visible>Library.HasContent(TVShows)</visible>
-        <visible>Container(9000).Hasfocus(11) + Skin.HasSetting(showLatestMediaAdded) + Skin.HasSetting(useClassicLatestMedia)</visible>
+        <visible>[Control.HasFocus(90151)] | [Container(9000).HasFocus(11)]</visible>
         <include>VisibleFadeEffect</include>
 
         <control type="image">
@@ -375,9 +384,16 @@
                 <height>232</height>
                 <aspectratio>scale</aspectratio>
                 <texture>$INFO[ListItem.Icon]</texture>
-                <bordertexture border="5">sets/Default/button-nofocus.png</bordertexture>
-                <bordersize>5</bordersize>
                 <visible>!Control.HasFocus(8001)</visible>
+              </control>
+
+             <control type="image">
+                <description>Play Button</description>
+                <posy>64</posy>
+                <posx>112</posx>
+                <width>128</width>
+                <height>128</height>
+                <texture >sets/Default/icons/MediaPlay-focus.png</texture>
               </control>
 
               <control type="label">
@@ -538,7 +554,7 @@
         <posx>240</posx>
         <posy>175</posy>
         <visible>Library.HasContent(Music)</visible>
-        <visible>Container(9000).Hasfocus(3) + Skin.HasSetting(showLatestMediaAdded) + Skin.HasSetting(useClassicLatestMedia)</visible>
+        <visible>Container(9000).Hasfocus(3)</visible>
         <include>VisibleFadeEffect</include>
 
         <control type="image">
@@ -651,6 +667,15 @@
               <height>262</height>
               <texture border="15">sets/Default/RecentAddedBack-focus.png</texture>
             </control>
+
+             <control type="image">
+                <description>Play Button</description>
+                <posy>64</posy>
+                <posx>96</posx>
+                <width>128</width>
+                <height>128</height>
+                <texture >sets/Default/icons/MediaPlay-focus.png</texture>
+              </control>
 
             <control type="label">
               <posx>150</posx>

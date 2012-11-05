@@ -2,27 +2,38 @@
   <defaultcontrol always="true">10</defaultcontrol>
   <coordinates>
     <system>1</system>
+  </coordinates>
+
+  <include>VisibleFadeEffect</include>
+  <controls>
+
+    <control type="image">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>sets/Default/backgroundTint.png</texture>
+    </control>
+
+    <control type="group">
     <posx>502</posx>
     <posy>345</posy>
-  </coordinates>
-  <include>dialogeffect</include>
-  <include>BehindDialogFadeOut</include>
-  <controls>
+
     <control type="image">
       <posx>0</posx>
       <posy>0</posy>
       <width>915</width>
       <height>360</height>
-      <texture border="40">DialogBack.png</texture>
+      <texture border="20">sets/Default/FadedBoxBackground-light.png</texture>
     </control>
 
     <control type="image">
       <description>Dialog Header image</description>
       <posx>60</posx>
-      <posy>24</posy>
+      <posy>65</posy>
       <width>795</width>
-      <height>60</height>
-      <texture>dialogheader.png</texture>
+      <height>32</height>
+      <texture>sets/Default/dialogheader.png</texture>
     </control>
 
     <control type="label" id="1">
@@ -41,7 +52,7 @@
       <posy>30</posy>
       <width>795</width>
       <height>45</height>
-      <font>font13_title</font>
+      <font>Font_Reg16</font>
       <label>$INFO[Control.GetLabel(1)] $INFO[System.Progressbar,- ,%]</label>
       <align>center</align>
       <aligny>center</aligny>
@@ -77,7 +88,7 @@
       <aligny>center</aligny>
       <label>-</label>
       <haspath>true</haspath>
-      <font>font13</font>
+      <font>Font_Reg12</font>
     </control>
 
     <control type="label" id="3">
@@ -90,7 +101,7 @@
       <aligny>center</aligny>
       <label>-</label>
       <haspath>true</haspath>
-      <font>font13</font>
+      <font>Font_Reg12</font>
     </control>
 
     <control type="label" id="4">
@@ -103,7 +114,7 @@
       <aligny>center</aligny>
       <label>-</label>
       <haspath>true</haspath>
-      <font>font13</font>
+      <font>Font_Reg12</font>
     </control>
 
     <control type="progress">
@@ -122,7 +133,7 @@
       <width>300</width>
       <height>60</height>
       <label>222</label>
-      <font>font12_title</font>
+      <font>Font_Reg14</font>
       <textcolor>white</textcolor>
       <focusedcolor>white</focusedcolor>
       <align>center</align>
@@ -130,6 +141,7 @@
       <onright>10</onright>
       <onup>10</onup>
       <ondown>10</ondown>
+    </control>
     </control>
   </controls>
 </window>

@@ -62,12 +62,12 @@
 				
 				<control type="image" id="400">
 					<description>avatar</description>
-					<posx>-10</posx>
-					<posy>10</posy>
-					<width>75</width>
-					<height>75</height>
+					<posx>0</posx>
+					<posy>15</posy>
+					<width>64</width>
+					<height>64</height>
 					<aspectratio>keep</aspectratio>
-					<texture>sets/Default/icons/Cry.png</texture>
+					<texture>sets/Default/icons/EmoteCry.png</texture>
 				</control>
 		</control>
 	</controls>

@@ -3,16 +3,6 @@
   <allowoverlay>no</allowoverlay>
   <controls>
     <include>CommonBackground</include>
-
-    <control type="image">
-      <include>VisibleFadeEffect</include>
-      <posx>0</posx>
-      <posy>0</posy>
-      <width>1920</width>
-      <height>1080</height>
-      <texture>sets/Default/backgroundTint.png</texture>
-    </control>
-
     <include>Header</include> 
 
      <control type="textbox">
@@ -29,63 +19,65 @@
     </control>
 
     <control type="group">
-      <posx>270</posx>
-      <posy>10</posy>
+      <include>Window_OpenClose_Animation_Left</include>
+      <posx>0</posx>
+      <posy>66</posy>
+      <width>350</width>
+      <height>1015</height>
 
-      <control type="list" id="9000">
-        <include>VisibleFadeEffect</include>
+      <control type="image">
         <posx>0</posx>
         <posy>0</posy>
+        <width>450</width>
+        <height>1015</height>
+        <texture>sets/Default/SideFade.png</texture>
+      </control>
+
+      <control type="list" id="9000">
+        <posx>0</posx>
+        <posy>20</posy>
         <width>1800</width>
-        <height>64</height>
+        <height>900</height>
         <onleft>9000</onleft>
         <onright>9001</onright>
         <onup>9000</onup>
         <ondown>9000</ondown>
-        <orientation>horizontal</orientation>
+        <orientation>vertical</orientation>
         <pagecontrol>-</pagecontrol>
         <scrolltime>300</scrolltime>
 
-        <itemlayout height="64" width="150">
+        <itemlayout height="64" width="250">
           <control type="label">
-            <posx>75</posx>
+            <posx>15</posx>
             <posy>-5</posy>
-            <width>150</width>
+            <width>250</width>
             <height>64</height>
             <font>Font_Reg14</font>
-            <textcolor>white</textcolor>
-            <align>center</align>
+            <textcolor>grey</textcolor>
+            <align>left</align>
             <aligny>top</aligny>
             <label>$INFO[ListItem.Label]</label>
             <shadowcolor>black</shadowcolor>
           </control>
         </itemlayout>
 
-        <focusedlayout height="64" width="150">
+        <focusedlayout height="64" width="250">
           <control type="image">
             <posx>0</posx>
-            <posy>-15</posy>
-            <width>150</width>
-            <height>64</height>
-            <texture>sets/Default/whiteGlow.png</texture>
-          </control>
-
-          <control type="image">
-            <posx>0</posx>
-            <posy>-15</posy>
-            <width>150</width>
+            <posy>-20</posy>
+            <width>250</width>
             <height>64</height>
             <texture>sets/Default/button-focus.png</texture>
           </control>
 
           <control type="label">
-            <posx>75</posx>
+            <posx>15</posx>
             <posy>-5</posy>
-            <width>140</width>
+            <width>250</width>
             <height>64</height>
             <font>Font_Reg14</font>
             <textcolor>white</textcolor>
-            <align>center</align>
+            <align>left</align>
             <aligny>top</aligny>
             <label>$INFO[ListItem.Label]</label>
             <shadowcolor>black</shadowcolor>

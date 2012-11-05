@@ -4,15 +4,24 @@
       <onup>20</onup>
       <ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
       <ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
-      <visible>!Window.IsVisible(Favourites) + Skin.HasSetting(showLatestMediaAdded) + !Skin.HasSetting(useClassicLatestMedia)</visible>
+      <visible>!Window.IsVisible(Favourites)</visible>
       
       <!-- Movies -->
       <control type="group">
       <posx>0</posx>
       <posy>50</posy>
       <visible>Library.HasContent(Movies)</visible>
-      <visible>Container(9000).Hasfocus(10)</visible>
+      <visible>[Control.HasFocus(90150) + !Skin.HasSetting(HomeMenuClassic)] | [Container(9000).HasFocus(10) + Skin.HasSetting(HomeMenuClassic)]</visible>
       <include>VisibleFadeEffect</include>
+
+      <!-- <control type="image">
+        <posx>936</posx>
+        <posy>15</posy>
+        <width>48</width>
+        <height>48</height>
+        <texture>sets/Default/icons/NavigateUp-small.png</texture>
+        <animation effect="rotate" start="0" end="-180" center="auto" delay="300" time="400" condition="ControlGroup(9000).HasFocus">Conditional</animation>     
+      </control>-->  
 
         <!-- Left Movie -->
         <control type="group">
@@ -229,7 +238,7 @@
       <posx>0</posx>
       <posy>50</posy>
       <visible>Library.HasContent(TVShows)</visible>
-      <visible>Container(9000).Hasfocus(11) + Skin.HasSetting(usePostersLatestMedia)</visible>
+      <visible>[Control.HasFocus(90151) + !Skin.HasSetting(HomeMenuClassic) + Skin.HasSetting(usePostersLatestMedia)] | [Container(9000).HasFocus(11) + Skin.HasSetting(HomeMenuClassic) + Skin.HasSetting(usePostersLatestMedia)]</visible>
       <include>VisibleFadeEffect</include>
 
         <!-- Left Show -->
@@ -447,7 +456,7 @@
         <posx>240</posx>
         <posy>175</posy>
         <visible>Library.HasContent(TVShows)</visible>
-        <visible>Container(9000).Hasfocus(11) + !Skin.HasSetting(usePostersLatestMedia)</visible>
+        <visible>[Control.HasFocus(90151) + !Skin.HasSetting(HomeMenuClassic) + !Skin.HasSetting(usePostersLatestMedia)] | [Container(9000).HasFocus(11) + Skin.HasSetting(HomeMenuClassic) + !Skin.HasSetting(usePostersLatestMedia)]</visible>
         <include>VisibleFadeEffect</include>
 
         <control type="image">
@@ -728,7 +737,7 @@
         <posx>240</posx>
         <posy>175</posy>
         <visible>Library.HasContent(Music)</visible>
-        <visible>Container(9000).Hasfocus(3) + !Skin.HasSetting(HomepageHideRecentlyAddedAlbums)</visible>
+        <visible>Container(9000).Hasfocus(3)</visible>
         <include>VisibleFadeEffect</include>
 
         <control type="image">
@@ -739,7 +748,6 @@
           <height>360</height>
           <texture border="15">sets/Default/FadedBoxBackground.png</texture>
         </control>
-
 
         <control type="list" id="8002">
           <animation effect="slide" start="0,0" end="150,0" time="0" condition="StringCompare(Container(8002).NumItems,3)">conditional</animation>
@@ -841,6 +849,15 @@
               <height>262</height>
               <texture border="15">sets/Default/RecentAddedBack-focus.png</texture>
             </control>
+
+             <control type="image">
+                <description>Play Button</description>
+                <posy>64</posy>
+                <posx>96</posx>
+                <width>128</width>
+                <height>128</height>
+                <texture >sets/Default/icons/MediaPlay-focus.png</texture>
+              </control>
 
             <control type="label">
               <posx>150</posx>
@@ -986,19 +1003,19 @@
           <width>45</width>
           <height>60</height>
           <include>ButtonArrowBig-Left</include>
-          <onclick>Control.Move(8002,-1)</onclick>
+          <onclick>Control.Move(8001,-1)</onclick>
           <visible>Control.HasFocus(8002) + Container(8002).HasPrevious</visible>
           <include>VisibleFadeEffect</include>
         </control>
 
         <control type="button">
           <description>right Arrow</description>
-          <posx>1215</posx>
+          <posx>1455</posx>
           <posy>135</posy>
           <width>45</width>
           <height>60</height>
           <include>ButtonArrowBig-Right</include>
-          <onclick>Control.Move(8002,1)</onclick>
+          <onclick>Control.Move(8001,1)</onclick>
           <visible>Control.HasFocus(8002) + Container(8002).HasNext</visible>
           <include>VisibleFadeEffect</include>
         </control>

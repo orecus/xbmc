@@ -1,0 +1,27 @@
+﻿<includes>
+  <include name="HomeWidgetsWeather">
+
+
+    <control type="group">
+      <!-- Weather -->
+      <control type="group">
+        <posx>0</posx>
+        <posy>50</posy>
+        <width>1920</width>
+        <height>1080</height>
+        <visible>Container(9000).Hasfocus(7)</visible>
+        <include>VisibleFadeEffect</include>
+
+        <control type="image">
+          <description>Weather image</description>
+          <posx>200</posx>
+          <posy>200</posy>
+          <width>90</width>
+          <height>90</height>
+          <aspectratio>keep</aspectratio>
+          <texture>$INFO[Weather.Conditions]</texture>
+        </control>
+      </control>
+    </control>
+  </include>
+</includes>

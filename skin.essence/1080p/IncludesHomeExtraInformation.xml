@@ -1,0 +1,86 @@
+﻿<includes>
+  <include name="HomeExtraInformation">
+      <!-- TV & Movie Extra Information -->
+      <control type="group">
+        <description>Extra Information</description>
+        <animation effect="slide" time="100" start="0,52" end="0,0">Visible</animation>
+        <animation effect="slide" time="100" start="0,0" end="0,52">Hidden</animation>
+
+        <animation effect="slide" time="100" start="0,52" end="0,0" delay="750">WindowOpen</animation>
+        <animation effect="slide" start="0,0" end="0,480" time="350" delay="175" tween="cubic" easing="in">WindowClose</animation>
+
+
+        <visible>[[Container(9000).HasFocus(3) | Container(9000).HasFocus(11) | Container(9000).HasFocus(10)] + [Skin.HasSetting(showExtraHomeInfo) + Skin.HasSetting(HomeMenuClassic)]] | [[Container(9000).HasFocus(3) | Control.HasFocus(90151) | Control.HasFocus(90150)] + [Skin.HasSetting(showExtraHomeInfo) + !Skin.HasSetting(HomeMenuClassic)]]</visible>
+
+        <posx>631</posx>
+        <posy>820</posy>
+        <height>52</height>
+        
+        <control type="image">
+          <width>658</width>
+          <height>52</height>
+          <texture flipy="true">sets/Default/HomeSub.png</texture>
+        </control>
+
+        <control type="image">
+          <description>Background End image</description>
+          <posx>658</posx>
+          <posy>0</posy>
+          <width>52</width>
+          <height>52</height>
+          <texture flipy="true">sets/Default/HomeSubEnd.png</texture>
+        </control>
+
+        <control type="image">
+          <description>Background End image</description>
+          <posx>-52</posx>
+          <posy>0</posy>
+          <width>52</width>
+          <height>52</height>
+          <texture flipy="true" flipx="true">sets/Default/HomeSubEnd.png</texture>
+        </control>
+        
+        <control type="label">
+          <visible>[Control.HasFocus(90151) + !Skin.HasSetting(HomeMenuClassic)] | [Container(9000).HasFocus(11) + Skin.HasSetting(HomeMenuClassic)]</visible>
+          <description>Show Information</description>
+          <font>Font_Bold14_Caps</font>
+          <textcolor>selected</textcolor>
+          <aligny>center</aligny>
+          <align>center</align>
+          <width>658</width>
+          <posx>0</posx>
+          <posy>30</posy>
+          <shadowcolor>black</shadowcolor>
+          <label>$INFO[Window(Home).Property(TVShows.Watched)][COLOR white] $LOCALIZE[31913] [/COLOR]$INFO[Window(Home).Property(TVShows.Count)] [COLOR white]$LOCALIZE[20343] $LOCALIZE[16102], [/COLOR]$INFO[Window(Home).Property(Episodes.UnWatched)][COLOR white] $LOCALIZE[31914].[/COLOR]</label>
+        </control>
+        
+        <control type="label">
+          <visible>[Control.HasFocus(90150) + !Skin.HasSetting(HomeMenuClassic)] | [Container(9000).HasFocus(10) + Skin.HasSetting(HomeMenuClassic)]</visible>
+          <description>Movie Information</description>
+          <font>Font_Bold14_Caps</font>
+          <textcolor>selected</textcolor>
+          <align>center</align>
+          <aligny>center</aligny>
+          <width>658</width>
+          <posx>0</posx>
+          <posy>30</posy>
+          <shadowcolor>black</shadowcolor>
+          <label>[COLOR white]$LOCALIZE[31910][/COLOR] $INFO[Window(Home).Property(Movies.Count)] [COLOR white]$LOCALIZE[31911],[/COLOR] $INFO[Window(Home).Property(Movies.UnWatched)] [COLOR white]$LOCALIZE[31912][/COLOR]</label>
+        </control>
+
+        <control type="label">
+          <visible>Container(9000).HasFocus(3)</visible>
+          <description>Music Information</description>
+          <font>Font_Bold14_Caps</font>
+          <textcolor>selected</textcolor>
+          <align>center</align>
+          <aligny>center</aligny>
+          <width>658</width>
+          <posx>0</posx>
+          <posy>30</posy>
+          <shadowcolor>black</shadowcolor>
+          <label>[COLOR white]$LOCALIZE[133]:[/COLOR] $INFO[Window(Home).Property(Music.ArtistsCount)][COLOR white] | $LOCALIZE[132]:[/COLOR] $INFO[Window(Home).Property(Music.AlbumsCount)][COLOR white] | $LOCALIZE[134]:[/COLOR] $INFO[Window(Home).Property(Music.SongsCount)]</label>
+        </control>
+    </control>
+  </include>
+</includes>

@@ -5,9 +5,10 @@
   <onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
   <controls>
     <include>CommonBackground</include>
-    <include>ContentPanelBackgrounds</include>
+
     <control type="group">
       <include>Window_OpenClose_Animation</include>
+      
       <include>CommonRootView</include>
       <!-- view id = 50 -->
       <include>FullWidthList</include>
@@ -42,50 +43,21 @@
     <include>BehindDialogFadeOut</include>
     <include>ScrollOffsetLabel</include>
 
-    <control type="image">
-      <description>Section header image</description>
-      <posx>30</posx>
-      <posy>4</posy>
-      <width>52</width>
-      <height>52</height>
-      <aspectratio>keep</aspectratio>
-      <texture>icon_video.png</texture>
-    </control>
-
-    <control type="grouplist">
-      <posx>98</posx>
-      <posy>8</posy>
-      <width>1500</width>
-      <height>45</height>
-      <orientation>horizontal</orientation>
-      <align>left</align>
-      <itemgap>8</itemgap>
-      <control type="label">
-        <include>WindowTitleCommons</include>
-        <label>$LOCALIZE[3]</label>
-      </control>
-      <control type="label">
-        <include>WindowTitleCommons</include>
-        <label>[COLOR=blue] - [/COLOR]$INFO[Container.FolderName]</label>
-        <visible>!IsEmpty(Container.FolderName)</visible>
-      </control>
-    </control>
-
     <control type="group">
-      <posx>-360</posx>
+      <posx>-375</posx>
       <include>SideBladeLeft</include>
 
       <control type="grouplist" id="9000">
-        <posx>0</posx>
+        <posx>15</posx>
         <posy>230</posy>
-        <width>350</width>
+        <width>375</width>
         <height>800</height>
         <onleft>9000</onleft>
         <onright>50</onright>
         <onup>9000</onup>
         <ondown>9000</ondown>
         <onback>50</onback>
-        <itemgap>0</itemgap>
+        <itemgap>-15</itemgap>
 
         <control type="button" id="2">
           <description>View As button</description>
@@ -103,10 +75,10 @@
         <control type="togglebutton" id="4">
           <description>Sort asc</description>
           <include>ButtonCommonValues</include>
-          <alttexturefocus border="5">sets/Default/button-focus.png</alttexturefocus>
-          <alttexturenofocus>-</alttexturenofocus>
-          <label>31051</label>
-          <altlabel>31050</altlabel>
+          <alttexturefocus>sets/Default/button-focus.png</alttexturefocus>
+          <alttexturenofocus>sets/Default/button.png</alttexturenofocus>
+          <label>$LOCALIZE[31051]</label>
+          <altlabel>$LOCALIZE[31050]</altlabel>
           <usealttexture>Container.SortDirection(Ascending)</usealttexture>
         </control>
 

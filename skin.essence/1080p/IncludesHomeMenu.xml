@@ -1,0 +1,213 @@
+﻿<includes>
+  <include name="HomeMenu">
+    <!-- MainMenu -->
+    <control type="group">
+      <posy>850</posy>
+      <include>Window_OpenClose_Animation_Down</include>
+
+      <control type="group" id="9001">
+        <animation effect="slide" time="100" start="0,-52" end="0,0" delay="750">WindowOpen</animation>
+        <posx>0</posx>
+        <posy>139</posy>
+        <onup>9000</onup>
+        <ondown>10</ondown>
+
+        <control type="grouplist" id="9015">
+          <include>HomeSubMenuCommonValues</include>
+          <onleft>9013</onleft>
+          <onright>9013</onright>
+          <visible>Container(9000).HasFocus(4)</visible>
+          <include>HomeSubMenuView</include>
+          <!-- Buttons for the grouplist -->
+        </control>
+
+        <control type="grouplist" id="9014">
+          <include>HomeSubMenuCommonValues</include>
+          <onleft>9014</onleft>
+          <onright>9014</onright>
+          <visible>Container(9000).HasFocus(12)</visible>
+          <include>HomeSubMenuWatch</include>
+          <!-- Buttons for the grouplist -->
+        </control>
+
+        <control type="grouplist" id="9011">
+          <include>HomeSubMenuCommonValues</include>
+          <onleft>9011</onleft>
+          <onright>9011</onright>
+          <visible>Container(9000).HasFocus(3)</visible>
+          <include>HomeSubMenuListen</include>
+          <!-- Buttons for the grouplist -->
+        </control>
+
+        <control type="grouplist" id="9012">
+          <include>HomeSubMenuCommonValues</include>
+          <onleft>9012</onleft>
+          <onright>9012</onright>
+          <visible>Container(9000).HasFocus(5)</visible>
+          <include>HomeSubMenuSystem</include>
+          <!-- Buttons for the grouplist -->
+        </control>
+
+        <control type="grouplist" id="9013">
+          <include>HomeSubMenuCommonValues</include>
+          <onleft>9013</onleft>
+          <onright>9013</onright>
+          <visible>Container(9000).HasFocus(6)</visible>
+          <include>HomeSubMenuPlayDisc</include>
+          <!-- Buttons for the grouplist -->
+        </control>
+      </control>
+
+      <!-- MainMenu Background -->
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>2200</width>
+        <height>160</height>
+        <texture>sets/Default/HomeBack.png</texture>
+      </control>
+
+      <control type="fixedlist" id="9000">
+        <posx>-165</posx>
+        <posy>35</posy>
+        <width>2250</width>
+        <height>90</height>
+        <onleft>9000</onleft>
+        <onright>9000</onright>
+        <onup condition="System.HasAddon(script.globalsearch)">608</onup>
+        <onup condition="!System.HasAddon(script.globalsearch)">603</onup>
+        <ondown>9001</ondown>
+        <pagecontrol>-</pagecontrol>
+        <scrolltime>300</scrolltime>
+        <focusposition>2</focusposition>
+        <movement>1</movement>
+        <orientation>Horizontal</orientation>
+
+        <itemlayout height="140" width="450">
+          <control type="label">
+            <posx>225</posx>
+            <posy>-10</posy>
+            <width>435</width>
+            <height>90</height>
+            <font>Font_MainMenu</font>
+            <textcolor>grey3</textcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <shadowcolor>black</shadowcolor>
+          </control>
+        </itemlayout>
+
+        <focusedlayout height="140" width="450">
+          <control type="label">
+            <posx>225</posx>
+            <posy>-10</posy>
+            <width>435</width>
+            <height>90</height>
+            <font>font_MainMenu</font>
+            <textcolor>grey3</textcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <shadowcolor>black</shadowcolor>
+          </control>
+
+          <control type="label">
+            <posx>225</posx>
+            <posy>-10</posy>
+            <width>435</width>
+            <height>90</height>
+            <font>font_MainMenu</font>
+            <textcolor>white</textcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Control.HasFocus(9000)</visible>
+            <include>VisibleFadeEffect</include>
+            <shadowcolor>black</shadowcolor>
+          </control>
+
+          <control type="image">
+            <include>VisibleFadeEffect</include>
+            <visible>Control.HasFocus(9000)</visible>
+            <posx>-50</posx>
+            <posy>-60</posy>
+            <height>200</height>
+            <width>550</width>
+            <aspectratio>keep</aspectratio>
+            <texture>sets/Default/whiteGlow.png</texture>
+          </control>
+
+          <control type="image">
+            <include>VisibleFadeEffect</include>
+            <visible>Control.HasFocus(9000)</visible>
+            <posx>-50</posx>
+            <posy>80</posy>
+            <height>16</height>
+            <width>550</width>
+            <aspectratio>keep</aspectratio>
+            <texture>sets/Default/seperatorHorizontal.png</texture>
+          </control>
+        </focusedlayout>
+
+        <content>
+          <item id="7">
+            <label>8</label>
+            <onclick>ActivateWindow(Weather)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
+          </item>
+
+          <item id="4">
+            <label>1</label>
+            <onclick>ActivateWindow(Pictures)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+            <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+          </item>
+
+          <item id="12">
+            <label>31932</label>
+            <onclick condition="System.GetBool(pvrmanager.enabled)">ActivateWindow(PVR)</onclick>
+            <onclick condition="!System.GetBool(pvrmanager.enabled)">ActivateWindow(Videos,Root)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+          </item>
+
+          <item id="3">
+            <label>31934</label>
+            <onclick>ActivateWindow(Music)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+          </item>
+
+          <item id="5">
+            <label>13000</label>
+            <onclick>ActivateWindow(Settings)</onclick>
+            <icon>-</icon>
+            <thumb>-</thumb>
+          </item>
+
+        </content>
+      </control>
+
+      <!-- MainMenu Fade -->
+      <control type="image">
+        <posx>0</posx>
+        <posy>24</posy>
+        <width>192</width>
+        <height>113</height>
+        <texture>sets/Default/SideFade.png</texture>
+      </control>
+
+      <control type="image">
+        <posx>192r</posx>
+        <posy>24</posy>
+        <width>192</width>
+        <height>113</height>
+        <texture flipx="true">sets/Default/SideFade.png</texture>
+      </control>
+    </control>
+  </include>
+</includes>

@@ -1,4 +1,4 @@
-﻿<window id="136">
+<window id="136">
   <animation effect="fade" time="100">WindowOpen</animation>
   <animation effect="fade" time="200">WindowClose</animation>
   <coordinates>
@@ -7,27 +7,40 @@
     <posy>0</posy>
   </coordinates>
   <controls>
+
+    <control type="image">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>sets/Default/backgroundTint.png</texture>
+    </control>
+
     <control type="group">
+      <include>droppedAnimation</include>
       <posx>1605</posx>
       <posy>957</posy>
+
       <control type="image">
         <description>background image</description>
         <posx>0</posx>
         <posy>0</posy>
         <width>300</width>
         <height>108</height>
-        <texture border="20">OverlayDialogBackground.png</texture>
+        <texture border="20">sets/Default/FadedBoxBackground-light.png</texture>
       </control>
+
       <control type="image">
         <description>Busy animation</description>
         <posx>30</posx>
         <posy>30</posy>
         <width>48</width>
         <height>48</height>
-        <texture>busy.png</texture>
+        <texture>sets/Default/busy.png</texture>
         <aspectratio>keep</aspectratio>
         <animation effect="rotate" start="0" end="360" center="54,54" time="1200" loop="true" condition="true">conditional</animation>
       </control>
+
       <control type="label">
         <description>Busy label</description>
         <posx>90</posx>
@@ -37,8 +50,9 @@
         <align>left</align>
         <aligny>center</aligny>
         <label>$LOCALIZE[31004]</label>
-        <font>font12</font>
+        <font>Font_Reg12</font>
       </control>
+      
       <control type="progress" id="10">
         <description>Progressbar</description>
         <posx>30</posx>

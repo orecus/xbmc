@@ -1,4 +1,4 @@
-﻿<window id="10140">
+<window id="10140">
   <defaultcontrol always="true">20</defaultcontrol>
   <coordinates>
     <system>1</system>
@@ -9,7 +9,7 @@
   <controls>
     <control type="group">
       <visible>!Window.IsVisible(PeripheralSettings)</visible>
-      <include>VisibleFadeEffect</include>
+      <include>droppedAnimation</include>
       <control type="image">
         <description>background image</description>
         <posx>0</posx>
@@ -34,7 +34,7 @@
         <posy>24</posy>
         <width>795</width>
         <height>60</height>
-        <texture>dialogheader.png</texture>
+        <texture>sets/Default/dialogheader.png</texture>
       </control>
       <control type="label" id="1">
         <description>header label</description>
@@ -84,7 +84,7 @@
             <posy>0</posy>
             <width>825</width>
             <height>120</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
           </control>
           <control type="label">
             <description>Name</description>
@@ -129,9 +129,9 @@
             <posy>0</posy>
             <width>825</width>
             <height>120</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
             <visible>!Control.HasFocus(20)</visible>
-            <include>VisibleFadeEffect</include>
+            <include>droppedAnimation</include>
           </control>
           <control type="image">
             <posx>0</posx>
@@ -140,7 +140,7 @@
             <height>120</height>
             <texture border="5">button-focus2.png</texture>
             <visible>Control.HasFocus(20)</visible>
-            <include>VisibleFadeEffect</include>
+            <include>droppedAnimation</include>
           </control>
           <control type="label">
             <description>Name</description>

@@ -1,6 +1,6 @@
-﻿<window type="buttonMenu" id="111">
+<window type="buttonMenu" id="111">
   <defaultcontrol>9001</defaultcontrol>
-  <include>VisibleFadeEffect</include>
+  <include>droppedAnimation</include>
   <coordinates>
     <system>1</system>
   </coordinates>

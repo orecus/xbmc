@@ -20,7 +20,7 @@
       <posy>24</posy>
       <width>795</width>
       <height>60</height>
-      <texture>dialogheader.png</texture>
+      <texture>sets/Default/dialogheader.png</texture>
     </control>
     <control type="label" id="1">
       <description>header label</description>

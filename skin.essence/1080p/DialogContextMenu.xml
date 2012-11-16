@@ -1,6 +1,6 @@
-﻿<window id="106">
+<window id="106">
   <defaultcontrol>1000</defaultcontrol>
-  <include>VisibleFadeEffect</include>
+  <include>droppedAnimation</include>
   <coordinates>
     <system>1</system>
   </coordinates>

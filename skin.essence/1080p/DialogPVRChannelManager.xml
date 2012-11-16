@@ -21,7 +21,7 @@
       <posy>24</posy>
       <width>1230</width>
       <height>60</height>
-      <texture>dialogheader.png</texture>
+      <texture>sets/Default/dialogheader.png</texture>
     </control>
     <control type="label">
       <description>header label</description>
@@ -91,7 +91,7 @@
         <posy>0</posy>
         <width>645</width>
         <height>712</height>
-        <texture border="5">button-nofocus.png</texture>
+        <texture border="5">sets/default/button.png</texture>
       </control>
       <control type="list" id="20">
         <posx>45</posx>
@@ -110,7 +110,7 @@
             <posy>0</posy>
             <width>630</width>
             <height>60</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
           </control>
           <control type="image">
             <posx>8</posx>
@@ -282,7 +282,7 @@
           <align>left</align>
           <aligny>center</aligny>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <pulseonselect>no</pulseonselect>
           <label>19074</label>
           <onleft>20</onleft>
@@ -301,7 +301,7 @@
           <focusedcolor>white</focusedcolor>
           <shadowcolor>black</shadowcolor>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <label>19201</label>
           <onright>60</onright>
           <onleft>20</onleft>
@@ -316,7 +316,7 @@
           <height>52</height>
           <font>font12</font>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <label>19202</label>
           <onleft>20</onleft>
           <onright>60</onright>
@@ -345,7 +345,7 @@
           <align>left</align>
           <aligny>center</aligny>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <pulseonselect>no</pulseonselect>
           <label>19206</label>
           <onleft>20</onleft>
@@ -361,7 +361,7 @@
           <height>52</height>
           <font>font12</font>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <label>19200</label>
           <onright>60</onright>
           <onleft>20</onleft>
@@ -381,7 +381,7 @@
           <align>left</align>
           <aligny>center</aligny>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <pulseonselect>no</pulseonselect>
           <label>19267</label>
           <onleft>20</onleft>
@@ -414,7 +414,7 @@
           <height>52</height>
           <font>font12</font>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <align>center</align>
           <label>19205</label>
           <onleft>20</onleft>
@@ -431,7 +431,7 @@
           <font>font12</font>
           <visible>IsEmpty(Window.Property(IsRadio))</visible>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <align>center</align>
           <label>19024</label>
           <onleft>30</onleft>
@@ -448,7 +448,7 @@
           <font>font12</font>
           <visible>!IsEmpty(Window.Property(IsRadio))</visible>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <align>center</align>
           <label>19023</label>
           <onleft>30</onleft>
@@ -464,7 +464,7 @@
           <height>52</height>
           <font>font12</font>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <align>center</align>
           <label>19203</label>
           <onleft>20</onleft>
@@ -480,7 +480,7 @@
           <height>52</height>
           <font>font12</font>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <align>center</align>
           <label>19211</label>
           <onleft>20</onleft>
@@ -496,7 +496,7 @@
           <height>52</height>
           <font>font12</font>
           <texturefocus border="5">button-focus2.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <align>center</align>
           <label>19204</label>
           <onleft>20</onleft>

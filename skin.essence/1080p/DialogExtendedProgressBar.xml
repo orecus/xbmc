@@ -1,14 +1,16 @@
 ﻿<window id="614">
 	<coordinates>
-		<posx>1420</posx>
-		<posy>43</posy>
+		<posx>1360</posx>
+		<posy>75</posy>
+		<!-- <posy>43</posy> -->
 	</coordinates>
 	<controls>
 		<control type="group">
 			<width>600</width>
-			<include>Window_OpenClose_Animation_Right</include>
+			<include>droppedAnimation</include>
+			<visible>!Window.IsVisible(FullscreenVideo)</visible>
 
-			<control type="image">
+<!-- 			<control type="image">
 				<description>Background End image</description>
 				<posx>-64</posx>
 				<posy>23</posy>
@@ -24,42 +26,63 @@
 				<width>520</width>
 				<height>64</height>
 				<texture>sets/Default/HomeSub.png</texture>
+			</control> -->
+
+			<control type="image">
+				<posx>-40</posx>
+				<height>100</height>
+				<width>600</width>
+				<texture border="20">sets/Default/FadedBoxBackground-light.png</texture>
 			</control>
 
-			<control type="label" id="30">
-				<description>Caption Label</description>
-				<posx>0</posx>
-				<posy>16</posy>
-				<width>490</width>
-				<height>27</height>
-				<font>Font_Reg12</font>
-				<textcolor>selected</textcolor>
-				<align>left</align>
-				<aligny>center</aligny>
+
+			<control type="image">
+				<posx>122r</posx>
+				<posy>15</posy>
+				<width>64</width>
+				<height>64</height>
+				<aspectratio>stretch</aspectratio>
+				<animation effect="rotate" start="0" end="360" center="auto" time="1200" loop="true" condition="true">conditional</animation>
+				<texture>sets/Default/busy.png</texture>
 			</control>
 
-			<control type="label" id="31">
-				<description>Current Directory Label</description>
-				<posx>0</posx>
-				<posy>35</posy>
-				<width>490</width>
-				<height>27</height>
-				<font>Font_Reg10</font>
-				<align>left</align>
-				<aligny>center</aligny>
-			</control>
+			<control type="group">
+				<posx>-20</posx>
+				<control type="fadelabel" id="30">
+					<description>Caption Label</description>
+					<posx>0</posx>
+					<posy>15</posy>
+					<width>490</width>
+					<height>27</height>
+					<font>Font_Reg14</font>
+					<textcolor>selected</textcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+				</control>
 
-			<control type="progress" id="32">
-				<description>progress control</description>
-				<posx>0</posx>
-				<posy>61</posy>
-				<width>490</width>
-				<height>6</height>
-				<texturebg border="2">sets/Default/ProgressBack-small.png</texturebg>
-				<lefttexture>-</lefttexture>
-				<midtexture>sets/Default/ProgressMid-small.png</midtexture>
-				<righttexture>-</righttexture>
-				<overlaytexture>-</overlaytexture>
+				<control type="fadelabel" id="31">
+					<description>Current Directory Label</description>
+					<posx>0</posx>
+					<posy>35</posy>
+					<width>490</width>
+					<height>27</height>
+					<font>Font_Reg12</font>
+					<align>right</align>
+					<aligny>center</aligny>
+				</control>
+
+				<control type="progress" id="32">
+					<description>progress control</description>
+					<posx>0</posx>
+					<posy>65</posy>
+					<width>490</width>
+					<height>12</height>
+					<texturebg border="2">sets/Default/ProgressBack-small.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture>sets/Default/ProgressMid-small.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+				</control>
 			</control>
 		</control>
 	</controls>

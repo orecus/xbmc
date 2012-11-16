@@ -1,43 +1,55 @@
 ﻿<window id="132">
   <defaultcontrol always="true">3</defaultcontrol>
+  <include>droppedAnimation</include>
   <coordinates>
     <system>1</system>
+  </coordinates>
+
+  <controls>
+  <control type="image">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>1920</width>
+    <height>1080</height>
+    <texture>sets/Default/backgroundTint.png</texture>
+  </control>
+  
+    <control type="group">
     <posx>360</posx>
     <posy>30</posy>
-  </coordinates>
-  <include>dialogeffect</include>
-  <controls>
-    <control type="group">
       <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(AddonSettings)">Conditional</animation>
+
       <control type="image">
-        <description>background image</description>
         <posx>0</posx>
         <posy>0</posy>
         <width>1200</width>
         <height>1020</height>
-        <texture border="40">DialogBack.png</texture>
+        <texture border="20">sets/Default/FadedBoxBackground-light.png</texture>
       </control>
+
       <control type="image">
         <description>Dialog Header image</description>
         <posx>60</posx>
-        <posy>24</posy>
+        <posy>50</posy>
         <width>1080</width>
-        <height>60</height>
-        <texture>dialogheader.png</texture>
+        <height>32</height>
+        <texture>sets/Default/dialogheader.png</texture>
       </control>
+
       <control type="label" id="1">
         <description>header label</description>
         <posx>60</posx>
         <posy>30</posy>
         <width>1080</width>
         <height>45</height>
-        <font>font13_title</font>
+        <font>Font_Reg16</font>
         <label>$LOCALIZE[20333]</label>
         <align>center</align>
         <aligny>center</aligny>
         <textcolor>selected</textcolor>
         <shadowcolor>black</shadowcolor>
       </control>
+
       <control type="button">
         <description>Close Window button</description>
         <posx>1065</posx>
@@ -55,27 +67,29 @@
         <ondown>10</ondown>
         <visible>system.getbool(input.enablemouse)</visible>
       </control>
+
       <control type="label">
         <description>Content Picker Header</description>
         <posx>45</posx>
         <posy>90</posy>
         <width>480</width>
         <height>60</height>
-        <font>font12</font>
+        <font>Font_Reg12</font>
         <label>$LOCALIZE[20344]</label>
         <align>center</align>
         <aligny>center</aligny>
         <textcolor>blue</textcolor>
         <shadowcolor>black</shadowcolor>
       </control>
+
       <control type="spincontrolex" id="3">
         <description>Content Picker</description>
         <posx>45</posx>
         <posy>150</posy>
         <width>480</width>
         <height>60</height>
-        <texturefocus border="5">button-focus.png</texturefocus>
-        <texturenofocus border="5">button-nofocus.png</texturenofocus>
+        <texturefocus border="5">sets/default/button-focus.png</texturefocus>
+        <texturenofocus border="5">sets/default/button.png</texturenofocus>
         <font>-</font>
         <label>-</label>
         <reverse>yes</reverse>
@@ -84,32 +98,35 @@
         <onleft>60</onleft>
         <onright>4</onright>
       </control>
+
       <control type="label">
         <description>Content Picker label</description>
         <posx>52</posx>
         <posy>150</posy>
         <width>420</width>
         <height>60</height>
-        <font>font13_title</font>
+        <font>Font_Reg16</font>
         <label>$INFO[Control.GetLabel(3)]</label>
         <align>left</align>
         <aligny>center</aligny>
         <textcolor>white</textcolor>
         <shadowcolor>black</shadowcolor>
       </control>
+
       <control type="label">
         <description>Used Scraper Header</description>
         <posx>45</posx>
         <posy>225</posy>
         <width>480</width>
         <height>30</height>
-        <font>font12</font>
+        <font>Font_Reg12</font>
         <label>$LOCALIZE[31312]</label>
         <align>center</align>
         <aligny>center</aligny>
         <textcolor>blue</textcolor>
         <shadowcolor>black</shadowcolor>
       </control>
+
       <control type="image">
         <description>Used Scraper Image</description>
         <posx>45</posx>
@@ -119,19 +136,21 @@
         <aspectratio>keep</aspectratio>
         <texture>$INFO[ListItem.Icon]</texture>
       </control>
+
       <control type="label">
         <description>Used Scaper Label</description>
         <posx>45</posx>
         <posy>472</posy>
         <width>480</width>
         <height>45</height>
-        <font>font13</font>
+        <font>Font_Reg12</font>
         <label>[B]$INFO[ListItem.Label][/B]</label>
         <align>center</align>
         <aligny>center</aligny>
         <textcolor>selected</textcolor>
         <shadowcolor>black</shadowcolor>
       </control>
+
       <control type="image">
         <posx>555</posx>
         <posy>90</posy>
@@ -140,19 +159,21 @@
         <aspectratio>stretch</aspectratio>
         <texture>separator_vertical.png</texture>
       </control>
+
       <control type="label">
         <description>Scraper List Header</description>
         <posx>600</posx>
         <posy>90</posy>
         <width>540</width>
         <height>60</height>
-        <font>font12</font>
+        <font>Font_Reg12</font>
         <label>$LOCALIZE[31313]</label>
         <align>center</align>
         <aligny>center</aligny>
         <textcolor>blue</textcolor>
         <shadowcolor>black</shadowcolor>
       </control>
+
       <control type="list" id="4">
         <posx>600</posx>
         <posy>150</posy>
@@ -164,14 +185,16 @@
         <ondown>4</ondown>
         <pagecontrol>60</pagecontrol>
         <scrolltime>200</scrolltime>
+
         <itemlayout height="68">
           <control type="image">
             <posx>0</posx>
             <posy>0</posy>
             <width>540</width>
             <height>60</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
           </control>
+
           <control type="image">
             <posx>8</posx>
             <posy>8</posy>
@@ -179,12 +202,13 @@
             <height>45</height>
             <texture>$INFO[Listitem.Icon]</texture>
           </control>
+
           <control type="label">
             <posx>75</posx>
             <posy>0</posy>
             <width>435</width>
             <height>60</height>
-            <font>font13</font>
+            <font>Font_Reg12</font>
             <align>left</align>
             <aligny>center</aligny>
             <textcolor>grey2</textcolor>
@@ -192,6 +216,7 @@
             <info>ListItem.Label</info>
           </control>
         </itemlayout>
+
         <focusedlayout height="68">
           <control type="image">
             <posx>0</posx>
@@ -199,8 +224,9 @@
             <width>540</width>
             <height>60</height>
             <visible>!Control.HasFocus(4)</visible>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
           </control>
+
           <control type="image">
             <posx>0</posx>
             <posy>0</posy>
@@ -209,6 +235,7 @@
             <visible>Control.HasFocus(4)</visible>
             <texture border="5">button-focus2.png</texture>
           </control>
+
           <control type="image">
             <posx>8</posx>
             <posy>8</posy>
@@ -216,12 +243,13 @@
             <height>45</height>
             <texture>$INFO[Listitem.Icon]</texture>
           </control>
+
           <control type="label">
             <posx>75</posx>
             <posy>0</posy>
             <width>435</width>
             <height>60</height>
-            <font>font13</font>
+            <font>Font_Reg12</font>
             <align>left</align>
             <aligny>center</aligny>
             <textcolor>white</textcolor>
@@ -230,6 +258,7 @@
           </control>
         </focusedlayout>
       </control>
+
       <control type="scrollbar" id="60">
         <posx>1140</posx>
         <posy>150</posy>
@@ -245,19 +274,21 @@
         <showonepage>true</showonepage>
         <orientation>vertical</orientation>
       </control>
+
       <control type="label">
         <description>Scanning Options Header</description>
         <posx>45</posx>
         <posy>525</posy>
         <width>1110</width>
         <height>30</height>
-        <font>font12</font>
+        <font>Font_Reg12</font>
         <label>$LOCALIZE[31314]</label>
         <align>center</align>
         <aligny>center</aligny>
         <textcolor>blue</textcolor>
         <shadowcolor>black</shadowcolor>
       </control>
+
       <control type="grouplist" id="5">
         <description>control area</description>
         <posx>45</posx>
@@ -270,22 +301,25 @@
         <onleft>5</onleft>
         <onright>5</onright>
       </control>
+
       <control type="button" id="7">
         <description>Default Button</description>
         <posx>0</posx>
         <posy>0</posy>
         <height>60</height>
-        <font>font13</font>
+        <font>Font_Reg12</font>
         <texturefocus border="5">button-focus2.png</texturefocus>
       </control>
+
       <control type="radiobutton" id="8">
         <description>Default RadioButton</description>
         <posx>0</posx>
         <posy>0</posy>
         <height>60</height>
-        <font>font13</font>
+        <font>Font_Reg12</font>
         <texturefocus border="5">button-focus2.png</texturefocus>
       </control>
+
       <control type="group" id="9001">
         <posy>922</posy>
         <control type="button" id="28">
@@ -296,13 +330,14 @@
           <height>60</height>
           <align>center</align>
           <aligny>center</aligny>
-          <font>font12_title</font>
+          <font>Font_Reg14</font>
           <label>186</label>
           <onleft>6</onleft>
           <onright>29</onright>
           <onup>30</onup>
           <ondown>3</ondown>
         </control>
+
         <control type="button" id="29">
           <description>Cancel Button</description>
           <posx>765</posx>
@@ -311,13 +346,14 @@
           <height>60</height>
           <align>center</align>
           <aligny>center</aligny>
-          <font>font12_title</font>
+          <font>Font_Reg14</font>
           <label>222</label>
           <onleft>28</onleft>
           <onright>6</onright>
           <onup>30</onup>
           <ondown>3</ondown>
         </control>
+        
         <control type="button" id="6">
           <description>Settings Button</description>
           <posx>135</posx>
@@ -326,7 +362,7 @@
           <height>60</height>
           <align>center</align>
           <aligny>center</aligny>
-          <font>font12_title</font>
+          <font>Font_Reg14</font>
           <label>5</label>
           <onleft>29</onleft>
           <onright>28</onright>

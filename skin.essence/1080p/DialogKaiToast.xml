@@ -1,14 +1,15 @@
 ﻿<window id="107">
 	<coordinates>
 		<posx>0</posx>
-		<posy>43</posy>
+		<posy>75</posy>
+		<!-- <posy>43</posy> -->
 	</coordinates>
 		<controls>
 			<control type="group">
 				<width>600</width>
-				<include>Window_OpenClose_Animation_Left</include>
+				<include>droppedAnimation</include>
 
-				<control type="image">
+<!-- 				<control type="image">
 					<description>Background End image</description>
 					<posx>520</posx>
 					<posy>23</posy>
@@ -24,17 +25,17 @@
 					<width>520</width>
 					<height>64</height>
 					<texture>sets/Default/HomeSub.png</texture>
-				</control>
+				</control> -->
 
-				<!--<control type="image">
-					<height>120</height>
+				<control type="image">
+					<height>100</height>
 					<width>600</width>
-					<texture>sets/Default/OverlayDialogBackground.png</texture>
-				</control>-->
+					<texture border="20">sets/Default/FadedBoxBackground-light.png</texture>
+				</control>
 
 				<control type="fadelabel" id="401">
 					<description>Line 1 Label</description>
-					<posx>55</posx>
+					<posx>85</posx>
 					<posy>20</posy>
 					<width>490</width>
 					<height>27</height>
@@ -48,7 +49,7 @@
 				
 				<control type="fadelabel" id="402">
 					<description>Line 2 Label</description>
-					<posx>55</posx>
+					<posx>85</posx>
 					<posy>40</posy>
 					<width>490</width>
 					<height>30</height>
@@ -62,11 +63,11 @@
 				
 				<control type="image" id="400">
 					<description>avatar</description>
-					<posx>0</posx>
-					<posy>15</posy>
+					<posx>18</posx>
+					<posy>18</posy>
 					<width>64</width>
 					<height>64</height>
-					<aspectratio>keep</aspectratio>
+					<aspectratio>stretch</aspectratio>
 					<texture>sets/Default/icons/EmoteCry.png</texture>
 				</control>
 		</control>

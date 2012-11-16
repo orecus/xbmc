@@ -1,10 +1,10 @@
-﻿<window id="101">
+<window id="101">
   <defaultcontrol always="true">10</defaultcontrol>
   <coordinates>
     <system>1</system>
   </coordinates>
 
-  <include>VisibleFadeEffect</include>
+  <include>droppedAnimation</include>
   <controls>
 
     <control type="image">

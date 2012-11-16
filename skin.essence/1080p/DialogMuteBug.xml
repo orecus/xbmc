@@ -1,12 +1,13 @@
-﻿<window id="113">
+<window id="113">
   <defaultcontrol>-</defaultcontrol>
-  <include>dialogeffect</include>
+  <include>droppedAnimation</include>
   <coordinates>
     <system>0</system>
     <posx>0</posx>
     <posy>0</posy>
   </coordinates>
   <controls>
+
     <control type="image">
       <posx>75r</posx>
       <posy>3</posy>
@@ -15,5 +16,6 @@
       <aspectratio>keep</aspectratio>
       <texture>icon-mute.png</texture>
     </control>
+    
   </controls>
 </window>

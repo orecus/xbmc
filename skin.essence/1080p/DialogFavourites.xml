@@ -61,7 +61,7 @@
             <posy>0</posy>
             <width>555</width>
             <height>60</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
           </control>
           <control type="label">
             <posx>15</posx>

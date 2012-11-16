@@ -21,7 +21,7 @@
       <posy>24</posy>
       <width>1080</width>
       <height>60</height>
-      <texture>dialogheader.png</texture>
+      <texture>sets/Default/dialogheader.png</texture>
     </control>
     <control type="label" id="2">
       <description>header label</description>
@@ -60,7 +60,7 @@
       <height>60</height>
       <width>1110</width>
       <texturefocus border="5">button-focus2.png</texturefocus>
-      <texturenofocus border="5">button-nofocus.png</texturenofocus>
+      <texturenofocus border="5">sets/default/button.png</texturenofocus>
       <textcolor>white</textcolor>
       <disabledcolor>grey3</disabledcolor>
       <textoffsetx>18</textoffsetx>

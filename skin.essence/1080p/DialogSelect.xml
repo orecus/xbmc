@@ -1,10 +1,10 @@
-﻿<window type="dialog" id="2000">
+<window type="dialog" id="2000">
   <defaultcontrol always="true">3</defaultcontrol>
   <coordinates>
     <system>1</system>
   </coordinates>
 
-  <include>VisibleFadeEffect</include>
+  <include>droppedAnimation</include>
   <controls>
 
     <control type="image">
@@ -87,7 +87,7 @@
           <posy>0</posy>
           <width>825</width>
           <height>60</height>
-          <texture border="5">button-nofocus.png</texture>
+          <texture border="5">sets/default/button.png</texture>
         </control>
 
         <control type="label">
@@ -110,9 +110,9 @@
           <posy>0</posy>
           <width>825</width>
           <height>60</height>
-          <texture border="5">button-nofocus.png</texture>
+          <texture border="5">sets/default/button.png</texture>
           <visible>!Control.HasFocus(3)</visible>
-          <include>VisibleFadeEffect</include>
+          <include>droppedAnimation</include>
         </control>
 
         <control type="image">
@@ -122,7 +122,7 @@
           <height>60</height>
           <texture border="5">button-focus2.png</texture>
           <visible>Control.HasFocus(3)</visible>
-          <include>VisibleFadeEffect</include>
+          <include>droppedAnimation</include>
         </control>
 
         <control type="label">
@@ -159,7 +159,7 @@
           <posy>0</posy>
           <width>825</width>
           <height>120</height>
-          <texture border="5">button-nofocus.png</texture>
+          <texture border="5">sets/default/button.png</texture>
         </control>
 
         <control type="image">
@@ -204,9 +204,9 @@
           <posy>0</posy>
           <width>825</width>
           <height>120</height>
-          <texture border="5">button-nofocus.png</texture>
+          <texture border="5">sets/default/button.png</texture>
           <visible>!Control.HasFocus(6)</visible>
-          <include>VisibleFadeEffect</include>
+          <include>droppedAnimation</include>
         </control>
 
         <control type="image">
@@ -216,7 +216,7 @@
           <height>120</height>
           <texture border="5">button-focus2.png</texture>
           <visible>Control.HasFocus(6)</visible>
-          <include>VisibleFadeEffect</include>
+          <include>droppedAnimation</include>
         </control>
 
         <control type="image">

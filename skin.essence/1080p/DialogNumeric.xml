@@ -20,7 +20,7 @@
       <posy>24</posy>
       <width>360</width>
       <height>60</height>
-      <texture>dialogheader.png</texture>
+      <texture>sets/Default/dialogheader.png</texture>
     </control>
     <control type="image">
       <posx>45</posx>
@@ -48,7 +48,7 @@
       <width>360</width>
       <height>45</height>
       <aspectratio>stretch</aspectratio>
-      <texture>dialogheader.png</texture>
+      <texture>sets/Default/dialogheader.png</texture>
     </control>
     <control type="label" id="1">
       <description>dialog Heading</description>

@@ -1,4 +1,4 @@
-﻿<window id="103">
+<window id="103">
   <defaultcontrol always="true">300</defaultcontrol>
   <include>dialogeffect</include>
   <coordinates>
@@ -8,7 +8,7 @@
   </coordinates>
   <controls>
     <control type="group">
-      <include>VisibleFadeEffect</include>
+      <include>droppedAnimation</include>
       <visible>!Window.IsVisible(numericinput)</visible>
       <control type="image">
         <posx>0</posx>
@@ -23,7 +23,7 @@
         <posy>24</posy>
         <width>1020</width>
         <height>60</height>
-        <texture>dialogheader.png</texture>
+        <texture>sets/Default/dialogheader.png</texture>
       </control>
       <control type="label" id="311">
         <description>header label</description>
@@ -78,7 +78,7 @@
         <width>750</width>
         <height>45</height>
         <aspectratio>stretch</aspectratio>
-        <texture>DialogHeader.png</texture>
+        <texture>sets/Default/dialogheader.png</texture>
       </control>
       <control type="group">
         <posx>45</posx>

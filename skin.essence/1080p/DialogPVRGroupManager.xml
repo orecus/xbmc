@@ -66,7 +66,7 @@
             <posy>112</posy>
             <width>510</width>
             <height>690</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
           </control>
           <control type="list" id="13">
             <posx>8</posx>
@@ -85,7 +85,7 @@
                 <posy>0</posy>
                 <width>495</width>
                 <height>60</height>
-                <texture border="5">button-nofocus.png</texture>
+                <texture border="5">sets/default/button.png</texture>
               </control>
               <control type="label">
                 <posx>15</posx>
@@ -106,7 +106,7 @@
                 <posy>0</posy>
                 <width>495</width>
                 <height>60</height>
-                <texture border="5">button-nofocus.png</texture>
+                <texture border="5">sets/default/button.png</texture>
                 <visible>!Control.HasFocus(13)</visible>
               </control>
               <control type="image">
@@ -169,7 +169,7 @@
             <posy>112</posy>
             <width>510</width>
             <height>690</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
           </control>
           <control type="list" id="11">
             <posx>8</posx>
@@ -188,7 +188,7 @@
                 <posy>0</posy>
                 <width>495</width>
                 <height>60</height>
-                <texture border="5">button-nofocus.png</texture>
+                <texture border="5">sets/default/button.png</texture>
               </control>
               <control type="image">
                 <width>48</width>
@@ -216,7 +216,7 @@
                 <posy>0</posy>
                 <width>495</width>
                 <height>60</height>
-                <texture border="5">button-nofocus.png</texture>
+                <texture border="5">sets/default/button.png</texture>
                 <visible>!Control.HasFocus(11)</visible>
               </control>
               <control type="image">
@@ -286,7 +286,7 @@
             <posy>112</posy>
             <width>510</width>
             <height>690</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
           </control>
           <control type="list" id="12">
             <posx>8</posx>
@@ -305,7 +305,7 @@
                 <posy>0</posy>
                 <width>495</width>
                 <height>60</height>
-                <texture border="5">button-nofocus.png</texture>
+                <texture border="5">sets/default/button.png</texture>
               </control>
               <control type="image">
                 <width>48</width>
@@ -333,7 +333,7 @@
                 <posy>0</posy>
                 <width>495</width>
                 <height>60</height>
-                <texture border="5">button-nofocus.png</texture>
+                <texture border="5">sets/default/button.png</texture>
                 <visible>!Control.HasFocus(12)</visible>
               </control>
               <control type="image">

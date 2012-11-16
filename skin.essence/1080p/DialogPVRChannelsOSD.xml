@@ -1,4 +1,4 @@
-﻿<window id="609">
+<window id="609">
   <defaultcontrol always="true">11</defaultcontrol>
   <coordinates>
     <system>1</system>
@@ -39,7 +39,7 @@
         <posy>24</posy>
         <width>600</width>
         <height>75</height>
-        <texture>dialogheader.png</texture>
+        <texture>sets/Default/dialogheader.png</texture>
       </control>
       <control type="label">
         <description>header label</description>
@@ -100,8 +100,8 @@
             <posy>0</posy>
             <width>615</width>
             <height>98</height>
-            <texture border="5">button-nofocus.png</texture>
-            <include>VisibleFadeEffect</include>
+            <texture border="5">sets/default/button.png</texture>
+            <include>droppedAnimation</include>
           </control>
           <control type="label">
             <posx>8</posx>
@@ -209,9 +209,9 @@
             <posy>0</posy>
             <width>615</width>
             <height>98</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
             <visible>!Control.HasFocus(11)</visible>
-            <include>VisibleFadeEffect</include>
+            <include>droppedAnimation</include>
           </control>
           <control type="image">
             <posx>0</posx>
@@ -220,7 +220,7 @@
             <height>98</height>
             <texture border="5">button-focus2.png</texture>
             <visible>Control.HasFocus(11)</visible>
-            <include>VisibleFadeEffect</include>
+            <include>droppedAnimation</include>
           </control>
           <control type="label">
             <posx>8</posx>

@@ -6,41 +6,23 @@
     <include>Header</include>
 
     <control type="image">
-      <posx>0</posx>
-      <posy>66</posy>
+      <posx>115</posx>
+      <posy>125</posy>
       <width>450</width>
-      <height>1015</height>
-      <texture>sets/Default/SideFade.png</texture>
-      <include>Window_OpenClose_Animation_Left</include>
+      <height>765</height>
+      <texture flipx="true">sets/Default/SideFade.png</texture>
+      <include>Window_OpenClose_Animation_Horizontal</include>
     </control>
 
     <control type="group">
-      <include>VisibleFadeEffect</include>
-
-      <control type="button">
-        <description>Close Window button</description>
-        <posx>1470</posx>
-        <posy>16</posy>
-        <width>96</width>
-        <height>48</height>
-        <label>-</label>
-        <font>-</font>
-        <onclick>PreviousMenu</onclick>
-        <texturefocus>DialogCloseButton-focus.png</texturefocus>
-        <texturenofocus>DialogCloseButton.png</texturenofocus>
-        <onleft>1</onleft>
-        <onright>1</onright>
-        <onup>1</onup>
-        <ondown>1</ondown>
-        <visible>system.getbool(input.enablemouse)</visible>
-        <include>VisibleFadeEffect</include>
-      </control>
+      <posx>200</posx>
+      <posy>0</posy>
+      <include>Window_OpenClose_Animation_Horizontal</include>
 
       <control type="grouplist" id="3">
-        <include>Window_OpenClose_Animation_Left</include>
         <description>button area</description>
         <posx>0</posx>
-        <posy>66</posy>
+        <posy>130</posy>
         <width>350</width>
         <height>1015</height>
         <itemgap>-2</itemgap>
@@ -55,7 +37,7 @@
         <posy>110</posy>
         <width>1325</width>
         <height>800</height>
-        <texture border="20">sets/Default/FadedBoxBackground.png</texture>
+        <texture border="20">sets/Default/FadedBoxBackground-light.png</texture>
       </control>
 
       <control type="label">
@@ -90,9 +72,9 @@
         <posy>195</posy>
         <width>20</width>
         <height>680</height>
-        <texturesliderbackground border="0,14,0,14">sets/Default/ScrollBarV.png</texturesliderbackground>
-        <texturesliderbar border="0,14,0,14">sets/Default/ScrollBarV_bar.png</texturesliderbar>
-        <texturesliderbarfocus border="0,14,0,14">sets/Default/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+        <texturesliderbackground border="0">sets/Default/ScrollBarV.png</texturesliderbackground>
+        <texturesliderbar border="0">sets/Default/ScrollBarV_bar.png</texturesliderbar>
+        <texturesliderbarfocus border="0">sets/Default/ScrollBarV_bar_focus.png</texturesliderbarfocus>
         <textureslidernib>sets/Default/ScrollBarNib.png</textureslidernib>
         <textureslidernibfocus>sets/Default/ScrollBarNib.png</textureslidernibfocus>
         <onleft>9002</onleft>
@@ -122,7 +104,7 @@
       <posx>0</posx>
       <posy>0</posy>
       <height>60</height>
-      <font>font13</font>
+      <font>Font_Reg12</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,0,0,20">sets/Default/MenuItem-focus.png</texturefocus>
@@ -134,7 +116,7 @@
       <posx>0</posx>
       <posy>0</posy>
       <height>60</height>
-      <font>font13</font>
+      <font>Font_Reg12</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,0,0,20">sets/Default/MenuItem-focus.png</texturefocus>
@@ -146,7 +128,7 @@
       <posx>0</posx>
       <posy>0</posy>
       <height>60</height>
-      <font>font13</font>
+      <font>Font_Reg12</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
       <texturefocus border="0,0,0,20">sets/Default/MenuItem-focus.png</texturefocus>
@@ -157,8 +139,8 @@
 
     <control type="image" id="11">
       <description>separator image</description>
-      <height>3</height>
-      <texture border="0">sets/Default/HomeSeperator.png</texture>
+      <height>8</height>
+      <texture border="0">sets/Default/SeperatorHorizontal.png</texture>
     </control>
 
     <control type="label" id="2">
@@ -172,6 +154,6 @@
     </control>
 
     <include>CommonNowPlaying</include>
-    <include>MainWindowMouseButtons</include>
+     
   </controls>
 </window>

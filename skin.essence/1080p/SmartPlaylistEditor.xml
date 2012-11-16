@@ -25,7 +25,7 @@
         <posy>24</posy>
         <width>1080</width>
         <height>60</height>
-        <texture>dialogheader.png</texture>
+        <texture>sets/Default/dialogheader.png</texture>
       </control>
       <control type="label" id="2">
         <description>header label</description>
@@ -66,7 +66,7 @@
         <label>467</label>
         <font>font13</font>
         <texturefocus border="5">button-focus2.png</texturefocus>
-        <texturenofocus border="5">button-nofocus.png</texturenofocus>
+        <texturenofocus border="5">sets/default/button.png</texturenofocus>
         <onright>22</onright>
         <onleft>22</onleft>
         <onup>9001</onup>
@@ -126,7 +126,7 @@
             <posy>0</posy>
             <width>825</width>
             <height>60</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
           </control>
           <control type="label">
             <posx>15</posx>
@@ -153,7 +153,7 @@
             <posy>0</posy>
             <width>825</width>
             <height>60</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
             <visible>!Control.HasFocus(10)</visible>
           </control>
           <control type="label">
@@ -235,7 +235,7 @@
         <label>21424</label>
         <font>font13</font>
         <texturefocus border="5">button-focus2.png</texturefocus>
-        <texturenofocus border="5">button-nofocus.png</texturenofocus>
+        <texturenofocus border="5">sets/default/button.png</texturenofocus>
         <onright>16</onright>
         <onleft>16</onleft>
         <onup>10</onup>
@@ -249,7 +249,7 @@
         <label>21427</label>
         <font>font13</font>
         <texturefocus border="5">button-focus2.png</texturefocus>
-        <texturenofocus border="5">button-nofocus.png</texturenofocus>
+        <texturenofocus border="5">sets/default/button.png</texturenofocus>
         <onright>17</onright>
         <onleft>17</onleft>
         <onup>16</onup>
@@ -263,7 +263,7 @@
         <label>21429</label>
         <font>font13</font>
         <texturefocus border="5">button-focus2.png</texturefocus>
-        <texturenofocus border="5">button-nofocus.png</texturenofocus>
+        <texturenofocus border="5">sets/default/button.png</texturenofocus>
         <onright>19</onright>
         <onleft>19</onleft>
         <onup>17</onup>
@@ -277,8 +277,8 @@
         <font>font12_title</font>
         <align>center</align>
         <aligny>center</aligny>
-        <texturenofocus border="5">button-nofocus.png</texturenofocus>
-        <texturefocus border="5">button-focus.png</texturefocus>
+        <texturenofocus border="5">sets/default/button.png</texturenofocus>
+        <texturefocus border="5">sets/default/button-focus.png</texturefocus>
         <alttexturenofocus border="5">button-nofocus.png</alttexturenofocus>
         <alttexturefocus border="5">button-focus.png</alttexturefocus>
         <label>21431</label>

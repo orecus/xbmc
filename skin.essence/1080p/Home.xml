@@ -1,4 +1,4 @@
-﻿<window id="0">
+<window id="0">
   <defaultcontrol always="true">9000</defaultcontrol>
   <allowoverlay>no</allowoverlay>
   <onunload condition="Container(9000).Hasfocus(10) | Container(9000).Hasfocus(11) | ControlGroup(9010).HasFocus | ControlGroup(9016).HasFocus | ControlGroup(9017).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
@@ -8,7 +8,6 @@
     <include>CommonBackground</include>
     <include>Header</include>
 
-    <include condition="!Skin.HasSetting(showExtraHomeInfo)">HomeExtraInformation</include>
     <include condition="Skin.HasSetting(showExtraHomeInfo)">HomeExtraInformation</include>
 
     <include condition="Skin.HasSetting(showWidgets) + Skin.HasSetting(showWeatherInformation)">HomeWidgetsWeather</include>
@@ -49,7 +48,7 @@
         <effect type="slide" start="500,0" end="0,0" time="300" delay="750"/>
       </animation>
       <animation type="WindowClose" reversible="false">
-        <effect type="slide" start="0,0" end="500,0" time="300" />
+        <effect type="fade" time="275" />
       </animation>
 
       <!-- Global Search -->
@@ -270,7 +269,6 @@
         <width>64</width>
         <height>64</height>
         <texture flipx="true" flipy="true">sets/Default/HomeSubEnd.png</texture>
-        <animation effect="slide" start="0,0" end="145,0" time="0" condition="!System.HasAddon(script.globalsearch)">Conditional</animation>
       </control>
 
       <control type="image">
@@ -342,7 +340,7 @@
       <posx>0</posx>
       <posy>48r</posy>
       <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
-      <include>Window_OpenClose_Animation_Down</include>
+      <include>@</include>
 	  
       <control type="image">
         <description>RSS background</description>

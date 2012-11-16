@@ -5,37 +5,56 @@
     <include>CommonBackground</include>
     <include>Header</include> 
 
-     <control type="textbox">
-      <description>Appearance Description</description>
-      <posx>450</posx>
-      <posy>780</posy>
-      <width>1110</width>
-      <height>150</height>
-      <font>Font_Reg14</font>
-      <label>$INFO[Container(9000).ListItem.Label2]</label>
-      <align>left</align>
-      <textcolor>white</textcolor>
-      <shadowcolor>black</shadowcolor>
+    <control type="group">
+      <include>Window_OpenClose_Animation_Horizontal</include>
+      <control type="image">
+        <posx>115</posx>
+        <posy>125</posy>
+        <width>450</width>
+        <height>765</height>
+        <texture flipx="true">sets/Default/SideFade.png</texture>
+      </control>
+
+      <control type="image">
+        <posx>550</posx>
+        <posy>110</posy>
+        <width>1325</width>
+        <height>800</height>
+        <texture border="20">sets/Default/FadedBoxBackground-light.png</texture>
+      </control>
+
+      <control type="image">
+        <posx>800</posx>
+        <posy>610</posy>
+        <width>900</width>
+        <height>18</height>
+        <texture>sets/Default/seperatorHorizontal2.png</texture>
+      </control>
+
+       <control type="textbox">
+        <description>Appearance Description</description>
+        <posx>580</posx>
+        <posy>680</posy>
+        <width>800</width>
+        <height>150</height>
+        <font>Font_Reg14</font>
+        <label>$INFO[Container(9000).ListItem.Label2]</label>
+        <align>left</align>
+        <textcolor>white</textcolor>
+        <shadowcolor>black</shadowcolor>
+      </control>
     </control>
 
     <control type="group">
-      <include>Window_OpenClose_Animation_Left</include>
+      <include>Window_OpenClose_Animation_Horizontal</include>
       <posx>0</posx>
       <posy>66</posy>
       <width>350</width>
       <height>1015</height>
 
-      <control type="image">
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>450</width>
-        <height>1015</height>
-        <texture>sets/Default/SideFade.png</texture>
-      </control>
-
       <control type="list" id="9000">
-        <posx>0</posx>
-        <posy>20</posy>
+        <posx>200</posx>
+        <posy>80</posy>
         <width>1800</width>
         <height>900</height>
         <onleft>9000</onleft>
@@ -152,7 +171,7 @@
     </control>
 
     <include>CommonNowPlaying</include>
-    <include>MainWindowMouseButtons</include>
+     
     <include>BehindDialogFadeOut</include>
   </controls>
 </window>

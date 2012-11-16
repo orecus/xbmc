@@ -5,14 +5,6 @@
     <!-- Latest ID Used: 466 -->
 
     <control type="image">
-      <posx>0</posx>
-      <posy>0</posy>
-      <width>1920</width>
-      <height>1080</height>
-      <texture>sets/Default/backgroundTint.png</texture>
-    </control>
-
-    <control type="image">
       <posx>1000</posx>
       <posy>0</posy>
       <width>920</width>
@@ -23,6 +15,8 @@
     <include>Header</include>
 
     <!-- Preview -->
+    <control type="group">
+      <include>Window_OpenClose_Animation_Horizontal</include>
     <control type="label">
       <posx>30</posx>
       <posy>110</posy>
@@ -193,29 +187,12 @@
       <texture>sets/Default/settings-preview/homescreen-extrainformation.png</texture>
       <include>VisibleFadeEffect</include>
     </control>
+</control>
 
     <!-- Main Configuration Menu -->
     <control type="group">
       <posx>0</posx>
       <posy>0</posy>
-
-      <control type="button">
-        <description>Close Window button</description>
-        <posx>1470</posx>
-        <posy>16</posy>
-        <width>96</width>
-        <height>48</height>
-        <label>-</label>
-        <font>-</font>
-        <onclick>PreviousMenu</onclick>
-        <texturefocus>DialogCloseButton-focus.png</texturefocus>
-        <texturenofocus>DialogCloseButton.png</texturenofocus>
-        <onleft>1</onleft>
-        <onright>1</onright>
-        <onup>1</onup>
-        <ondown>1</ondown>
-        <visible>system.getbool(input.enablemouse)</visible>
-      </control>
 
       <control type="list" id="9000">
         <include>VisibleFadeEffect</include>
@@ -308,6 +285,8 @@
 
       <!-- Items General -->
       <control type="group" id="9010">
+        <include>Window_OpenClose_Animation_Horizontal</include>
+
         <control type="grouplist" id="9001">
           <visible>Container(9000).Hasfocus(1)</visible>
           <posx>1000</posx>
@@ -600,6 +579,7 @@
 
          <!-- Items Home -->
         <control type="grouplist" id="9002">
+          <include>Window_OpenClose_Animation_Right</include>
           <visible>Container(9000).Hasfocus(2)</visible>
           <posx>1000</posx>
           <posy>110</posy>
@@ -858,6 +838,7 @@
 
         <!-- Library -->
         <control type="grouplist" id="9003">
+          <include>Window_OpenClose_Animation_Right</include>
           <visible>Container(9000).Hasfocus(3)</visible>
           <posx>1000</posx>
           <posy>110</posy>
@@ -937,6 +918,7 @@
 
         <!-- Add-On -->
         <control type="group">
+          <include>Window_OpenClose_Animation_Right</include>
           <control type="grouplist" id="9004">
             <visible>Container(9000).Hasfocus(4)</visible>
             <posx>1000</posx>
@@ -1363,7 +1345,5 @@
     </control>
 
     <include>CommonNowPlaying</include>
-    <include>MainWindowMouseButtons</include>
-    <include>BehindDialogFadeOut</include>
   </controls>
 </window>

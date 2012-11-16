@@ -65,9 +65,9 @@
 
   <include name="ButtonInfoDialogsCommonValues">
     <height>60</height>
-    <width>255</width>
+    <width>180</width>
     <textoffsetx>30</textoffsetx>
-    <align>center</align>
+    <align>left</align>
     <aligny>center</aligny>
     <font>Font_Reg12</font>
     <texturefocus>sets/Default/button-focus.png</texturefocus>
@@ -174,7 +174,7 @@
     </control>
 
     <control type="button" id="9001">
-      <posx>375</posx>
+      <posx>385</posx>
       <posy>516</posy>
       <width>48</width>
       <height>48</height>
@@ -191,137 +191,63 @@
       <height>1015</height>
       <texture>sets/Default/SideFade.png</texture>
     </control>
-  </include>
 
-  <include name="MainWindowMouseButtons">
-    <control type="group">
-      <posx>180r</posx>
-      <posy>82r</posy>
-      <animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
-      <animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
-      <visible>system.getbool(input.enablemouse)</visible>
-      <control type="button">
-        <description>Back push button</description>
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>68</width>
-        <height>68</height>
-        <label>1036</label>
-        <font>-</font>
-        <aligny>-</aligny>
-        <onclick>back</onclick>
-        <texturefocus border="5">floor_buttonFO.png</texturefocus>
-        <texturenofocus border="5">floor_button.png</texturenofocus>
-        <onleft>50</onleft>
-        <onright>50</onright>
-        <onup>50</onup>
-        <ondown>50</ondown>
-      </control>
-
-      <control type="image">
-        <description>Back Icon</description>
-        <posx>8</posx>
-        <posy>8</posy>
-        <width>52</width>
-        <height>52</height>
-        <aspectratio>keep</aspectratio>
-        <texture>icon_back.png</texture>
-      </control>
-
-      <control type="button">
-        <description>Home push button</description>
-        <posx>82</posx>
-        <posy>0</posy>
-        <width>68</width>
-        <height>68</height>
-        <label>31003</label>
-        <font>-</font>
-        <aligny>-</aligny>
-        <onclick>ActivateWindow(home)</onclick>
-        <texturefocus border="5">floor_buttonFO.png</texturefocus>
-        <texturenofocus border="5">floor_button.png</texturenofocus>
-        <onleft>50</onleft>
-        <onright>50</onright>
-        <onup>50</onup>
-        <ondown>50</ondown>
-      </control>
-
-      <control type="image">
-        <description>Home Icon</description>
-        <posx>90</posx>
-        <posy>8</posy>
-        <width>52</width>
-        <height>52</height>
-        <aspectratio>keep</aspectratio>
-        <texture>icon_home.png</texture>
-      </control>
+    <control type="image">
+      <posx>375</posx>
+      <posy>65</posy>
+      <width>18</width>
+      <height>1015</height>
+      <texture>sets/Default/SeperatorVertical2.png</texture>
     </control>
+
   </include>
 
   <include name="CommonNowPlaying">
     <control type="group">
-      <posx>700</posx>
-      <posy>67</posy>
+      <posx>0</posx>
+      <posy>64r</posy>
       <visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
 
-      <animation effect="fade" time="150" condition="Window.Previous(Home)">WindowClose</animation>
-      <animation effect="fade" time="150" condition="Window.Previous(Home)">WindowOpen</animation>
-      <animation effect="slide" time="100" start="0,-52" end="0,0" condition="Window.Previous(Home)">WindowOpen</animation>
-      <animation effect="slide" time="100" start="0,0" end="0,-52" condition="Window.Previous(Home)">WindowClose</animation>
+      <include>Window_OpenClose_Animation_Down</include>
 
       <control type="image">
         <description>Background End image</description>
         <posx>520</posx>
+        <posy>0</posy>
         <width>64</width>
         <height>64</height>
-        <texture flipx="false">sets/Default/HomeSubEnd.png</texture>
+        <texture flipx="false" flipy="true">sets/Default/HomeSubEnd.png</texture>
       </control>
 
       <control type="image">
         <description>Background image</description>
         <posx>0</posx>
+        <posy>0</posy>
         <width>520</width>
         <height>64</height>
-        <texture>sets/Default/HomeSub.png</texture>
-      </control>
-
-      <control type="image">
-        <description>Background End image</description>
-        <posx>-64</posx>
-        <width>64</width>
-        <height>64</height>
-        <texture flipx="true">sets/Default/HomeSubEnd.png</texture>
-      </control>
-
-      <control type="image">
-        <description>Player Icon</description>
-        <posx>-20</posx>
-        <posy>-8</posy>
-        <width>64</width>
-        <height>64</height>
-        <aspectratio>keep</aspectratio>
-        <texture>sets/Default/icons/MediaPlay-focus.png</texture>
+        <texture flipy="true">sets/Default/HomeSub.png</texture>
       </control>
 
       <control type="fadelabel">
-        <posx>30</posx>
-        <posy>-5</posy>
+        <posx>10</posx>
+        <posy>15</posy>
         <width>500</width>
         <height>30</height>
-        <label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]$INFO[VideoPlayer.Title] ($INFO[Player.Time] [COLOR=orange]/[/COLOR] $INFO[Player.Duration,])</label>
+        <label>$INFO[VideoPlayer.Title] ([COLOR=orange]$INFO[VideoPlayer.Year][/COLOR])</label>
         <align>left</align>
         <aligny>center</aligny>
         <font>Font_Reg12</font>
         <textcolor>grey</textcolor>
         <shadowcolor>black</shadowcolor>
+        <visible>Player.HasVideo + !VideoPlayer.Content(MusicVideos)</visible>
       </control>
 
       <control type="fadelabel">
-        <posx>30</posx>
+        <posx>10</posx>
         <posy>15</posy>
-        <width>480</width>
+        <width>500</width>
         <height>30</height>
-        <label>[COLOR=orange]$INFO[MusicPlayer.Album][/COLOR]</label>
+        <label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
         <align>left</align>
         <aligny>center</aligny>
         <font>Font_Reg12</font>
@@ -331,21 +257,35 @@
       </control>
 
       <control type="fadelabel">
-        <posx>30</posx>
-        <posy>15</posy>
+        <posx>10</posx>
+        <posy>35</posy>
         <width>480</width>
         <height>30</height>
-        <label>$INFO[VideoPlayer.Studio]</label>
+        <label>$INFO[Player.Time] [COLOR=orange]/[/COLOR] $INFO[Player.Duration,]</label>
         <align>left</align>
         <aligny>center</aligny>
         <font>Font_Reg12</font>
         <textcolor>grey</textcolor>
         <shadowcolor>black</shadowcolor>
-        <visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
+        <visible>Player.HasVideo</visible>
       </control>
 
       <control type="fadelabel">
-        <posx>30</posx>
+        <posx>10</posx>
+        <posy>35</posy>
+        <width>480</width>
+        <height>30</height>
+        <label>$INFO[Player.Time] [COLOR=orange]/[/COLOR] $INFO[Player.Duration,] - [COLOR=orange]$INFO[MusicPlayer.Album][/COLOR]</label>
+        <align>left</align>
+        <aligny>center</aligny>
+        <font>Font_Reg12</font>
+        <textcolor>grey</textcolor>
+        <shadowcolor>black</shadowcolor>
+        <visible>Player.HasAudio</visible>
+      </control>
+
+      <control type="fadelabel">
+        <posx>10</posx>
         <posy>15</posy>
         <width>480</width>
         <height>30</height>
@@ -359,11 +299,11 @@
       </control>
 
       <control type="fadelabel">
-        <posx>30</posx>
+        <posx>10</posx>
         <posy>15</posy>
         <width>480</width>
         <height>30</height>
-        <label>$INFO[VideoPlayer.Artist]</label>
+        <label>$INFO[VideoPlayer.Artist] - $INFO[VideoPlayer.Title] ([COLOR=orange]$INFO[VideoPlayer.Year][/COLOR])</label>
         <align>left</align>
         <aligny>center</aligny>
         <font>Font_Reg12</font>
@@ -373,7 +313,7 @@
       </control>
 
       <control type="fadelabel">
-        <posx>30</posx>
+        <posx>10</posx>
         <posy>15</posy>
         <width>480</width>
         <height>30</height>
@@ -390,21 +330,29 @@
 
   <include name="CommonPageCount">
     <control type="group">
-      <animation effect="slide" start="0,0" end="-48,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+      <include>Window_OpenClose_Animation_Down</include>
 
       <control type="image">
-        <description>BottomBackground</description>
-        <posx>0</posx>
-        <posy>48r</posy>
-        <width>1920</width>
-        <height>48</height>
-        <texture>sets\Default\fullGradiant.png</texture>
-        <include>Window_OpenClose_Animation_Down</include>
+        <description>Background End image</description>
+        <posx>384r</posx>
+        <posy>64r</posy>
+        <width>64</width>
+        <height>64</height>
+        <texture flipx="true" flipy="true">sets/Default/HomeSubEnd.png</texture>
+      </control>
+
+      <control type="image">
+        <description>Background image</description>
+        <posx>320r</posx>
+        <posy>64r</posy>
+        <width>320</width>
+        <height>64</height>
+        <texture flipy="true">sets/Default/HomeSub.png</texture>
       </control>
 
       <control type="label">
         <description>Page Count Label</description>
-        <posx>60r</posx>
+        <posx>10r</posx>
         <posy>48r</posy>
         <width>750</width>
         <height>30</height>
@@ -414,22 +362,20 @@
         <align>right</align>
         <aligny>center</aligny>
         <label>$INFO[Window.Property(filter),$LOCALIZE[587] ([COLOR=orange],[/COLOR]) - ]$INFO[Container.NumItems,([COLOR=orange],[/COLOR]) $LOCALIZE[31025]]$INFO[Container.CurrentPage, - $LOCALIZE[31024] ([COLOR=orange]]$INFO[Container.NumPages,/,[/COLOR])]</label>
-        <include>Window_OpenClose_Animation_Down</include>
       </control>
 
       <control type="label">
         <description>Container Duration Label</description>
-        <posx>60</posx>
-        <posy>48r</posy>
+        <posx>10r</posx>
+        <posy>29r</posy>
         <width>750</width>
         <height>30</height>
         <font>Font_Reg12</font>
         <textcolor>grey</textcolor>
         <scroll>false</scroll>
-        <align>left</align>
+        <align>right</align>
         <aligny>center</aligny>
         <label>$INFO[Container.TotalTime,$LOCALIZE[31009] ([COLOR=orange],[/COLOR])]</label>
-        <include>Window_OpenClose_Animation</include>
       </control>
     </control>
   </include>
@@ -1322,19 +1268,8 @@
   <!-- Header & Weather -->
   <include name="Header">
     <control type="group">
-    <!--       
-      <control type="image">
-        <description>Background image</description>
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>1920</width>
-        <height>120</height>
-        <aspectratio>keep</aspectratio>
-        <texture>sets/Default/headerBackground.png</texture>
-      </control> 
-    -->
-    
-      <control type="image">
+
+     <control type="image">
         <posx>0</posx>
         <posy>-72</posy>
         <width>1920</width>
@@ -1411,33 +1346,47 @@
     </control>
   </include>
 
-  <include name="Window_OpenClose_Animation_Up">
-	<animation effect="slide" start="0,0" end="0,-480" time="350" delay="175" tween="cubic" easing="in">WindowClose</animation>
-	<animation effect="slide" start="0,-480" end="0,0" time="350" delay="175" tween="cubic" easing="out">WindowOpen</animation>
-  <animation effect="slide" start="0,0" end="0,-480" time="350" delay="175" tween="cubic" easing="in">Hidden</animation>
-  <animation effect="slide" start="0,-480" end="0,0" time="350" delay="175" tween="cubic" easing="out">Visible</animation>
+  <include name="Window_OpenClose_Animation_Vertical">
+  	<animation effect="slide" start="0,0" end="0,1080" time="350" tween="cubic" easing="in">WindowClose</animation>
+  	<animation effect="slide" start="0,-1080" end="0,0" time="350" delay="275" tween="cubic" easing="out">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,1080" time="350" tween="cubic" easing="in">Hidden</animation>
+    <animation effect="slide" start="0,-1080" end="0,0" time="350" delay="275" tween="cubic" easing="out">Visible</animation>
   </include>  
 
-  <include name="Window_OpenClose_Animation_Down">
-	<animation effect="slide" start="0,0" end="0,480" time="350" delay="175" tween="cubic" easing="in">WindowClose</animation>
-	<animation effect="slide" start="0,480" end="0,0" time="350" delay="175" tween="cubic" easing="out">WindowOpen</animation>
-  <animation effect="slide" start="0,0" end="0,480" time="350" delay="175" tween="cubic" easing="in">Hidden</animation>
-  <animation effect="slide" start="0,480" end="0,0" time="350" delay="175" tween="cubic" easing="out">Visible</animation>
+  <include name="Window_OpenClose_Animation_Horizontal">
+    <animation effect="slide" start="0,0" end="1920,0" time="350" tween="cubic" easing="in">WindowClose</animation>
+    <animation effect="slide" start="-1920,0" end="0,0" time="350" delay="275" tween="cubic" easing="out">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="1920,0" time="350" tween="cubic" easing="in">Hidden</animation>
+    <animation effect="slide" start="-1920,0" end="0,0" time="350" delay="275" tween="cubic" easing="out">Visible</animation>
   </include> 
 
-  <include name="Window_OpenClose_Animation_Left">
-	<animation effect="slide" start="0,0" end="-480,0" time="350" delay="175" tween="cubic" easing="in">WindowClose</animation>
-	<animation effect="slide" start="-480,0" end="0,0" time="350" delay="175" tween="cubic" easing="out">WindowOpen</animation>
-  <animation effect="slide" start="0,0" end="-480,0" time="350" delay="175" tween="cubic" easing="in">Hidden</animation>
-  <animation effect="slide" start="-480,0" end="0,0" time="350" delay="175" tween="cubic" easing="out">Visible</animation>
+  <include name="Element_OpenClose_Animation_Up">
+    <animation effect="slide" start="0,0" end="0,-480" time="350" tween="cubic" easing="in">WindowClose</animation>
+    <animation effect="slide" start="0,-480" end="0,0" time="350" delay="175" tween="cubic" easing="out">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,-480" time="350" tween="cubic" easing="in">Hidden</animation>
+    <animation effect="slide" start="0,-480" end="0,0" time="350" delay="175" tween="cubic" easing="out">Visible</animation>
   </include>  
 
-  <include name="Window_OpenClose_Animation_Right">
-	<animation effect="slide" start="0,0" end="480,0" time="350" delay="175" tween="cubic" easing="in">WindowClose</animation>
-	<animation effect="slide" start="480,0" end="0,0" time="350" delay="175" tween="cubic" easing="out">WindowOpen</animation>
-  <animation effect="slide" start="0,0" end="480,0" time="350" delay="175" tween="cubic" easing="in">Hidden</animation>
-  <animation effect="slide" start="480,0" end="0,0" time="350" delay="175"tween="cubic" easing="out">Visible</animation>
+  <include name="Element_OpenClose_Animation_Down">
+    <animation effect="slide" start="0,0" end="0,480" time="350" tween="cubic" easing="in">WindowClose</animation>
+    <animation effect="slide" start="0,480" end="0,0" time="350" delay="175" tween="cubic" easing="out">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="0,480" time="350" tween="cubic" easing="in">Hidden</animation>
+    <animation effect="slide" start="0,480" end="0,0" time="350" delay="175" tween="cubic" easing="out">Visible</animation>
+  </include> 
+
+  <include name="Element_OpenClose_Animation_Left">
+    <animation effect="slide" start="0,0" end="-480,0" time="350" tween="cubic" easing="in">WindowClose</animation>
+    <animation effect="slide" start="-480,0" end="0,0" time="350" delay="175" tween="cubic" easing="out">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="-480,0" time="350" tween="cubic" easing="in">Hidden</animation>
+    <animation effect="slide" start="-480,0" end="0,0" time="350" delay="175" tween="cubic" easing="out">Visible</animation>
   </include>  
+
+  <include name="Element_OpenClose_Animation_Right">
+    <animation effect="slide" start="0,0" end="480,0" time="350" tween="cubic" easing="in">WindowClose</animation>
+    <animation effect="slide" start="480,0" end="0,0" time="350" delay="175" tween="cubic" easing="out">WindowOpen</animation>
+    <animation effect="slide" start="0,0" end="480,0" time="350" tween="cubic" easing="in">Hidden</animation>
+    <animation effect="slide" start="480,0" end="0,0" time="350" delay="175"tween="cubic" easing="out">Visible</animation>
+  </include> 
 
   <include name="VisibleFadeEffect">
     <animation effect="fade" time="275">Visible</animation>
@@ -1446,20 +1395,34 @@
     <animation effect="fade" time="275">WindowClose</animation>
   </include>
 
+  <include name="droppedAnimation">
+      <animation type="Hidden" reversible="true">
+        <effect type="fade" start="100" end="0" time="375" />
+        <effect type="zoom" start="100" end="150" center="auto" time="375" tween="cubic" easing="out" />
+      </animation>
+
+      <animation type="Visible" reversible="true">
+        <effect type="fade" start="0" end="100" time="375" />
+        <effect type="zoom" start="150" end="100" center="auto" time="375" tween="cubic" easing="out" />
+      </animation>
+
+      <animation type="WindowClose" reversible="true">
+        <effect type="fade" start="100" end="0" time="375" />
+        <effect type="zoom" start="100" end="150" center="auto" time="375" tween="cubic" easing="out" />
+      </animation>
+
+      <animation type="WindowOpen" reversible="true">
+        <effect type="fade" start="0" end="100" time="375" />
+        <effect type="zoom" start="150" end="100" center="auto" time="375" tween="cubic" easing="out" />
+      </animation>
+  </include>
+
   <include name="backgroundAnimation">
       <animation effect="zoom" start="110" end="130" center="auto" time="25000" tween="sine" pulse="true" delay="600" reversible="true" condition="Skin.HasSetting(animateGUI) + Skin.HasSetting(animateBackgrounds)">Conditional</animation>
       <animation effect="slide" start="0,-15" end="0,15" time="7500" tween="sine" pulse="true" delay="0" reversible="true" condition="Skin.HasSetting(animateGUI) + Skin.HasSetting(animateBackgrounds)">Conditional</animation>
       <animation effect="slide" start="15,0" end="-15,0" time="7500" tween="sine" pulse="true" delay="7500" reversible="true" condition="Skin.HasSetting(animateGUI) + Skin.HasSetting(animateBackgrounds)">Conditional</animation>
       <animation type="WindowOpen" reversible="false" condition="Window.Previous(Startup)">
-        <effect type="zoom" start="100,0" end="100,100" center="auto" delay="500" time="1000" tween="cubic" easing="out" />
-      </animation>
-      <animation type="WindowOpen" reversible="false" condition="!Window.Previous(Startup)">
-        <effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" easing="out" />
-        <effect type="fade" start="50" end="100" time="300" />
-      </animation>
-      <animation type="WindowClose" reversible="false">
-        <effect type="fade" start="100" end="0" time="300" />
-        <effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+        <effect type="zoom" start="120,120" end="100,100" center="auto" delay="500" time="1000" tween="cubic" easing="out" />
       </animation>
   </include>
 

@@ -23,7 +23,7 @@
         <posy>24</posy>
         <width>1080</width>
         <height>60</height>
-        <texture>dialogheader.png</texture>
+        <texture>sets/Default/dialogheader.png</texture>
       </control>
       <control type="label">
         <description>header label</description>
@@ -113,7 +113,7 @@
     <control type="sliderex" id="10">
       <description>Default Slider</description>
       <height>60</height>
-      <texturenofocus border="5">button-nofocus.png</texturenofocus>
+      <texturenofocus border="5">sets/default/button.png</texturenofocus>
       <texturefocus border="5">button-focus2.png</texturefocus>
       <font>font13</font>
       <textcolor>grey2</textcolor>
@@ -147,7 +147,7 @@
       <font>font13</font>
       <textcolor>grey2</textcolor>
       <focusedcolor>white</focusedcolor>
-      <texturenofocus border="5">button-nofocus.png</texturenofocus>
+      <texturenofocus border="5">sets/default/button.png</texturenofocus>
       <texturefocus border="5">button-focus2.png</texturefocus>
       <aligny>center</aligny>
       <reverse>yes</reverse>

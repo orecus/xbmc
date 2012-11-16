@@ -393,8 +393,8 @@
           <textcolor>FFFFFFFF</textcolor>
           <align>center</align>
           <aligny>center</aligny>
-          <texturefocus border="5">button-focus.png</texturefocus>
-          <texturenofocus border="5">button-nofocus.png</texturenofocus>
+          <texturefocus border="5">sets/default/button-focus.png</texturefocus>
+          <texturenofocus border="5">sets/default/button.png</texturenofocus>
           <onup>101</onup>
           <ondown>101</ondown>
           <onleft>101</onleft>
@@ -436,7 +436,7 @@
                   <posy>0</posy>
                   <width>555</width>
                   <height>188</height>
-                  <texture border="5">button-nofocus.png</texture>
+                  <texture border="5">sets/default/button.png</texture>
                 </control>
                 <control type="image">
                   <posx>8</posx>
@@ -667,7 +667,7 @@
                   <posy>0</posy>
                   <width>555</width>
                   <height>255</height>
-                  <texture border="5">button-nofocus.png</texture>
+                  <texture border="5">sets/default/button.png</texture>
                 </control>
                 <control type="image">
                   <posx>8</posx>
@@ -840,7 +840,7 @@
                   <posy>0</posy>
                   <width>555</width>
                   <height>188</height>
-                  <texture border="5">button-nofocus.png</texture>
+                  <texture border="5">sets/default/button.png</texture>
                 </control>
                 <control type="image">
                   <posx>8</posx>
@@ -970,7 +970,7 @@
                   <posy>0</posy>
                   <width>1125</width>
                   <height>152</height>
-                  <texture border="5">button-nofocus.png</texture>
+                  <texture border="5">sets/default/button.png</texture>
                 </control>
                 <control type="image">
                   <posx>8</posx>
@@ -1139,7 +1139,7 @@
                   <posy>0</posy>
                   <width>555</width>
                   <height>152</height>
-                  <texture border="5">button-nofocus.png</texture>
+                  <texture border="5">sets/default/button.png</texture>
                 </control>
                 <control type="image">
                   <posx>8</posx>
@@ -1328,7 +1328,7 @@
                   <posy>0</posy>
                   <width>1125</width>
                   <height>152</height>
-                  <texture border="5">button-nofocus.png</texture>
+                  <texture border="5">sets/default/button.png</texture>
                 </control>
                 <control type="image">
                   <posx>8</posx>
@@ -1481,7 +1481,7 @@
                   <posy>0</posy>
                   <width>1125</width>
                   <height>152</height>
-                  <texture border="5">button-nofocus.png</texture>
+                  <texture border="5">sets/default/button.png</texture>
                 </control>
                 <control type="image">
                   <posx>8</posx>
@@ -1634,7 +1634,7 @@
                   <posy>0</posy>
                   <width>555</width>
                   <height>152</height>
-                  <texture border="5">button-nofocus.png</texture>
+                  <texture border="5">sets/default/button.png</texture>
                 </control>
                 <control type="image">
                   <posx>8</posx>

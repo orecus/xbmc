@@ -340,7 +340,7 @@
       </control>
     </control>
     <include>CommonNowPlaying</include>
-    <include>MainWindowMouseButtons</include>
+     
     <control type="image">
       <description>Section header image</description>
       <posx>30</posx>

@@ -3,7 +3,7 @@
     <!-- MainMenu -->
     <control type="group">
       <posy>850</posy>
-      <include>Window_OpenClose_Animation_Down</include>
+      <include>VisibleFadeEffect</include>
 
       <control type="group" id="9001">
         <animation effect="slide" time="100" start="0,-52" end="0,0" delay="750">WindowOpen</animation>

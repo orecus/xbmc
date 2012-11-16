@@ -18,7 +18,6 @@
       <label>31502</label>
       <onclick>ActivateWindow(PVR)</onclick>
       <onclick>Setfocus(14)</onclick>
-      <visible>Library.HasContent(Movies)</visible>
       <visible>System.GetBool(pvrmanager.enabled)</visible>
     </control>
 
@@ -28,7 +27,8 @@
       <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
       <onclick>Setfocus(32)</onclick>
       <onclick>Setfocus(11)</onclick>
-      <visible>Library.HasContent(Movies)</visible>
+      <ondown>Setfocus(9003)</ondown>
+      <visible>Library.HasContent(TVShows)</visible>
     </control>
 
     <control type="button" id="90150">
@@ -37,13 +37,15 @@
       <onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
       <onclick>Setfocus(32)</onclick>
       <onclick>Setfocus(11)</onclick>
-      <visible>Library.HasContent(TVShows)</visible>
+      <ondown>Setfocus(9003)</ondown>
+      <visible>Library.HasContent(Movies)</visible>
     </control>
 
     <control type="button" id="90104">
       <include>ButtonHomeSubCommonValues</include>
       <label>20389</label>
       <onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+      <ondown>Setfocus(9003)</ondown>
       <visible>Library.HasContent(MusicVideos)</visible>
     </control>
 

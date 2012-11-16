@@ -2,7 +2,7 @@
   <include name="IncludesNowPlayingSmall">
 
     <control type="group">
-      <animation effect="slide" start="0,0" end="-480,0" time="350" delay="175" tween="cubic" easing="in">WindowClose</animation>
+      <animation effect="fade" time="275">WindowClose</animation>
       <animation effect="slide" start="-480,0" end="0,0" time="350" delay="750" tween="cubic" easing="out">WindowOpen</animation>
       <animation effect="slide" start="0,0" end="-480,0" time="350" delay="175" tween="cubic" easing="in">Hidden</animation>
       <animation effect="slide" start="-480,0" end="0,0" time="350" delay="175" tween="cubic" easing="out">Visible</animation>

@@ -22,7 +22,7 @@
         <posy>24</posy>
         <width>1080</width>
         <height>60</height>
-        <texture>dialogheader.png</texture>
+        <texture>sets/Default/dialogheader.png</texture>
       </control>
       <control type="label">
         <description>header label</description>
@@ -80,7 +80,7 @@
             <posy>0</posy>
             <width>1080</width>
             <height>60</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
           </control>
           <control type="label">
             <posx>15</posx>
@@ -101,7 +101,7 @@
             <posy>0</posy>
             <width>1080</width>
             <height>60</height>
-            <texture border="5">button-nofocus.png</texture>
+            <texture border="5">sets/default/button.png</texture>
             <visible>!Control.HasFocus(2)</visible>
             <include>VisibleFadeEffect</include>
           </control>

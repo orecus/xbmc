@@ -4,7 +4,7 @@
   <controls>
     <include>CommonBackground</include>
     <include>ContentPanelBackgroundsPVR</include>
-    <include>MainWindowMouseButtons</include>
+     
     <control type="image">
       <description>Section header image</description>
       <posx>30</posx>
@@ -55,7 +55,7 @@
         <posy>0</posy>
         <width>1035</width>
         <height>600</height>
-        <texture border="5">button-nofocus.png</texture>
+        <texture border="5">sets/default/button.png</texture>
       </control>
       <control type="image">
         <posx>8</posx>

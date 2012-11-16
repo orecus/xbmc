@@ -716,7 +716,7 @@
       </control>
     </control>
     <include>CommonNowPlaying</include>
-    <include>MainWindowMouseButtons</include>
+     
     <control type="group">
       <posx>-375</posx>
       <include>SideBladeLeft</include>

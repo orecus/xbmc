@@ -28,7 +28,7 @@
         <font>
             <name>Font_Bold22</name>
             <filename>MC360.ttf</filename>
-            <style>bold</style>
+            <style>bold uppercase</style>
             <size>37</size>
         </font>
         <font>

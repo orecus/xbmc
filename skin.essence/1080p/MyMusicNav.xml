@@ -32,8 +32,6 @@
 
     <include>CommonPageCount</include>
     <include>CommonNowPlaying</include>
-    <include>MainWindowMouseButtons</include>
-    <include>BehindDialogFadeOut</include>
     <include>ScrollOffsetLabel</include>
 
     <control type="image">

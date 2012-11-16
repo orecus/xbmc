@@ -26,6 +26,7 @@
       <animation effect="fade" time="200">VisibleChange</animation>
       <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
     </control>
+
     <control type="slider" id="87">
       <description>Seek Slider</description>
       <posx>645</posx>
@@ -41,6 +42,7 @@
       <animation effect="fade" time="200">VisibleChange</animation>
       <visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
     </control>
+
     <!-- !LiveTV -->
     <control type="group" id="100">
       <posx>488</posx>
@@ -64,6 +66,7 @@
         <ondown>1000</ondown>
         <onclick>PlayerControl(Previous)</onclick>
       </control>
+
       <control type="button" id="601">
         <posx>82</posx>
         <posy>0</posy>
@@ -79,6 +82,7 @@
         <ondown>1000</ondown>
         <onclick>PlayerControl(Rewind)</onclick>
       </control>
+
       <control type="togglebutton" id="602">
         <posx>165</posx>
         <posy>0</posy>
@@ -98,6 +102,7 @@
         <ondown>1000</ondown>
         <onclick>PlayerControl(Play)</onclick>
       </control>
+
       <control type="button" id="603">
         <posx>248</posx>
         <posy>0</posy>
@@ -113,6 +118,7 @@
         <ondown>1000</ondown>
         <onclick>PlayerControl(Stop)</onclick>
       </control>
+
       <control type="button" id="604">
         <posx>330</posx>
         <posy>0</posy>
@@ -128,6 +134,7 @@
         <ondown>1000</ondown>
         <onclick>PlayerControl(Forward)</onclick>
       </control>
+
       <control type="button" id="605">
         <posx>412</posx>
         <posy>0</posy>
@@ -144,6 +151,7 @@
         <onclick>PlayerControl(Next)</onclick>
       </control>
     </control>
+    
     <!-- LiveTV -->
     <control type="group" id="100">
       <posx>488</posx>

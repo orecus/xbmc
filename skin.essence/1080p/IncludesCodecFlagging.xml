@@ -23,14 +23,14 @@
       <width>82</width>
       <height>52</height>
       <aspectratio align="right">keep</aspectratio>
-      <texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
+      <texture>$INFO[ListItem.VideoResolution,sets/Default/flagging/resolution/,.png]</texture>
     </control>
     <control type="image">
       <description>Codec Image</description>
       <width>120</width>
       <height>52</height>
       <aspectratio align="left">keep</aspectratio>
-      <texture>$VAR[videocodec,flagging/video/,.png]</texture>
+      <texture>$VAR[videocodec,sets/Default/flagging/videocodec/,.png]</texture>
     </control>
   </include>
   <include name="VideoTypeHackFlaggingConditions">
@@ -39,7 +39,7 @@
       <width>120</width>
       <height>52</height>
       <aspectratio align="left">keep</aspectratio>
-      <texture>$VAR[typehackflagging,flagging/video/,.png]</texture>
+      <texture>$VAR[typehackflagging,sets/Default/flagging/source/,.png]</texture>
       <visible>!Skin.HasSetting(HideFilenameFlagging)</visible>
     </control>
   </include>
@@ -48,8 +48,8 @@
       <description>Rating image</description>
       <width>120</width>
       <height>52</height>
-      <aspectratio>keep</aspectratio>
-      <texture>$VAR[rating,flagging/ratings/,.png]</texture>
+      <aspectratio >keep</aspectratio>
+      <texture>$VAR[rating,sets/Default/flagging/rating/,.png]</texture>
     </control>
   </include>
   <include name="AudioCodecFlaggingConditions">
@@ -58,7 +58,7 @@
       <width>120</width>
       <height>52</height>
       <aspectratio align="right">keep</aspectratio>
-      <texture>$INFO[ListItem.AudioCodec,flagging/audio/,.png]</texture>
+      <texture>$INFO[ListItem.AudioCodec,sets/Default/flagging/audio/,.png]</texture>
     </control>
   </include>
   <include name="AudioChannelsFlaggingConditions">
@@ -67,7 +67,7 @@
       <width>82</width>
       <height>52</height>
       <aspectratio align="left">keep</aspectratio>
-      <texture>$INFO[ListItem.AudioChannels,flagging/audio/,.png]</texture>
+      <texture>$INFO[ListItem.AudioChannels,sets/Default/flagging/audio/,.png]</texture>
     </control>
   </include>
   <include name="AspectCodecFlaggingConditions">
@@ -76,7 +76,7 @@
       <width>82</width>
       <height>52</height>
       <aspectratio align="right">keep</aspectratio>
-      <texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
+      <texture>$INFO[ListItem.VideoAspect,sets/Default/flagging/aspectratio/,.png]</texture>
     </control>
   </include>
 </includes>

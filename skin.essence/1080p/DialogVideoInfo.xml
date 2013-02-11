@@ -12,7 +12,7 @@
         <control type="label">
           <description>header label</description>
           <posx>315</posx>
-          <posy>90</posy>
+          <posy>65</posy>
           <width>1545</width>
           <height>45</height>
           <font>Font_Bold24</font>
@@ -26,7 +26,7 @@
         <control type="grouplist">
           <description>Media Codec Flagging Images</description>
           <posx>60</posx>
-          <posy>990</posy>
+          <posy>970</posy>
           <width>900</width>
           <align>left</align>
           <itemgap>3</itemgap>
@@ -129,7 +129,7 @@
         <control type="group">
           <visible>[!container.content(tvshows) + !container.content(episodes) + !container.content(musicvideos)] + ![Control.HasFocus(12) | Control.HasFocus(15)]</visible>
           <posx>40</posx>
-          <posy>120</posy>
+          <posy>90</posy>
 
           <control type="image">
             <posx>580</posx>

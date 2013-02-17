@@ -1271,10 +1271,10 @@
 
      <control type="image">
         <posx>0</posx>
-        <posy>-72</posy>
+        <posy>0</posy>
         <width>1920</width>
-        <height>160</height>
-        <texture>sets/Default/HomeBack.png</texture>
+        <height>120</height>
+        <texture>sets/Default/headerBackground.png</texture>
       </control>
 
       <control type="image">

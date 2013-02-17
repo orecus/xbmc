@@ -24,7 +24,7 @@
       <posy>0</posy>
       <width>915</width>
       <height>360</height>
-      <texture border="20">sets/Default/FadedBoxBackground-light.png</texture>
+      <texture border="32">sets/Default/DialogBack.png</texture>
     </control>
 
     <control type="image">
@@ -111,6 +111,8 @@
       <width>300</width>
       <height>60</height>
       <label>107</label>
+      <texturefocus border="12">sets/Default/buttonPositive-focus.png</texturefocus>
+      <texturenofocus border="12">sets/Default/buttonPositive-nofocus.png</texturenofocus>
       <font>Font_Reg14</font>
       <textcolor>white</textcolor>
       <focusedcolor>white</focusedcolor>
@@ -128,6 +130,8 @@
       <width>300</width>
       <height>60</height>
       <label>106</label>
+      <texturefocus border="12">sets/Default/buttonNegative-focus.png</texturefocus>
+      <texturenofocus border="12">sets/Default/buttonNegative-nofocus.png</texturenofocus>
       <font>Font_Reg14</font>
       <textcolor>white</textcolor>
       <focusedcolor>white</focusedcolor>

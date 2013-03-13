@@ -69,8 +69,8 @@
       <label>-</label>
       <font>-</font>
       <onclick>PreviousMenu</onclick>
-      <texturefocus>DialogCloseButton-focus.png</texturefocus>
-      <texturenofocus>DialogCloseButton.png</texturenofocus>
+      <texturefocus>sets/Default/DialogCloseButton-focus.png</texturefocus>
+      <texturenofocus>sets/Default/DialogCloseButton-nofocus.png</texturenofocus>
       <onleft>10</onleft>
       <onright>10</onright>
       <onup>10</onup>

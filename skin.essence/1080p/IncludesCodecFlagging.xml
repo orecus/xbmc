@@ -21,14 +21,14 @@
     <control type="image">
       <description>Video rez Image</description>
       <width>82</width>
-      <height>52</height>
+      <height>100</height>
       <aspectratio align="right">keep</aspectratio>
       <texture>$INFO[ListItem.VideoResolution,sets/Default/flagging/resolution/,.png]</texture>
     </control>
     <control type="image">
       <description>Codec Image</description>
       <width>120</width>
-      <height>52</height>
+      <height>100</height>
       <aspectratio align="left">keep</aspectratio>
       <texture>$VAR[videocodec,sets/Default/flagging/videocodec/,.png]</texture>
     </control>
@@ -37,7 +37,7 @@
     <control type="image">
       <description>Video Type Image</description>
       <width>120</width>
-      <height>52</height>
+      <height>100</height>
       <aspectratio align="left">keep</aspectratio>
       <texture>$VAR[typehackflagging,sets/Default/flagging/source/,.png]</texture>
       <visible>!Skin.HasSetting(HideFilenameFlagging)</visible>
@@ -47,7 +47,7 @@
     <control type="image">
       <description>Rating image</description>
       <width>120</width>
-      <height>52</height>
+      <height>100</height>
       <aspectratio >keep</aspectratio>
       <texture>$VAR[rating,sets/Default/flagging/rating/,.png]</texture>
     </control>
@@ -56,7 +56,7 @@
     <control type="image">
       <description>Audio Codec Image</description>
       <width>120</width>
-      <height>52</height>
+      <height>100</height>
       <aspectratio align="right">keep</aspectratio>
       <texture>$INFO[ListItem.AudioCodec,sets/Default/flagging/audio/,.png]</texture>
     </control>
@@ -65,7 +65,7 @@
     <control type="image">
       <description>Audio Codec Image</description>
       <width>82</width>
-      <height>52</height>
+      <height>100</height>
       <aspectratio align="left">keep</aspectratio>
       <texture>$INFO[ListItem.AudioChannels,sets/Default/flagging/audio/,.png]</texture>
     </control>
@@ -74,7 +74,7 @@
     <control type="image">
       <description>Aspectratio Image</description>
       <width>82</width>
-      <height>52</height>
+      <height>100</height>
       <aspectratio align="right">keep</aspectratio>
       <texture>$INFO[ListItem.VideoAspect,sets/Default/flagging/aspectratio/,.png]</texture>
     </control>

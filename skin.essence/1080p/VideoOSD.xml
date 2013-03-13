@@ -17,8 +17,8 @@
       <font>-</font>
       <onclick>Dialog.Close(VideoOSD,true)</onclick>
       <onclick>FullScreen</onclick>
-      <texturefocus>DialogCloseButton-focus.png</texturefocus>
-      <texturenofocus>DialogCloseButton.png</texturenofocus>
+      <texturefocus>sets/Default/DialogCloseButton-focus.png</texturefocus>
+      <texturenofocus>sets/Default/DialogCloseButton-nofocus.png</texturenofocus>
       <onleft>1000</onleft>
       <onright>1000</onright>
       <onup>100</onup>

@@ -8,56 +8,56 @@
    <control type="group">
     <visible>Control.IsVisible(50)</visible>
  
-    <!-- Poster Code -->
-    <control type="group">
-        <posx>900</posx>
-        <posy>0</posy>
+      <!-- Poster Code -->
+      <control type="group">
+          <posx>900</posx>
+          <posy>0</posy>
 
-        <control type="image">
-          <posx>-40</posx>
-          <posy>110</posy>
-          <width>835</width>
-          <height>385</height>
-          <texture border="32">sets/Default/DialogBack.png</texture>
+          <control type="image">
+            <posx>-40</posx>
+            <posy>110</posy>
+            <width>835</width>
+            <height>385</height>
+            <texture border="32">sets/Default/DialogBack.png</texture>
+          </control>
+
+          <control type="image">
+            <description>Fanart image</description>
+            <posx>0</posx>
+            <posy>150</posy>
+            <width>542</width>
+            <height>305</height>
+            <texture background="true">$VAR[FanartThumbs]</texture>
+            <fadetime>150</fadetime>
+            <aspectratio aligny="top">stretch</aspectratio>
+          </control>
+
+          <control type="image">
+            <posx>550</posx>
+            <posy>150</posy>
+            <width>207</width>
+            <height>305</height>
+            <aspectratio aligny="top">stretch</aspectratio>
+            <fadetime>150</fadetime>
+            <texture background="true">$VAR[PosterThumbs]</texture>
+          </control>
+
         </control>
 
-        <control type="image">
-          <description>Fanart image</description>
-          <posx>0</posx>
-          <posy>150</posy>
-          <width>542</width>
-          <height>305</height>
-          <texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-          <fadetime>150</fadetime>
-          <aspectratio aligny="top">stretch</aspectratio>
-          <visible>!IsEmpty(Listitem.Property(Fanart_Image))</visible>
-        </control>
-
-        <control type="image">
-          <posx>550</posx>
-          <posy>150</posy>
-          <width>207</width>
-          <height>305</height>
-          <aspectratio aligny="top">stretch</aspectratio>
-          <fadetime>150</fadetime>
-          <texture background="true">$INFO[ListItem.Art(poster)]</texture>
-          <visible>!IsEmpty(ListItem.Art(poster))</visible>
-        </control>
-
-      </control>
         <!-- Media Information -->
         <control type="group">
-          <posx>900</posx>
-          <posy>50</posy>
+          <posx>905</posx>
+          <posy>0</posy>
 
           <control type="label">
             <posx>0</posx>
-            <posy>455</posy>
-            <width>600</width>
+            <posy>410</posy>
+            <width>500</width>
             <font>Font_Reg16</font>
             <textcolor>blue</textcolor>
             <shadowcolor>99000000</shadowcolor>
             <label>$INFO[ListItem.Genre]</label>
+            <visible>![Container.Content(TVShows) | Container.Content(Seasons)]</visible>
           </control>
 
           <control type="grouplist">
@@ -70,7 +70,7 @@
 
             <control type="label">
               <height min="0" max="13">auto</height>
-              <width>300</width>
+              <width>250</width>
               <label>$LOCALIZE[20339]</label>
               <font>Font_Bold14_Caps</font>
               <textcolor>white</textcolor>
@@ -80,7 +80,7 @@
 
             <control type="label">
               <height min="0" max="13">auto</height>
-              <width>300</width>
+              <width>250</width>
               <label fallback="195">$INFO[ListItem.Director]</label>
               <font>Font_Reg14</font>
               <textcolor>white</textcolor>
@@ -91,12 +91,23 @@
 
             <control type="label">
               <height min="0" max="13">auto</height>
-              <width>300</width>
+              <width>250</width>
               <label>$LOCALIZE[515]</label>
               <font>Font_Bold14_Caps</font>
               <textcolor>white</textcolor>
               <shadowcolor>99000000</shadowcolor>
-              <visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
+              <visible>[Container.Content(TVShows) | Container.Content(Seasons)]</visible>
+            </control>
+
+            <control type="label">
+              <height min="0" max="13">auto</height>
+              <width>250</width>
+              <label fallback="195">$INFO[ListItem.Genre]</label>
+              <font>Font_Reg14</font>
+              <textcolor>white</textcolor>
+              <shadowcolor>99000000</shadowcolor>
+              <scrollspeed>30</scrollspeed>
+              <visible>[Container.Content(TVShows) | Container.Content(Seasons)]</visible>
             </control>
           </control>
 
@@ -161,7 +172,7 @@
 
             <control type="label">
               <height min="0" max="13">auto</height>
-              <width>300</width>
+              <width>250</width>
               <label>$LOCALIZE[2050]</label>
               <font>Font_Bold14_Caps</font>
               <textcolor>white</textcolor>
@@ -171,7 +182,7 @@
 
             <control type="label">
               <height min="0" max="13">auto</height>
-              <width>300</width>
+              <width>250</width>
               <label fallback="195">$INFO[ListItem.Duration]</label>
               <visible>substring(listitem.Duration,min)</visible>
               <font>Font_Reg14</font>
@@ -183,7 +194,7 @@
 
             <control type="label">
               <height min="0" max="13">auto</height>
-              <width>300</width>
+              <width>250</width>
               <label fallback="195">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
               <visible>!substring(listitem.Duration,min)</visible>
               <font>Font_Reg14</font>
@@ -195,7 +206,7 @@
 
             <control type="label">
               <height min="0" max="13">auto</height>
-              <width>300</width>
+              <width>250</width>
               <label>$LOCALIZE[572]</label>
               <font>Font_Bold14_Caps</font>
               <textcolor>white</textcolor>
@@ -205,7 +216,7 @@
 
             <control type="label">
               <height min="0" max="13">auto</height>
-              <width>300</width>
+              <width>250</width>
               <label fallback="195">$INFO[ListItem.Studio]</label>
               <font>Font_Reg14</font>
               <textcolor>white</textcolor>
@@ -276,6 +287,7 @@
         <scrolltime tween="cubic" easing="out">300</scrolltime>
         <itemlayout height="45" width="710" condition="[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets) | Container.Content(Addons)] + ![substring(Container.FolderPath,plugin,left) + Container.Content(Episodes)]">
           <control type="group">
+
             <control type="label">
               <posx>19</posx>
               <posy>0</posy>
@@ -292,7 +304,7 @@
             </control>
 
             <control type="label">
-              <posx>20</posx>
+              <posx>24</posx>
               <posy>0</posy>
               <width>100</width>
               <height>45</height>
@@ -307,10 +319,10 @@
             </control>
 
             <control type="image">
-              <posx>73</posx>
-              <posy>15</posy>
-              <width>20</width>
-              <height>20</height>
+              <posx>-6</posx>
+              <posy>10</posy>
+              <width>32</width>
+              <height>32</height>
               <texture>sets/Default/flagging/watched_nofocus.png</texture>
               <visible>!stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
               <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos)</visible>
@@ -367,7 +379,7 @@
             <control type="label">
               <posx>585</posx>
               <posy>0</posy>
-              <width>300</width>
+              <width>250</width>
               <height>45</height>
               <font>Font_Reg14</font>
               <textcolor>grey</textcolor>
@@ -378,6 +390,21 @@
               <label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
               <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)]</visible>
             </control>
+
+
+            <control type="label">
+              <posx>585</posx>
+              <posy>5</posy>
+              <height min="0" max="13">auto</height>
+              <width>300</width>
+              <label fallback="195">[COLOR=white]$INFO[ListItem.Property(UnWatchedEpisodes)][/COLOR] $LOCALIZE[31913] $INFO[ListItem.Property(TotalEpisodes)]</label>
+              <font>Font_Reg14</font>
+              <textcolor>grey</textcolor>
+              <shadowcolor>99000000</shadowcolor>
+              <scrollspeed>30</scrollspeed>
+              <visible>[Container.Content(TVShows) | Container.Content(Seasons)]</visible>
+            </control>
+
           </control>
         </itemlayout>
 
@@ -389,7 +416,7 @@
               <posy>0</posy>
               <width>100</width>
               <height>45</height>
-              <font>Font_Bold14_Caps</font>
+              <font>Font_Reg14</font>
               <textcolor>white</textcolor>
               <shadowcolor>99000000</shadowcolor>
               <selectedcolor>selected</selectedcolor>
@@ -400,11 +427,11 @@
             </control>
 
             <control type="label">
-              <posx>20</posx>
+              <posx>24</posx>
               <posy>0</posy>
               <width>100</width>
               <height>45</height>
-              <font>Font_Bold14_Caps</font>
+              <font>Font_Reg14</font>
               <textcolor>white</textcolor>
               <shadowcolor>99000000</shadowcolor>
               <selectedcolor>selected</selectedcolor>
@@ -415,10 +442,10 @@
             </control>
 
             <control type="image">
-              <posx>73</posx>
-              <posy>15</posy>
-              <width>20</width>
-              <height>20</height>
+              <posx>-6</posx>
+              <posy>10</posy>
+              <width>32</width>
+              <height>32</height>
               <texture>sets/Default/flagging/watched_focus.png</texture>
               <visible>!stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
               <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos)</visible>
@@ -429,7 +456,7 @@
               <posy>0</posy>
               <width>455</width>
               <height>44</height>
-              <font>Font_Bold14_Caps</font>
+              <font>Font_Reg14</font>
               <textcolor>white</textcolor>
               <shadowcolor>99000000</shadowcolor>
               <selectedcolor>selected</selectedcolor>
@@ -475,9 +502,9 @@
             <control type="label">
               <posx>585</posx>
               <posy>0</posy>
-              <width>300</width>
+              <width>250</width>
               <height>45</height>
-              <font>Font_Bold14_Caps</font>
+              <font>Font_Reg14</font>
               <textcolor>white</textcolor>
               <shadowcolor>99000000</shadowcolor>
               <selectedcolor>selected</selectedcolor>
@@ -485,6 +512,19 @@
               <aligny>center</aligny>
               <label fallback="․  ․  ․">$INFO[ListItem.Label2]</label>
               <visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)]</visible>
+            </control>
+
+            <control type="label">
+              <posx>585</posx>
+              <posy>5</posy>
+              <height min="0" max="13">auto</height>
+              <width>300</width>
+              <label fallback="195">[COLOR=blue]$INFO[ListItem.Property(UnWatchedEpisodes)][/COLOR] $LOCALIZE[31913] [COLOR=grey]$INFO[ListItem.Property(TotalEpisodes)][/COLOR] $LOCALIZE[31912]</label>
+              <font>Font_Reg14</font>
+              <textcolor>white</textcolor>
+              <shadowcolor>99000000</shadowcolor>
+              <scrollspeed>30</scrollspeed>
+              <visible>[Container.Content(TVShows) | Container.Content(Seasons)]</visible>
             </control>
           </control>
         </focusedlayout>
@@ -522,7 +562,7 @@
             <control type="label">
               <posx>700</posx>
               <posy>0</posy>
-              <width>300</width>
+              <width>250</width>
               <height>45</height>
               <font>Font_Reg14</font>
               <textcolor>grey</textcolor>
@@ -569,7 +609,7 @@
             <control type="label">
               <posx>700</posx>
               <posy>0</posy>
-              <width>300</width>
+              <width>250</width>
               <height>45</height>
               <font>Font_Reg14</font>
               <textcolor>white</textcolor>
@@ -587,10 +627,10 @@
         <posx>20</posx>
         <posy>160</posy>
         <width>11</width>
-        <height>427</height>
+        <height>840</height>
         <texturesliderbackground>-</texturesliderbackground>
-        <texturesliderbar border="0,14,0,14">views/scrollbar/scrollbar.png</texturesliderbar>
-        <texturesliderbarfocus border="0,14,0,14">views/scrollbar/scrollbar.png</texturesliderbarfocus>
+        <texturesliderbar border="0,14,0,14">sets/Default/ScrollBarV_bar.png</texturesliderbar>
+        <texturesliderbarfocus border="0,14,0,14">sets/Default/ScrollBarV_bar_focus.png</texturesliderbarfocus>
         <textureslidernib>-</textureslidernib>
         <textureslidernibfocus>-</textureslidernibfocus>
         <onleft>9000</onleft>
